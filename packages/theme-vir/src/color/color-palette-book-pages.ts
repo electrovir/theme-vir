@@ -4,8 +4,7 @@ import {defineBookPage, type BookPage} from 'element-book';
 import {css, html, unsafeCSS} from 'element-vir';
 import {type SingleCssVarDefinition} from 'lit-css-vars';
 import {type RequireExactlyOne} from 'type-fest';
-import {noNativeSpacing} from 'vira/dist/styles/native-styles.js';
-import {viraColorPalette} from 'vira/dist/styles/vira-color-palette.js';
+import {noNativeSpacing, viraColorPalette} from 'vira';
 import {
     buildLowLevelColorTheme,
     groupColors,

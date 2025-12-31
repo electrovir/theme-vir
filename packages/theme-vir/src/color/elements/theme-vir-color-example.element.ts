@@ -1,6 +1,6 @@
 import {assertWrap, check} from '@augment-vir/assert';
 import {css, defineElement, html, listen, nothing, onDomCreated, unsafeCSS} from 'element-vir';
-import {noNativeFormStyles, noNativeSpacing} from 'vira/dist/styles/native-styles.js';
+import {noNativeFormStyles, noNativeSpacing} from 'vira';
 import {type ColorThemeColor} from '../color-theme.js';
 import {calculateContrast, type FontWeight} from '../contrast.js';
 import {ThemeVirContrastIndicator} from './theme-vir-contrast-indicator.element.js';

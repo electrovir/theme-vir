@@ -1,6 +1,6 @@
 {
     "name": "@electrovir/theme-vir-mono-repo",
-    "version": "28.15.2",
+    "version": "28.15.3",
     "private": true,
     "repository": {
         "type": "git",
