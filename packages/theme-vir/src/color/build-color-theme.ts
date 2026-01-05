@@ -10,6 +10,12 @@ import {
     type PartialWithUndefined,
     type RequiredAndNotNull,
 } from '@augment-vir/common';
+import {
+    ContrastLevelName,
+    contrastLevelLabel,
+    findClosestColor,
+    findColorAtContrastLevel,
+} from '@electrovir/color';
 import {type CssVarDefinitions, type SingleCssVarDefinition} from 'lit-css-vars';
 import {
     defineColorTheme,
@@ -17,12 +23,6 @@ import {
     type ColorInit,
     type NoRefColorInit,
 } from './color-theme.js';
-import {
-    contrastLevelLabel,
-    ContrastLevelName,
-    findClosestColor,
-    findColorAtContrastLevel,
-} from './contrast.js';
 
 /** @category Internal */
 export type ColorPaletteVars = CssVarDefinitions<Record<`${string}-${string}-${number}`, any>>;

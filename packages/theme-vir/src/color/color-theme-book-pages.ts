@@ -1,5 +1,6 @@
 import {check} from '@augment-vir/assert';
 import {groupArrayBy, type PartialWithUndefined} from '@augment-vir/common';
+import {VirColorPair} from '@electrovir/color';
 import {
     BookPageControlType,
     defineBookPage,
@@ -11,7 +12,6 @@ import {css, html, listen, nothing} from 'element-vir';
 import {type EmptyObject} from 'type-fest';
 import {type ColorThemeOverride} from './color-theme-override.js';
 import {generateThemeCode, type ColorTheme} from './color-theme.js';
-import {ThemeVirColorExample} from './elements/theme-vir-color-example.element.js';
 
 /**
  * Create multiple element-book pages to showcase a theme its overrides (if any).
@@ -78,26 +78,26 @@ export function createColorThemeBookPages({
         }
 
         const normalTemplate = html`
-            <${ThemeVirColorExample.assign({
+            <${VirColorPair.assign({
                 color: themeColor,
                 showVarValues: true,
                 showVarNames: controls['Show Var Names'],
                 showContrast: controls['Show Contrast Tips'],
                 fontWeight: 400,
-            })}></${ThemeVirColorExample}>
+            })}></${VirColorPair}>
         `;
 
         const inverseColor = hideInverseColors ? undefined : inverseThemeColor;
 
         const inverseTemplate = inverseColor
             ? html`
-                  <${ThemeVirColorExample.assign({
+                  <${VirColorPair.assign({
                       color: inverseColor,
                       showVarValues: false,
                       showVarNames: controls['Show Var Names'],
                       showContrast: controls['Show Contrast Tips'],
                       fontWeight: 400,
-                  })}></${ThemeVirColorExample}>
+                  })}></${VirColorPair}>
               `
             : nothing;
 
