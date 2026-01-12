@@ -227,7 +227,7 @@ export function buildLowLevelColorTheme(
                         'behind-background',
                         'ahead-foreground',
                         'behind-foreground',
-                        'self-light-front',
+                        'self-dark-back',
                         'self-light-back',
                     ],
                     contrast: contrastLevels,
@@ -242,6 +242,7 @@ export function buildLowLevelColorTheme(
                 );
 
                 const lightestSelf = findClosestColor('white', colorStrings);
+                const darkestSelf = findClosestColor('black', colorStrings);
 
                 return filterMap(
                     allCrosses,
@@ -280,10 +281,17 @@ export function buildLowLevelColorTheme(
                                               foreground: colorStrings,
                                               background: lightestSelf,
                                           }
-                                        : {
-                                              foreground: lightestSelf,
-                                              background: colorStrings,
-                                          };
+                                        : // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+                                          cross.crossWith === 'self-dark-back'
+                                          ? {
+                                                foreground: colorStrings,
+                                                background: darkestSelf,
+                                            }
+                                          : undefined;
+
+                        if (!comparison) {
+                            throw new Error(`Forgot to handle crossWith: '${cross.crossWith}'`);
+                        }
 
                         const matchedColorString = findColorAtContrastLevel(
                             comparison,
