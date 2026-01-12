@@ -140,9 +140,9 @@ export function createColorCssVarDefault(
     if (check.isPrimitive(init) || '_$cssResult$' in init) {
         return init;
     } else if ('refDefaultBackground' in init) {
-        return '--var(default-bg)';
+        return `var(--default-bg, ${noRefColorInitToString(defaultInit.background)})`;
     } else if ('refDefaultForeground' in init) {
-        return '--var(default-fg)';
+        return `var(--default-fg, ${noRefColorInitToString(defaultInit.foreground)})`;
     } else if ('refBackground' in init || 'refForeground' in init) {
         const referenceKey: keyof ColorInitReference | undefined = check.hasKey(
             init,
