@@ -9,6 +9,7 @@ import {noNativeSpacing, viraColorPalette} from 'vira';
 import {
     buildLowLevelColorTheme,
     groupColors,
+    type BuildLowLevelColorThemeOptions,
     type ColorPaletteVars,
     type PaletteColor,
 } from './build-color-theme.js';
@@ -78,6 +79,7 @@ export function createColorPaletteBookPages({
     includeContrast,
     includeTheme,
     useVerticalTheme,
+    options,
 }: {
     parent: Readonly<BookPage>;
     title: string;
@@ -86,6 +88,7 @@ export function createColorPaletteBookPages({
     includeContrast: boolean;
     includeTheme: boolean;
     useVerticalTheme: boolean;
+    options: Readonly<BuildLowLevelColorThemeOptions>;
 }>): BookPage[] {
     const colorGroups = groupColors(colors);
 
@@ -289,7 +292,7 @@ export function createColorPaletteBookPages({
             ? createColorThemeBookPages({
                   parent: topColorsPage,
                   title: 'Theme (auto)',
-                  theme: buildLowLevelColorTheme(colors),
+                  theme: buildLowLevelColorTheme(colors, options),
                   hideInverseColors: true,
                   useVerticalLayout: useVerticalTheme,
                   prefixGroupByCount: 2,

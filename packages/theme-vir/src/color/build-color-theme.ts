@@ -168,6 +168,34 @@ export const defaultContrastLevels: Readonly<ArrayOrSelectParam<ContrastLevelNam
 };
 
 /**
+ * Options for {@link buildLowLevelColorTheme}.
+ *
+ * @category Internal
+ */
+export type BuildLowLevelColorThemeOptions = PartialWithUndefined<{
+    /**
+     * The default theme colors for {@link defineColorTheme}. Defaults to
+     * {@link defaultLightThemePair}.
+     *
+     * @default defaultLightThemePair
+     */
+    defaultTheme: RequiredAndNotNull<NoRefColorInit>;
+    /**
+     * All font weights to cross colors with. Defaults to {@link defaultContrastLevels}.
+     *
+     * @default defaultContrastLevels
+     */
+    crossContrastLevels: Readonly<ArrayOrSelectParam<ContrastLevelName>>;
+    /**
+     * Color values to omit from the grouping. Defaults to
+     * {@link defaultOmittedColorGroupColorValues}.
+     *
+     * @default defaultOmittedColorGroupColorValues
+     */
+    omittedColorValues: ReadonlyArray<string>;
+}>;
+
+/**
  * Creates a color theme from a color palette.
  *
  * @category Color Theme
@@ -178,30 +206,7 @@ export function buildLowLevelColorTheme(
         defaultTheme = defaultLightThemePair,
         omittedColorValues = defaultOmittedColorGroupColorValues,
         crossContrastLevels = defaultContrastLevels,
-    }: Readonly<
-        PartialWithUndefined<{
-            /**
-             * The default theme colors for {@link defineColorTheme}. Defaults to
-             * {@link defaultLightThemePair}.
-             *
-             * @default defaultLightThemePair
-             */
-            defaultTheme: RequiredAndNotNull<NoRefColorInit>;
-            /**
-             * All font weights to cross colors with. Defaults to {@link defaultContrastLevels}.
-             *
-             * @default defaultContrastLevels
-             */
-            crossContrastLevels: Readonly<ArrayOrSelectParam<ContrastLevelName>>;
-            /**
-             * Color values to omit from the grouping. Defaults to
-             * {@link defaultOmittedColorGroupColorValues}.
-             *
-             * @default defaultOmittedColorGroupColorValues
-             */
-            omittedColorValues: ReadonlyArray<string>;
-        }>
-    > = {},
+    }: Readonly<BuildLowLevelColorThemeOptions> = {},
 ) {
     const contrastLevels = extractParam<ContrastLevelName>(crossContrastLevels, {
         mapFrom: contrastLevelLabel,
