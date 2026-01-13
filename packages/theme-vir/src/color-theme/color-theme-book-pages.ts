@@ -10,8 +10,11 @@ import {
 } from 'element-book';
 import {css, html, listen, nothing} from 'element-vir';
 import {type EmptyObject} from 'type-fest';
+import {generateThemeCode} from './color-theme-code.js';
 import {type ColorThemeOverride} from './color-theme-override.js';
-import {generateThemeCode, type ColorTheme} from './color-theme.js';
+import {type ColorTheme} from './color-theme.js';
+
+const noneOverridesSelectionValue = 'None';
 
 /**
  * Create multiple element-book pages to showcase a theme its overrides (if any).
@@ -25,7 +28,7 @@ export function createColorThemeBookPages({
     hideInverseColors,
     overrides,
     useVerticalLayout,
-    prefixGroupByCount = 0,
+    prefixGroupByCount = 2,
 }: {
     title: string;
     theme: Readonly<ColorTheme>;
@@ -49,6 +52,25 @@ export function createColorThemeBookPages({
         'Show Contrast Tips': definePageControl({
             controlType: BookPageControlType.Checkbox,
             initValue: true,
+        }),
+    };
+
+    const defaultThemeControls = {
+        'Theme Override': definePageControl({
+            controlType: BookPageControlType.Dropdown,
+            initValue: noneOverridesSelectionValue,
+            options: [
+                noneOverridesSelectionValue,
+                ...(overrides || []).map((override) => {
+                    if (override.name === noneOverridesSelectionValue) {
+                        throw new Error(
+                            `Cannot have theme override named '${noneOverridesSelectionValue}'`,
+                        );
+                    }
+
+                    return override.name;
+                }),
+            ],
         }),
     };
 
@@ -107,10 +129,15 @@ export function createColorThemeBookPages({
     }
 
     function createThemePageExamples(
-        defineExample: DefineExampleCallback<EmptyObject, typeof themeParentPage.controls>,
-        theme: Readonly<ColorTheme>,
+        defineExample: DefineExampleCallback<
+            EmptyObject,
+            | (typeof themeParentPage.controls & typeof defaultThemeControls)
+            | typeof themeParentPage.controls
+        >,
+        defaultTheme: Readonly<ColorTheme>,
+        overrides: ReadonlyArray<Readonly<ColorThemeOverride>> | undefined,
     ) {
-        const groups = groupArrayBy(Object.keys(theme.colors), (value) => {
+        const groups = groupArrayBy(Object.keys(defaultTheme.colors), (value) => {
             if (prefixGroupByCount) {
                 return value.split('-').slice(0, prefixGroupByCount).join('-');
             } else {
@@ -143,10 +170,18 @@ export function createColorThemeBookPages({
                         }
                     `,
                     render({controls}) {
+                        const selectedOverride: ColorThemeOverride | undefined =
+                            ('Theme Override' in controls &&
+                                controls['Theme Override'] &&
+                                overrides?.find(
+                                    (override) => override.name === controls['Theme Override'],
+                                )) ||
+                            undefined;
+
                         return group.map((entry) =>
                             buildThemeColorTemplate({
                                 controls,
-                                theme,
+                                theme: selectedOverride?.asTheme || defaultTheme,
                                 themeColorName: entry,
                             }),
                         );
@@ -162,7 +197,7 @@ export function createColorThemeBookPages({
 
     const defaultThemePage = defineBookPage({
         parent: themeParentPage,
-        title: 'Default Theme',
+        title: 'Default',
         descriptionParagraphs,
         useVerticalExamples: useVerticalLayout,
         controls: {
@@ -171,7 +206,10 @@ export function createColorThemeBookPages({
                 content: html`
                     <button
                         ${listen('click', async () => {
-                            const code = generateThemeCode(theme, 'viraColorPalette');
+                            const code = generateThemeCode(theme, {
+                                paletteVarName: 'viraColorPalette',
+                                overrides,
+                            });
                             await navigator.clipboard.writeText(code);
                         })}
                     >
@@ -179,9 +217,10 @@ export function createColorThemeBookPages({
                     </button>
                 `,
             }),
+            ...defaultThemeControls,
         },
         defineExamples({defineExample}) {
-            createThemePageExamples(defineExample, theme);
+            createThemePageExamples(defineExample, theme, overrides);
         },
     });
 
@@ -192,7 +231,7 @@ export function createColorThemeBookPages({
             useVerticalExamples: useVerticalLayout,
             descriptionParagraphs,
             defineExamples({defineExample}) {
-                createThemePageExamples(defineExample, override.asTheme);
+                createThemePageExamples(defineExample, override.asTheme, undefined);
             },
         });
     });

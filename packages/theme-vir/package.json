@@ -1,6 +1,6 @@
 {
     "name": "theme-vir",
-    "version": "28.16.2",
+    "version": "28.17.0",
     "description": "Create an entire web theme.",
     "keywords": [
         "design",
@@ -39,7 +39,8 @@
         "start": "virmator frontend",
         "test": "virmator test web",
         "test:coverage": "npm run test coverage",
-        "test:docs": "virmator docs check"
+        "test:docs": "virmator docs check",
+        "test:update": "virmator test web update"
     },
     "dependencies": {
         "@augment-vir/assert": "^31.57.5",

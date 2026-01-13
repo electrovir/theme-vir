@@ -7,7 +7,7 @@ import {type SingleCssVarDefinition} from 'lit-css-vars';
 import {type RequireExactlyOne} from 'type-fest';
 import {noNativeSpacing, viraColorPalette} from 'vira';
 import {
-    buildLowLevelColorTheme,
+    buildColorTheme,
     groupColors,
     type BuildLowLevelColorThemeOptions,
     type ColorPaletteVars,
@@ -281,6 +281,8 @@ export function createColorPaletteBookPages({
         );
     }
 
+    const generatedTheme = buildColorTheme(colors, options);
+
     return [
         topColorsPage,
         colorPalettePage,
@@ -292,10 +294,11 @@ export function createColorPaletteBookPages({
             ? createColorThemeBookPages({
                   parent: topColorsPage,
                   title: 'Theme (auto)',
-                  theme: buildLowLevelColorTheme(colors, options),
+                  theme: generatedTheme.defaultLight,
                   hideInverseColors: true,
                   useVerticalLayout: useVerticalTheme,
                   prefixGroupByCount: 2,
+                  overrides: [generatedTheme.darkOverride],
               })
             : []),
     ].filter(check.isTruthy);

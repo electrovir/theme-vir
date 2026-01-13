@@ -1,7 +1,9 @@
 import {assert} from '@augment-vir/assert';
 import {mapObjectValues} from '@augment-vir/common';
-import {describe, it} from '@augment-vir/test';
-import {defineColorTheme, generateThemeCode, themeDefaultKey} from './color-theme.js';
+import {assertSnapshot, describe, it} from '@augment-vir/test';
+import {generateThemeCode} from './color-theme-code.js';
+import {defineColorThemeOverride} from './color-theme-override.js';
+import {defineColorTheme, themeDefaultKey} from './color-theme.js';
 import {mockColorTheme} from './color-theme.mock.js';
 
 describe(defineColorTheme.name, () => {
@@ -174,37 +176,18 @@ describe(defineColorTheme.name, () => {
 });
 
 describe(generateThemeCode.name, () => {
-    it('generates code', () => {
-        assert.strictEquals(
-            generateThemeCode(mockColorTheme),
-            `defineColorTheme(
-    {
-        foreground: 'black',
-        background: 'white',
-    },
-    {
-        'action-primary': {
-            foreground: 'dodgerblue',
-        },
-        'action-secondary': {
-            foreground: 'navy',
-        },
-        'action-danger': {
-            foreground: 'red',
-        },
-        'nav-bar': {
-            background: '#ccc',
-        },
-        'button-primary': {
-            foreground: {
-                refDefaultBackground: true,
-            },
-            background: {
-                refForeground: 'action-primary',
-            },
-        },
-    },
-)`,
+    it('generates code', async (testContext) => {
+        await assertSnapshot(
+            testContext,
+            generateThemeCode(mockColorTheme, {
+                overrides: [
+                    defineColorThemeOverride(mockColorTheme, 'mock', {
+                        defaultOverride: {
+                            foreground: 'blue',
+                        },
+                    }),
+                ],
+            }),
         );
     });
 });
