@@ -217,6 +217,7 @@ export function createColorThemeBookPages({
                     </button>
                 `,
             }),
+            ...themeControls,
             ...defaultThemeControls,
         },
         defineExamples({defineExample}) {
