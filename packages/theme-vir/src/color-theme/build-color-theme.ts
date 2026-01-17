@@ -163,6 +163,7 @@ export const defaultLightThemePair: RequiredAndNotNull<NoRefColorInit> = {
 /** @category Internal */
 export const defaultContrastLevels: Readonly<ArrayOrSelectParam<ContrastLevelName>> = {
     [ContrastLevelName.BodyText]: true,
+    [ContrastLevelName.NonBodyText]: true,
     [ContrastLevelName.Header]: true,
     [ContrastLevelName.Placeholder]: true,
     [ContrastLevelName.Decoration]: true,
