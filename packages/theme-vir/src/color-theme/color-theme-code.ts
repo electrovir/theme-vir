@@ -37,7 +37,7 @@ export function generateThemeCode(
         paletteVarName,
     );
 
-    const themeCode = `const theme = defineColorTheme(\n${defaultInitCode},\n${colorsInitCode},\n);`;
+    const themeCode = `export const theme = defineColorTheme(\n${defaultInitCode},\n${colorsInitCode},\n);`;
 
     const overridesCodes = (options?.overrides || []).map((override) => {
         return generateOverrideCode(override, paletteVarName);
@@ -127,7 +127,7 @@ function generateOverrideCode(
         parts.push(`${tab(2)}colorOverrides: {\n${colorOverrideEntries.join('\n')}\n${tab(2)}},`);
     }
 
-    return `const ${override.name}Override = defineColorThemeOverride(\n${tab(1)}theme,\n${tab(1)}'${override.name}',\n${tab(1)}{\n${parts.join('\n')}\n${tab(1)}},\n);`;
+    return `export const ${override.name}Override = defineColorThemeOverride(\n${tab(1)}theme,\n${tab(1)}'${override.name}',\n${tab(1)}{\n${parts.join('\n')}\n${tab(1)}},\n);`;
 }
 
 function tab(level: number): string {
