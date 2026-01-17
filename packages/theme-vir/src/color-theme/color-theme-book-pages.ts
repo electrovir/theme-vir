@@ -29,10 +29,12 @@ export function createColorThemeBookPages({
     overrides,
     useVerticalLayout,
     prefixGroupByCount = 2,
+    hideCopyCode,
 }: {
     title: string;
     theme: Readonly<ColorTheme>;
 } & PartialWithUndefined<{
+    hideCopyCode: boolean;
     parent: Readonly<BookPage>;
     hideInverseColors: boolean;
     overrides: ReadonlyArray<Readonly<ColorThemeOverride>>;
@@ -201,22 +203,26 @@ export function createColorThemeBookPages({
         descriptionParagraphs,
         useVerticalExamples: useVerticalLayout,
         controls: {
-            copy: definePageControl({
-                controlType: BookPageControlType.Custom,
-                content: html`
-                    <button
-                        ${listen('click', async () => {
-                            const code = generateThemeCode(theme, {
-                                paletteVarName: 'viraColorPalette',
-                                overrides,
-                            });
-                            await navigator.clipboard.writeText(code);
-                        })}
-                    >
-                        Copy Code
-                    </button>
-                `,
-            }),
+            ...(hideCopyCode
+                ? {}
+                : {
+                      copy: definePageControl({
+                          controlType: BookPageControlType.Custom,
+                          content: html`
+                              <button
+                                  ${listen('click', async () => {
+                                      const code = generateThemeCode(theme, {
+                                          paletteVarName: 'viraColorPalette',
+                                          overrides,
+                                      });
+                                      await navigator.clipboard.writeText(code);
+                                  })}
+                              >
+                                  Copy Code
+                              </button>
+                          `,
+                      }),
+                  }),
             ...defaultThemeControls,
         },
         defineExamples({defineExample}) {
