@@ -1,17 +1,17 @@
+import {check} from '@augment-vir/assert';
 import {
     getObjectTypedEntries,
     type PartialWithUndefined,
     type RequiredAndNotNull,
 } from '@augment-vir/common';
-import {type CSSResult} from 'element-vir';
-import {type ColorThemeOverride} from './color-theme-override.js';
+import {CSSResult} from 'element-vir';
 import {
     type ColorInit,
     type ColorInitValue,
-    type ColorTheme,
     type ColorThemeInit,
-    type NoRefColorInit,
-} from './color-theme.js';
+    type ColorThemeOverride,
+} from './color-theme-init.js';
+import {type ColorTheme, type NoRefColorInit} from './color-theme.js';
 
 /**
  * Convert a color theme into code to define that color theme.
@@ -138,14 +138,10 @@ function colorInitValuesEqual(a: ColorInitValue, b: ColorInitValue): boolean {
     if (typeof a !== typeof b) {
         return false;
     }
-    if (typeof a === 'string' || typeof a === 'number') {
-        return a === b;
-    }
-    if ('_$cssResult$' in a && '_$cssResult$' in (b as object)) {
-        return a.cssText === (b as CSSResult).cssText;
-    }
-    // For references and SingleCssVarDefinition, compare as JSON
-    return JSON.stringify(a) === JSON.stringify(b);
+    const aString = check.isString(a) || a instanceof CSSResult ? String(a) : JSON.stringify(a);
+    const bString = check.isString(b) || b instanceof CSSResult ? String(b) : JSON.stringify(b);
+
+    return aString === bString;
 }
 
 function extractCssVarName(cssValue: string): string | undefined {
@@ -162,7 +158,7 @@ function colorInitValueToCode(
         return `'${value}'`;
     } else if (typeof value === 'number') {
         return String(value);
-    } else if ('_$cssResult$' in value) {
+    } else if (value instanceof CSSResult) {
         const cssText = String(value);
         if (paletteVarName) {
             const varName = extractCssVarName(cssText);

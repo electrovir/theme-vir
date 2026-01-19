@@ -12,6 +12,7 @@ describe(defineColorTheme.name, () => {
             {
                 foreground: 'black',
                 background: 'white',
+                prefix: 'test-maps-all-colors',
             },
             {
                 'brand-primary': {
@@ -37,11 +38,11 @@ describe(defineColorTheme.name, () => {
         assert.strictEquals(theme.colors['brand-primary'].foreground.default, 'dodgerblue');
         assert.strictEquals(
             theme.colors['brand-primary'].background.default,
-            'var(--default-bg, white)',
+            'var(--test-maps-all-colors-default-bg, white)',
         );
         assert.strictEquals(
             theme.colors['brand-secondary'].foreground.default,
-            'var(--default-fg, black)',
+            'var(--test-maps-all-colors-default-fg, black)',
         );
         assert.strictEquals(theme.colors['brand-secondary'].background.default, 'navy');
         assert.strictEquals(
@@ -50,7 +51,7 @@ describe(defineColorTheme.name, () => {
         );
         assert.strictEquals(
             theme.colors['logo-color'].background.default,
-            'var(--default-bg, white)',
+            'var(--test-maps-all-colors-default-bg, white)',
         );
         assert.strictEquals(
             theme.colors['header-color'].foreground.default,
@@ -58,7 +59,7 @@ describe(defineColorTheme.name, () => {
         );
         assert.strictEquals(
             theme.colors['header-color'].background.default,
-            'var(--default-bg, white)',
+            'var(--test-maps-all-colors-default-bg, white)',
         );
 
         assert.strictEquals(theme.colors['brand-primary'].name, 'brand-primary');
@@ -78,18 +79,18 @@ describe(defineColorTheme.name, () => {
                 },
                 'action-primary': {
                     foreground: 'dodgerblue',
-                    background: 'var(--default-bg, white)',
+                    background: 'var(--mock-default-bg, white)',
                 },
                 'action-secondary': {
                     foreground: 'navy',
-                    background: 'var(--default-bg, white)',
+                    background: 'var(--mock-default-bg, white)',
                 },
                 'action-danger': {
                     foreground: 'red',
-                    background: 'var(--default-bg, white)',
+                    background: 'var(--mock-default-bg, white)',
                 },
                 'nav-bar': {
-                    foreground: 'var(--default-fg, black)',
+                    foreground: 'var(--mock-default-fg, black)',
                     background: '#ccc',
                 },
                 'button-primary': {
@@ -106,6 +107,7 @@ describe(defineColorTheme.name, () => {
                     {
                         foreground: 'black',
                         background: 'white',
+                        prefix: 'invalid-ref-1',
                     },
                     {
                         'brand-primary': {
@@ -132,6 +134,7 @@ describe(defineColorTheme.name, () => {
                     {
                         foreground: 'black',
                         background: 'white',
+                        prefix: 'invalid-ref-2',
                     },
                     {
                         'brand-primary': {
@@ -153,13 +156,14 @@ describe(defineColorTheme.name, () => {
             },
         );
     });
-    it('rejects an themeDefaultKey key', () => {
+    it('rejects a themeDefaultKey key', () => {
         assert.throws(
             () => {
                 defineColorTheme(
                     {
                         foreground: 'black',
                         background: 'white',
+                        prefix: 'no-default',
                     },
                     {
                         [themeDefaultKey]: {

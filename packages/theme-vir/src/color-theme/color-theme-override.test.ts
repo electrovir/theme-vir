@@ -2,13 +2,14 @@ import {assert} from '@augment-vir/assert';
 import {describe, it, testWeb} from '@augment-vir/test';
 import {css, html} from 'element-vir';
 import {colorCss} from './color-css.js';
-import {applyColorTheme, defineColorThemeOverride} from './color-theme-override.js';
-import {defineColorTheme} from './color-theme.js';
+import {defineColorThemeOverride} from './color-theme-override.js';
+import {applyColorTheme, defineColorTheme} from './color-theme.js';
 
 const mockTheme = defineColorTheme(
     {
         foreground: 'black',
         background: 'white',
+        prefix: 'mock',
     },
     {
         'main-color': {
@@ -29,7 +30,7 @@ describe(defineColorThemeOverride.name, () => {
                 },
             }).overrides,
             {
-                '--default-fg': 'purple',
+                '--mock-default-fg': 'purple',
             },
         );
     });

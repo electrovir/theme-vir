@@ -11,7 +11,7 @@ import {
 import {css, html, listen, nothing} from 'element-vir';
 import {type EmptyObject} from 'type-fest';
 import {generateThemeCode} from './color-theme-code.js';
-import {type ColorThemeOverride} from './color-theme-override.js';
+import {type ColorThemeOverride} from './color-theme-init.js';
 import {type ColorTheme} from './color-theme.js';
 
 const noneOverridesSelectionValue = 'None';

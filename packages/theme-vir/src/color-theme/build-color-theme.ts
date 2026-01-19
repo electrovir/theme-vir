@@ -17,11 +17,12 @@ import {
     findColorAtContrastLevel,
 } from '@electrovir/color';
 import {type CssVarDefinitions, type CssVarName, type SingleCssVarDefinition} from 'lit-css-vars';
+import {type ColorInit} from './color-theme-init.js';
 import {defineColorThemeOverride} from './color-theme-override.js';
 import {
     defineColorTheme,
     noRefColorInitToString,
-    type ColorInit,
+    type DefaultColorThemeInit,
     type NoRefColorInit,
 } from './color-theme.js';
 
@@ -176,6 +177,12 @@ export const defaultContrastLevels: Readonly<ArrayOrSelectParam<ContrastLevelNam
  */
 export type BuildLowLevelColorThemeOptions = PartialWithUndefined<{
     /**
+     * Theme var prefix.
+     *
+     * @default 'vir'
+     */
+    prefix: string;
+    /**
      * The default theme colors for {@link defineColorTheme}. Defaults to
      * {@link defaultLightThemePair}.
      *
@@ -207,15 +214,17 @@ export function buildColorTheme(
     {
         omittedColorValues = defaultOmittedColorGroupColorValues,
         crossContrastLevels = defaultContrastLevels,
+        prefix = 'vir',
     }: Readonly<BuildLowLevelColorThemeOptions> = {},
 ) {
     const contrastLevels = extractParam<ContrastLevelName>(crossContrastLevels, {
         mapFrom: contrastLevelLabel,
     });
     const colorGroups = groupColors(colorPalette, omittedColorValues);
-    const defaultTheme = {
+    const defaultTheme: Readonly<DefaultColorThemeInit> = {
         background: 'white',
         foreground: 'black',
+        prefix,
     };
 
     const lightThemeColors: Record<CssVarName, ColorInit> = {};
@@ -309,7 +318,7 @@ export function buildColorTheme(
 
                 if (cross.crossWith === 'color-in-foreground-light-mode') {
                     const name = [
-                        firstColor.prefix,
+                        prefix,
                         firstColor.colorName,
                         'foreground',
                         cross.contrast,
@@ -318,7 +327,7 @@ export function buildColorTheme(
                     lightThemeColors[name] = colorValue;
                 } else if (cross.crossWith === 'color-in-background-light-mode') {
                     const name = [
-                        firstColor.prefix,
+                        prefix,
                         firstColor.colorName,
                         'background',
                         cross.contrast,
@@ -327,7 +336,7 @@ export function buildColorTheme(
                     lightThemeColors[name] = colorValue;
                 } else if (cross.crossWith === 'color-on-self-light-mode') {
                     const name = [
-                        firstColor.prefix,
+                        prefix,
                         firstColor.colorName,
                         'on',
                         'self',
@@ -337,7 +346,7 @@ export function buildColorTheme(
                     lightThemeColors[name] = colorValue;
                 } else if (cross.crossWith === 'color-in-foreground-dark-mode') {
                     const name = [
-                        firstColor.prefix,
+                        prefix,
                         firstColor.colorName,
                         'foreground',
                         cross.contrast,
@@ -346,7 +355,7 @@ export function buildColorTheme(
                     darkThemeOverrides[name] = colorValue;
                 } else if (cross.crossWith === 'color-in-background-dark-mode') {
                     const name = [
-                        firstColor.prefix,
+                        prefix,
                         firstColor.colorName,
                         'background',
                         cross.contrast,
@@ -356,7 +365,7 @@ export function buildColorTheme(
                     // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
                 } else if (cross.crossWith === 'color-on-self-dark-mode') {
                     const name = [
-                        firstColor.prefix,
+                        prefix,
                         firstColor.colorName,
                         'on',
                         'self',

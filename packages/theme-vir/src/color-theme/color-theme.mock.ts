@@ -5,6 +5,7 @@ export const mockColorTheme = defineColorTheme(
     {
         background: 'white',
         foreground: 'black',
+        prefix: 'mock',
     },
     {
         'action-primary': {

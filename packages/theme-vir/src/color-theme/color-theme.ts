@@ -1,6 +1,7 @@
 import {assert, check} from '@augment-vir/assert';
 import {
     getObjectTypedEntries,
+    getObjectTypedValues,
     log,
     mapObjectValues,
     type RequiredAndNotNull,
@@ -8,47 +9,22 @@ import {
 } from '@augment-vir/common';
 import {CSSResult} from 'element-vir';
 import {
+    type CssPropertyDefinition,
     type CssVarName,
     type CssVarsSetup,
     CssVarSyntaxName,
     defineCssVars,
+    setCssVarValue,
     type SingleCssVarDefinition,
 } from 'lit-css-vars';
 import {type RequireAtLeastOne, type Writable} from 'type-fest';
-
-/**
- * Reference another color from this same definition inside {@link ColorInitValue}
- *
- * @category Internal
- */
-export type ColorInitReference = RequireAtLeastOne<{
-    refForeground: CssVarName;
-    refBackground: CssVarName;
-    refDefaultBackground: true;
-    refDefaultForeground: true;
-}>;
-
-/**
- * All possible types for {@link ColorInit}.
- *
- * @category Internal
- */
-export type ColorInitValue =
-    | string
-    | number
-    | CSSResult
-    | ColorInitReference
-    | SingleCssVarDefinition;
-
-/**
- * An individual theme color init.
- *
- * @category Internal
- */
-export type ColorInit = RequireAtLeastOne<{
-    foreground: ColorInitValue;
-    background: ColorInitValue;
-}>;
+import {
+    type ColorInit,
+    type ColorInitReference,
+    type ColorInitValue,
+    type ColorThemeInit,
+    type ColorThemeOverride,
+} from './color-theme-init.js';
 
 /**
  * Same as {@link ColorInit} but without references.
@@ -80,13 +56,6 @@ export type ColorThemeColor<
 };
 
 /**
- * Base input type for the type parameter in {@link defineColorTheme}.
- *
- * @category Internal
- */
-export type ColorThemeInit = Record<CssVarName, ColorInit>;
-
-/**
  * A finalized color theme, output from {@link defineColorTheme}.
  *
  * @category Internal
@@ -97,7 +66,7 @@ export type ColorTheme<Init extends ColorThemeInit = ColorThemeInit> = {
     /** The original init object for this theme. */
     init: {
         colors: Init;
-        default: RequiredAndNotNull<NoRefColorInit>;
+        default: Readonly<DefaultColorThemeInit>;
     };
 };
 
@@ -115,12 +84,12 @@ export type AllColorThemeColors<Init extends ColorThemeInit = ColorThemeInit> = 
             : never
         : never;
 } & {
-    [themeDefaultKey]: ColorThemeColor<RequiredAndNotNull<NoRefColorInit>, typeof themeDefaultKey>;
+    [themeDefaultKey]: ColorThemeColor<DefaultColorThemeInit, typeof themeDefaultKey>;
 };
 
 /** @category Internal */
 export function noRefColorInitToString(init: Values<NoRefColorInit>): string {
-    if (check.isPrimitive(init) || '_$cssResult$' in init) {
+    if (check.isPrimitive(init) || init instanceof CSSResult) {
         return String(init);
     } else {
         return init.default;
@@ -135,15 +104,18 @@ export function noRefColorInitToString(init: Values<NoRefColorInit>): string {
 export function createColorCssVarDefault(
     fromName: string,
     init: ColorInitValue,
-    defaultInit: RequiredAndNotNull<NoRefColorInit>,
+    defaultInit: Readonly<DefaultColorThemeInit>,
     colorsInit: ColorThemeInit,
 ): string | number | CSSResult {
+    const defaultForegroundKey = `${defaultInit.prefix}-default-fg`;
+    const defaultBackgroundKey = `${defaultInit.prefix}-default-bg`;
+
     if (check.isPrimitive(init) || init instanceof CSSResult) {
         return init;
     } else if ('refDefaultBackground' in init) {
-        return `var(--default-bg, ${noRefColorInitToString(defaultInit.background)})`;
+        return `var(--${defaultBackgroundKey}, ${noRefColorInitToString(defaultInit.background)})`;
     } else if ('refDefaultForeground' in init) {
-        return `var(--default-fg, ${noRefColorInitToString(defaultInit.foreground)})`;
+        return `var(--${defaultForegroundKey}, ${noRefColorInitToString(defaultInit.foreground)})`;
     } else if ('refBackground' in init || 'refForeground' in init) {
         const referenceKey: keyof ColorInitReference | undefined = check.hasKey(
             init,
@@ -168,13 +140,13 @@ export function createColorCssVarDefault(
             referenced[layerKey] ||
             (layerKey === 'foreground'
                 ? createColorCssVarDefault(
-                      'default-fg',
+                      defaultForegroundKey,
                       defaultInit.foreground,
                       defaultInit,
                       colorsInit,
                   )
                 : createColorCssVarDefault(
-                      'default-bg',
+                      defaultBackgroundKey,
                       defaultInit.background,
                       defaultInit,
                       colorsInit,
@@ -187,6 +159,15 @@ export function createColorCssVarDefault(
 }
 
 /**
+ * Default theme init for {@link defineColorTheme}.
+ *
+ * @category Internal
+ */
+export type DefaultColorThemeInit = RequiredAndNotNull<NoRefColorInit> & {
+    prefix: string;
+};
+
+/**
  * Default foreground/background color theme used in {@link ColorTheme}. Do not define a theme color
  * with this name!
  *
@@ -195,12 +176,63 @@ export function createColorCssVarDefault(
 export const themeDefaultKey = 'theme-default' satisfies CssVarName;
 
 /**
+ * Set all color theme CSS vars on the given element. If no override is given, the theme color
+ * default values are assigned.
+ *
+ * @category Color Theme
+ */
+export function applyColorTheme<const Theme extends ColorTheme>(
+    /** This should usually be the top-level `html` element. */
+    element: HTMLElement,
+    fullTheme: Theme,
+    themeOverride?: ColorThemeOverride | undefined,
+) {
+    getObjectTypedValues(fullTheme.colors as Record<CssVarName, ColorThemeColor>).forEach(
+        (themeColor) => {
+            applyIndividualThemeColorValue({
+                element,
+                layerKey: 'background',
+                themeColor,
+                themeOverride,
+            });
+            applyIndividualThemeColorValue({
+                element,
+                layerKey: 'foreground',
+                themeColor,
+                themeOverride,
+            });
+        },
+    );
+}
+
+function applyIndividualThemeColorValue({
+    element,
+    layerKey,
+    themeOverride,
+    themeColor,
+}: {
+    element: HTMLElement;
+    layerKey: keyof ColorInit;
+    themeOverride: ColorThemeOverride | undefined;
+    themeColor: ColorThemeColor;
+}) {
+    const override = themeOverride?.overrides[String(themeColor[layerKey].name) as CssVarName];
+    const value: string | number = override || themeColor[layerKey].default;
+
+    setCssVarValue({
+        forCssVar: themeColor[layerKey],
+        onElement: element,
+        toValue: value,
+    });
+}
+
+/**
  * Define a color theme.
  *
  * @category Color Theme
  */
 export function defineColorTheme<const Init extends ColorThemeInit>(
-    defaultInit: RequiredAndNotNull<NoRefColorInit>,
+    defaultInit: Readonly<DefaultColorThemeInit>,
     allColorsInit: Init,
 ): ColorTheme<Init> {
     try {
@@ -209,35 +241,40 @@ export function defineColorTheme<const Init extends ColorThemeInit>(
                 `Cannot define theme color by name '${themeDefaultKey}', it is used internally.`,
             );
         }
+        const defaultForegroundKey = `${defaultInit.prefix}-default-fg`;
+        const defaultBackgroundKey = `${defaultInit.prefix}-default-bg`;
+
+        const inverseDefaultForegroundKey = `${defaultInit.prefix}-default-inverse-fg`;
+        const inverseDefaultBackgroundKey = `${defaultInit.prefix}-default-inverse-bg`;
 
         const defaultColorsInit = mapObjectValues(
             {
-                'default-fg': createColorCssVarDefault(
-                    'default-fg',
+                [defaultForegroundKey]: createColorCssVarDefault(
+                    defaultForegroundKey,
                     defaultInit.foreground,
                     defaultInit,
                     allColorsInit,
                 ),
-                'default-bg': createColorCssVarDefault(
-                    'default-bg',
+                [defaultBackgroundKey]: createColorCssVarDefault(
+                    defaultBackgroundKey,
                     defaultInit.background,
                     defaultInit,
                     allColorsInit,
                 ),
-                'default-inverse-fg': createColorCssVarDefault(
-                    'default-inverse-fg',
+                [inverseDefaultForegroundKey]: createColorCssVarDefault(
+                    inverseDefaultForegroundKey,
                     defaultInit.background,
                     defaultInit,
                     allColorsInit,
                 ),
-                'default-inverse-bg': createColorCssVarDefault(
-                    'default-inverse-bg',
+                [inverseDefaultBackgroundKey]: createColorCssVarDefault(
+                    inverseDefaultBackgroundKey,
                     defaultInit.foreground,
                     defaultInit,
                     allColorsInit,
                 ),
             },
-            (key, value) => {
+            (key, value): CssPropertyDefinition => {
                 return {
                     default: value,
                     initialValue: 'transparent',
@@ -270,7 +307,8 @@ export function defineColorTheme<const Init extends ColorThemeInit>(
                           defaultInit,
                           allColorsInit,
                       )
-                    : `var(${defaultColors['default-fg'].name}, ${defaultColors['default-fg'].default})`;
+                    : // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                      `var(${defaultColors[defaultForegroundKey]!.name}, ${defaultColors[defaultForegroundKey]!.default})`;
                 const background = colorInit.background
                     ? createColorCssVarDefault(
                           [
@@ -281,7 +319,8 @@ export function defineColorTheme<const Init extends ColorThemeInit>(
                           defaultInit,
                           allColorsInit,
                       )
-                    : `var(${defaultColors['default-bg'].name}, ${defaultColors['default-bg'].default})`;
+                    : // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                      `var(${defaultColors[defaultBackgroundKey]!.name}, ${defaultColors[defaultBackgroundKey]!.default})`;
 
                 accum[names.foreground] = {
                     default: foreground,
@@ -356,16 +395,20 @@ export function defineColorTheme<const Init extends ColorThemeInit>(
         );
 
         const themeDefaultColors: ColorTheme['colors'][typeof themeDefaultKey] = {
-            foreground: defaultColors['default-fg'],
-            background: defaultColors['default-bg'],
+            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+            foreground: defaultColors[defaultForegroundKey]!,
+            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+            background: defaultColors[defaultBackgroundKey]!,
             init: defaultInit,
             name: themeDefaultKey,
         };
 
         const themeDefaultInverseColors: ColorTheme['inverse'][typeof themeDefaultKey] = {
             ...themeDefaultColors,
-            foreground: defaultColors['default-inverse-fg'],
-            background: defaultColors['default-inverse-bg'],
+            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+            foreground: defaultColors[inverseDefaultForegroundKey]!,
+            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+            background: defaultColors[inverseDefaultBackgroundKey]!,
         };
 
         return {
