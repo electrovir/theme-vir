@@ -334,12 +334,12 @@ export function defineColorTheme<const Init extends ColorThemeInit>(
                 };
 
                 accum[names.foregroundInverse] = {
-                    default: `var(--${names.background}, ${background})`,
+                    default: `var(--${names.background})`,
                     initialValue: 'transparent',
                     syntax: CssVarSyntaxName.Color,
                 };
                 accum[names.backgroundInverse] = {
-                    default: `var(--${names.foreground}, ${foreground})`,
+                    default: `var(--${names.foreground})`,
                     initialValue: 'transparent',
                     syntax: CssVarSyntaxName.Color,
                 };

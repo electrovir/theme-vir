@@ -1,7 +1,7 @@
 import {assert} from '@augment-vir/assert';
 import {describe, it, testWeb} from '@augment-vir/test';
+import {colorCss} from '@electrovir/color';
 import {css, html} from 'element-vir';
-import {colorCss} from './color-css.js';
 import {defineColorThemeOverride} from './color-theme-override.js';
 import {applyColorTheme, defineColorTheme} from './color-theme.js';
 
