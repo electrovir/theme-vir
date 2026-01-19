@@ -2,14 +2,15 @@ import {assert, check} from '@augment-vir/assert';
 import {
     getObjectTypedEntries,
     log,
+    mapObjectValues,
     type RequiredAndNotNull,
     type Values,
 } from '@augment-vir/common';
-import {type CSSResult} from 'element-vir';
+import {CSSResult} from 'element-vir';
 import {
-    type CssVarDefinitions,
     type CssVarName,
     type CssVarsSetup,
+    CssVarSyntaxName,
     defineCssVars,
     type SingleCssVarDefinition,
 } from 'lit-css-vars';
@@ -137,7 +138,7 @@ export function createColorCssVarDefault(
     defaultInit: RequiredAndNotNull<NoRefColorInit>,
     colorsInit: ColorThemeInit,
 ): string | number | CSSResult {
-    if (check.isPrimitive(init) || '_$cssResult$' in init) {
+    if (check.isPrimitive(init) || init instanceof CSSResult) {
         return init;
     } else if ('refDefaultBackground' in init) {
         return `var(--default-bg, ${noRefColorInitToString(defaultInit.background)})`;
@@ -209,32 +210,43 @@ export function defineColorTheme<const Init extends ColorThemeInit>(
             );
         }
 
-        const defaultColors = defineCssVars({
-            'default-fg': createColorCssVarDefault(
-                'default-fg',
-                defaultInit.foreground,
-                defaultInit,
-                allColorsInit,
-            ),
-            'default-bg': createColorCssVarDefault(
-                'default-bg',
-                defaultInit.background,
-                defaultInit,
-                allColorsInit,
-            ),
-            'default-inverse-fg': createColorCssVarDefault(
-                'default-inverse-fg',
-                defaultInit.background,
-                defaultInit,
-                allColorsInit,
-            ),
-            'default-inverse-bg': createColorCssVarDefault(
-                'default-inverse-bg',
-                defaultInit.foreground,
-                defaultInit,
-                allColorsInit,
-            ),
-        });
+        const defaultColorsInit = mapObjectValues(
+            {
+                'default-fg': createColorCssVarDefault(
+                    'default-fg',
+                    defaultInit.foreground,
+                    defaultInit,
+                    allColorsInit,
+                ),
+                'default-bg': createColorCssVarDefault(
+                    'default-bg',
+                    defaultInit.background,
+                    defaultInit,
+                    allColorsInit,
+                ),
+                'default-inverse-fg': createColorCssVarDefault(
+                    'default-inverse-fg',
+                    defaultInit.background,
+                    defaultInit,
+                    allColorsInit,
+                ),
+                'default-inverse-bg': createColorCssVarDefault(
+                    'default-inverse-bg',
+                    defaultInit.foreground,
+                    defaultInit,
+                    allColorsInit,
+                ),
+            },
+            (key, value) => {
+                return {
+                    default: value,
+                    initialValue: 'transparent',
+                    syntax: CssVarSyntaxName.Color,
+                };
+            },
+        );
+
+        const defaultColors = defineCssVars(defaultColorsInit);
 
         const cssVarsSetup: CssVarsSetup = getObjectTypedEntries(
             allColorsInit as ColorThemeInit,
@@ -248,7 +260,7 @@ export function defineColorTheme<const Init extends ColorThemeInit>(
             ) => {
                 const names = createCssVarNames(colorName);
 
-                accum[names.foreground] = colorInit.foreground
+                const foreground = colorInit.foreground
                     ? createColorCssVarDefault(
                           [
                               colorName,
@@ -259,7 +271,7 @@ export function defineColorTheme<const Init extends ColorThemeInit>(
                           allColorsInit,
                       )
                     : `var(${defaultColors['default-fg'].name}, ${defaultColors['default-fg'].default})`;
-                accum[names.background] = colorInit.background
+                const background = colorInit.background
                     ? createColorCssVarDefault(
                           [
                               colorName,
@@ -271,10 +283,27 @@ export function defineColorTheme<const Init extends ColorThemeInit>(
                       )
                     : `var(${defaultColors['default-bg'].name}, ${defaultColors['default-bg'].default})`;
 
-                accum[names.foregroundInverse] =
-                    `var(--${names.background}, ${accum[names.background]})`;
-                accum[names.backgroundInverse] =
-                    `var(--${names.foreground}, ${accum[names.foreground]})`;
+                accum[names.foreground] = {
+                    default: foreground,
+                    initialValue: 'transparent',
+                    syntax: CssVarSyntaxName.Color,
+                };
+                accum[names.background] = {
+                    default: background,
+                    initialValue: 'transparent',
+                    syntax: CssVarSyntaxName.Color,
+                };
+
+                accum[names.foregroundInverse] = {
+                    default: `var(--${names.background}, ${background})`,
+                    initialValue: 'transparent',
+                    syntax: CssVarSyntaxName.Color,
+                };
+                accum[names.backgroundInverse] = {
+                    default: `var(--${names.foreground}, ${foreground})`,
+                    initialValue: 'transparent',
+                    syntax: CssVarSyntaxName.Color,
+                };
 
                 return accum;
             },
@@ -286,9 +315,7 @@ export function defineColorTheme<const Init extends ColorThemeInit>(
          * generic. That is indeed true, but in this use case we do not care because the resulting
          * `cssVars` object is not directly exposed.
          */
-        const cssVars = defineCssVars(
-            cssVarsSetup as any,
-        ) as unknown as CssVarDefinitions<CssVarsSetup>;
+        const cssVars = defineCssVars(cssVarsSetup);
 
         const colors: Record<string, ColorThemeColor> = {};
         const inverseColors: Record<string, ColorThemeColor> = {};
