@@ -2,6 +2,7 @@ import {assert, assertWrap, check} from '@augment-vir/assert';
 import {
     crossProduct,
     filterMap,
+    getEnumValues,
     getOrSet,
     log,
     mapObjectValues,
@@ -162,13 +163,8 @@ export const defaultLightThemePair: RequiredAndNotNull<NoRefColorInit> = {
 };
 
 /** @category Internal */
-export const defaultContrastLevels: Readonly<ArrayOrSelectParam<ContrastLevelName>> = {
-    [ContrastLevelName.BodyText]: true,
-    [ContrastLevelName.NonBodyText]: true,
-    [ContrastLevelName.Header]: true,
-    [ContrastLevelName.Placeholder]: true,
-    [ContrastLevelName.Decoration]: true,
-};
+export const defaultContrastLevels: Readonly<ArrayOrSelectParam<ContrastLevelName>> =
+    getEnumValues(ContrastLevelName);
 
 /**
  * Options for {@link buildColorTheme}.

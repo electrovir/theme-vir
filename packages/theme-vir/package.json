@@ -1,6 +1,6 @@
 {
     "name": "theme-vir",
-    "version": "28.18.4",
+    "version": "28.18.5",
     "description": "Create an entire web theme.",
     "keywords": [
         "design",
@@ -45,7 +45,7 @@
     "dependencies": {
         "@augment-vir/assert": "^31.59.0",
         "@augment-vir/common": "^31.59.0",
-        "@electrovir/color": "^1.7.5",
+        "@electrovir/color": "^1.7.6",
         "apca-w3": "^0.1.9",
         "lit-css-vars": "^3.2.2",
         "type-fest": "^5.4.1"
@@ -59,7 +59,7 @@
         "@web/test-runner-playwright": "^0.11.1",
         "@web/test-runner-visual-regression": "^0.10.0",
         "element-book": "^26.15.3",
-        "element-vir": "^26.14.2",
+        "element-vir": "^26.14.3",
         "esbuild": "^0.27.2",
         "istanbul-smart-text-reporter": "^1.1.5",
         "markdown-code-example-inserter": "^3.0.3",
