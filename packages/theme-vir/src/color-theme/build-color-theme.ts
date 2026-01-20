@@ -1,5 +1,6 @@
 import {assert, assertWrap, check} from '@augment-vir/assert';
 import {
+    arrayToObject,
     crossProduct,
     filterMap,
     getEnumValues,
@@ -226,6 +227,21 @@ export function buildColorTheme(
     const lightThemeColors: Record<CssVarName, ColorInit> = {};
     const darkThemeOverrides: Record<CssVarName, ColorInit> = {};
 
+    // Compute these once outside the loop since they don't change
+    const allCrosses = crossProduct({
+        crossWith: [
+            'color-in-foreground-light-mode',
+            'color-in-background-light-mode',
+            'color-in-foreground-dark-mode',
+            'color-in-background-dark-mode',
+            'color-on-self-dark-mode',
+            'color-on-self-light-mode',
+        ],
+        contrast: contrastLevels,
+    });
+    const defaultForegroundString: string = noRefColorInitToString(defaultTheme.foreground);
+    const defaultBackgroundString: string = noRefColorInitToString(defaultTheme.background);
+
     Object.entries(colorGroups).forEach(
         ([
             colorGroupName,
@@ -233,25 +249,22 @@ export function buildColorTheme(
         ]) => {
             assert.isLengthAtLeast(colors, 1);
             const colorStrings: string[] = colors.map((color) => color.definition.default);
-            const allCrosses = crossProduct({
-                crossWith: [
-                    'color-in-foreground-light-mode',
-                    'color-in-background-light-mode',
-                    'color-in-foreground-dark-mode',
-                    'color-in-background-dark-mode',
-                    'color-on-self-dark-mode',
-                    'color-on-self-light-mode',
-                ],
-                contrast: contrastLevels,
-                // fontWeight: fontWeights,
-            });
             const firstColor = colors[0];
 
-            const defaultForegroundString: string = noRefColorInitToString(defaultTheme.foreground);
-            const defaultBackgroundString: string = noRefColorInitToString(defaultTheme.background);
+            // Create an object for O(1) color lookup instead of O(n) find()
+            const colorByDefault = arrayToObject(colors, (color) => ({
+                key: color.definition.default,
+                value: color,
+            }));
 
             const lightestSelf = findClosestColor('white', colorStrings);
             const darkestSelf = findClosestColor('black', colorStrings);
+
+            // Pre-compute base name parts that don't change per cross
+            const baseNameParts = [
+                prefix,
+                firstColor.colorName,
+            ];
 
             allCrosses.forEach((cross) => {
                 const comparison =
@@ -293,9 +306,9 @@ export function buildColorTheme(
                 }
 
                 const matchedColorString = findColorAtContrastLevel(comparison, cross.contrast);
-                const matchedColor = colors.find(
-                    (color) => color.definition.default === matchedColorString,
-                );
+                const matchedColor = matchedColorString
+                    ? colorByDefault[matchedColorString]
+                    : undefined;
 
                 if (!matchedColor) {
                     log.error(
@@ -312,66 +325,40 @@ export function buildColorTheme(
                     }
                 });
 
-                if (cross.crossWith === 'color-in-foreground-light-mode') {
-                    const name = [
-                        prefix,
-                        firstColor.colorName,
-                        'foreground',
-                        cross.contrast,
-                    ].join('-') as CssVarName;
+                const isLightMode =
+                    cross.crossWith === 'color-in-foreground-light-mode' ||
+                    cross.crossWith === 'color-in-background-light-mode' ||
+                    cross.crossWith === 'color-on-self-light-mode';
 
+                const isSelfContrast =
+                    cross.crossWith === 'color-on-self-light-mode' ||
+                    cross.crossWith === 'color-on-self-dark-mode';
+
+                const nameSuffix = isSelfContrast
+                    ? [
+                          'on',
+                          'self',
+                          cross.contrast,
+                      ]
+                    : cross.crossWith.includes('foreground')
+                      ? [
+                            'foreground',
+                            cross.contrast,
+                        ]
+                      : [
+                            'background',
+                            cross.contrast,
+                        ];
+
+                const name = [
+                    ...baseNameParts,
+                    ...nameSuffix,
+                ].join('-') as CssVarName;
+
+                if (isLightMode) {
                     lightThemeColors[name] = colorValue;
-                } else if (cross.crossWith === 'color-in-background-light-mode') {
-                    const name = [
-                        prefix,
-                        firstColor.colorName,
-                        'background',
-                        cross.contrast,
-                    ].join('-') as CssVarName;
-
-                    lightThemeColors[name] = colorValue;
-                } else if (cross.crossWith === 'color-on-self-light-mode') {
-                    const name = [
-                        prefix,
-                        firstColor.colorName,
-                        'on',
-                        'self',
-                        cross.contrast,
-                    ].join('-') as CssVarName;
-
-                    lightThemeColors[name] = colorValue;
-                } else if (cross.crossWith === 'color-in-foreground-dark-mode') {
-                    const name = [
-                        prefix,
-                        firstColor.colorName,
-                        'foreground',
-                        cross.contrast,
-                    ].join('-') as CssVarName;
-
-                    darkThemeOverrides[name] = colorValue;
-                } else if (cross.crossWith === 'color-in-background-dark-mode') {
-                    const name = [
-                        prefix,
-                        firstColor.colorName,
-                        'background',
-                        cross.contrast,
-                    ].join('-') as CssVarName;
-
-                    darkThemeOverrides[name] = colorValue;
-                    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-                } else if (cross.crossWith === 'color-on-self-dark-mode') {
-                    const name = [
-                        prefix,
-                        firstColor.colorName,
-                        'on',
-                        'self',
-                        cross.contrast,
-                    ].join('-') as CssVarName;
-
-                    darkThemeOverrides[name] = colorValue;
                 } else {
-                    assert.tsType(cross.crossWith).equals<never>();
-                    throw new Error(`crossWith not handled: ${String(cross.crossWith)}`);
+                    darkThemeOverrides[name] = colorValue;
                 }
             });
         },

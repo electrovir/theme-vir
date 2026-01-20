@@ -126,14 +126,7 @@ export function createColorThemeBookPages({
             : nothing;
 
         return html`
-            <div
-                class="with-inverse"
-                ${onDomRendered((element) => {
-                    applyColorTheme(assertWrap.instanceOf(element, HTMLElement), theme);
-                })}
-            >
-                ${normalTemplate}${inverseTemplate}
-            </div>
+            <div class="with-inverse">${normalTemplate}${inverseTemplate}</div>
         `;
     }
 
@@ -172,6 +165,10 @@ export function createColorThemeBookPages({
                             gap: 4px;
                         }
 
+                        .theme-wrapper {
+                            display: contents;
+                        }
+
                         .with-inverse {
                             display: flex;
                             flex-direction: column;
@@ -187,13 +184,27 @@ export function createColorThemeBookPages({
                                 )) ||
                             undefined;
 
-                        return group.map((entry) =>
-                            buildThemeColorTemplate({
-                                controls,
-                                theme: selectedOverride?.asTheme || defaultTheme,
-                                themeColorName: entry,
-                            }),
-                        );
+                        const currentTheme = selectedOverride?.asTheme || defaultTheme;
+
+                        return html`
+                            <div
+                                class="theme-wrapper"
+                                ${onDomRendered((element) => {
+                                    applyColorTheme(
+                                        assertWrap.instanceOf(element, HTMLElement),
+                                        currentTheme,
+                                    );
+                                })}
+                            >
+                                ${group.map((entry) =>
+                                    buildThemeColorTemplate({
+                                        controls,
+                                        theme: currentTheme,
+                                        themeColorName: entry,
+                                    }),
+                                )}
+                            </div>
+                        `;
                     },
                 });
             },

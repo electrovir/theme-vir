@@ -5,7 +5,7 @@ import {defineBookPage, type BookPage} from 'element-book';
 import {css, html, unsafeCSS} from 'element-vir';
 import {type SingleCssVarDefinition} from 'lit-css-vars';
 import {type RequireExactlyOne} from 'type-fest';
-import {noNativeSpacing, viraColorPalette} from 'vira';
+import {noNativeSpacing, viraColorPalette, viraTheme} from 'vira';
 import {
     buildColorTheme,
     groupColors,
@@ -14,6 +14,7 @@ import {
     type PaletteColor,
 } from './build-color-theme.js';
 import {createColorThemeBookPages} from './color-theme-book-pages.js';
+import {themeDefaultKey} from './color-theme.js';
 
 type ContrastCell = {
     title: string;
@@ -27,42 +28,42 @@ const blackWhiteCells: ContrastCell[] = [
     {
         title: 'Black',
         fontWeight: 400,
-        foreground: viraColorPalette['vira-black'],
+        foreground: viraTheme.colors[themeDefaultKey].foreground,
     },
     {
         title: 'Black',
         fontWeight: 700,
-        foreground: viraColorPalette['vira-black'],
+        foreground: viraTheme.colors[themeDefaultKey].foreground,
     },
     {
         title: 'White',
         fontWeight: 400,
-        foreground: viraColorPalette['vira-white'],
+        foreground: viraTheme.colors[themeDefaultKey].background,
     },
     {
         title: 'White',
         fontWeight: 700,
-        foreground: viraColorPalette['vira-white'],
+        foreground: viraTheme.colors[themeDefaultKey].background,
     },
     {
         title: 'Black',
         fontWeight: 400,
-        background: viraColorPalette['vira-black'],
+        background: viraTheme.colors[themeDefaultKey].foreground,
     },
     {
         title: 'Black',
         fontWeight: 700,
-        background: viraColorPalette['vira-black'],
+        background: viraTheme.colors[themeDefaultKey].foreground,
     },
     {
         title: 'White',
         fontWeight: 400,
-        background: viraColorPalette['vira-white'],
+        background: viraTheme.colors[themeDefaultKey].background,
     },
     {
         title: 'White',
         fontWeight: 700,
-        background: viraColorPalette['vira-white'],
+        background: viraTheme.colors[themeDefaultKey].background,
     },
 ];
 
