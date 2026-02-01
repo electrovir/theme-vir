@@ -3,16 +3,13 @@ import {
     getObjectTypedEntries,
     getObjectTypedValues,
     log,
-    mapObjectValues,
     type RequiredAndNotNull,
     type Values,
 } from '@augment-vir/common';
 import {CSSResult} from 'element-vir';
 import {
-    type CssPropertyDefinition,
     type CssVarName,
     type CssVarsSetup,
-    CssVarSyntaxName,
     defineCssVars,
     setCssVarValue,
     type SingleCssVarDefinition,
@@ -247,41 +244,32 @@ export function defineColorTheme<const Init extends ColorThemeInit>(
         const inverseDefaultForegroundKey = `${defaultInit.prefix}-default-inverse-fg`;
         const inverseDefaultBackgroundKey = `${defaultInit.prefix}-default-inverse-bg`;
 
-        const defaultColorsInit = mapObjectValues(
-            {
-                [defaultForegroundKey]: createColorCssVarDefault(
-                    defaultForegroundKey,
-                    defaultInit.foreground,
-                    defaultInit,
-                    allColorsInit,
-                ),
-                [defaultBackgroundKey]: createColorCssVarDefault(
-                    defaultBackgroundKey,
-                    defaultInit.background,
-                    defaultInit,
-                    allColorsInit,
-                ),
-                [inverseDefaultForegroundKey]: createColorCssVarDefault(
-                    inverseDefaultForegroundKey,
-                    defaultInit.background,
-                    defaultInit,
-                    allColorsInit,
-                ),
-                [inverseDefaultBackgroundKey]: createColorCssVarDefault(
-                    inverseDefaultBackgroundKey,
-                    defaultInit.foreground,
-                    defaultInit,
-                    allColorsInit,
-                ),
-            },
-            (key, value): CssPropertyDefinition => {
-                return {
-                    default: value,
-                    initialValue: 'transparent',
-                    syntax: CssVarSyntaxName.Color,
-                };
-            },
-        );
+        const defaultColorsInit = {
+            [defaultForegroundKey]: createColorCssVarDefault(
+                defaultForegroundKey,
+                defaultInit.foreground,
+                defaultInit,
+                allColorsInit,
+            ),
+            [defaultBackgroundKey]: createColorCssVarDefault(
+                defaultBackgroundKey,
+                defaultInit.background,
+                defaultInit,
+                allColorsInit,
+            ),
+            [inverseDefaultForegroundKey]: createColorCssVarDefault(
+                inverseDefaultForegroundKey,
+                defaultInit.background,
+                defaultInit,
+                allColorsInit,
+            ),
+            [inverseDefaultBackgroundKey]: createColorCssVarDefault(
+                inverseDefaultBackgroundKey,
+                defaultInit.foreground,
+                defaultInit,
+                allColorsInit,
+            ),
+        };
 
         const defaultColors = defineCssVars(defaultColorsInit);
 
@@ -322,27 +310,11 @@ export function defineColorTheme<const Init extends ColorThemeInit>(
                     : // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
                       `var(${defaultColors[defaultBackgroundKey]!.name}, ${defaultColors[defaultBackgroundKey]!.default})`;
 
-                accum[names.foreground] = {
-                    default: foreground,
-                    initialValue: 'transparent',
-                    syntax: CssVarSyntaxName.Color,
-                };
-                accum[names.background] = {
-                    default: background,
-                    initialValue: 'transparent',
-                    syntax: CssVarSyntaxName.Color,
-                };
+                accum[names.foreground] = foreground;
+                accum[names.background] = background;
 
-                accum[names.foregroundInverse] = {
-                    default: `var(--${names.background})`,
-                    initialValue: 'transparent',
-                    syntax: CssVarSyntaxName.Color,
-                };
-                accum[names.backgroundInverse] = {
-                    default: `var(--${names.foreground})`,
-                    initialValue: 'transparent',
-                    syntax: CssVarSyntaxName.Color,
-                };
+                accum[names.foregroundInverse] = `var(--${names.background}, ${background})`;
+                accum[names.backgroundInverse] = `var(--${names.foreground}, ${foreground})`;
 
                 return accum;
             },

@@ -1,4 +1,4 @@
-import {assertWrap, check} from '@augment-vir/assert';
+import {check} from '@augment-vir/assert';
 import {groupArrayBy, type PartialWithUndefined} from '@augment-vir/common';
 import {VirColorPair} from '@electrovir/color';
 import {
@@ -8,11 +8,11 @@ import {
     type BookPage,
     type DefineExampleCallback,
 } from 'element-book';
-import {css, html, listen, nothing, onDomRendered} from 'element-vir';
+import {css, html, listen, nothing} from 'element-vir';
 import {type EmptyObject} from 'type-fest';
 import {generateThemeCode} from './color-theme-code.js';
 import {type ColorThemeOverride} from './color-theme-init.js';
-import {applyColorTheme, type ColorTheme} from './color-theme.js';
+import {type ColorTheme} from './color-theme.js';
 
 const noneOverridesSelectionValue = 'None';
 
@@ -187,15 +187,7 @@ export function createColorThemeBookPages({
                         const currentTheme = selectedOverride?.asTheme || defaultTheme;
 
                         return html`
-                            <div
-                                class="theme-wrapper"
-                                ${onDomRendered((element) => {
-                                    applyColorTheme(
-                                        assertWrap.instanceOf(element, HTMLElement),
-                                        currentTheme,
-                                    );
-                                })}
-                            >
+                            <div class="theme-wrapper">
                                 ${group.map((entry) =>
                                     buildThemeColorTemplate({
                                         controls,
