@@ -257,8 +257,10 @@ export function buildColorTheme(
                 value: color,
             }));
 
-            const lightestSelf = findClosestColor('white', colorStrings);
-            const darkestSelf = findClosestColor('black', colorStrings);
+            const lightestSelfString = findClosestColor('white', colorStrings);
+            const darkestSelfString = findClosestColor('black', colorStrings);
+            const lightestSelf = colorByDefault[lightestSelfString];
+            const darkestSelf = colorByDefault[darkestSelfString];
 
             // Pre-compute base name parts that don't change per cross
             const baseNameParts = [
@@ -291,13 +293,13 @@ export function buildColorTheme(
                               : cross.crossWith === 'color-on-self-dark-mode'
                                 ? {
                                       foreground: colorStrings,
-                                      background: darkestSelf,
+                                      background: darkestSelfString,
                                   }
                                 : // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
                                   cross.crossWith === 'color-on-self-light-mode'
                                   ? {
                                         foreground: colorStrings,
-                                        background: lightestSelf,
+                                        background: lightestSelfString,
                                     }
                                   : undefined;
 
@@ -317,8 +319,20 @@ export function buildColorTheme(
                     return undefined;
                 }
 
+                const isSelfContrast =
+                    cross.crossWith === 'color-on-self-light-mode' ||
+                    cross.crossWith === 'color-on-self-dark-mode';
+
                 const colorValue = mapObjectValues(comparison, (key, value) => {
                     if (check.isString(value)) {
+                        // For self-contrast modes, use the CSS var reference for the background
+                        if (isSelfContrast && key === 'background') {
+                            const selfColor =
+                                cross.crossWith === 'color-on-self-light-mode'
+                                    ? lightestSelf
+                                    : darkestSelf;
+                            return selfColor?.definition.value ?? value;
+                        }
                         return value;
                     } else {
                         return matchedColor.definition.value;
@@ -329,10 +343,6 @@ export function buildColorTheme(
                     cross.crossWith === 'color-in-foreground-light-mode' ||
                     cross.crossWith === 'color-in-background-light-mode' ||
                     cross.crossWith === 'color-on-self-light-mode';
-
-                const isSelfContrast =
-                    cross.crossWith === 'color-on-self-light-mode' ||
-                    cross.crossWith === 'color-on-self-dark-mode';
 
                 const nameSuffix = isSelfContrast
                     ? [
