@@ -231,11 +231,13 @@ export function buildColorTheme(
     const allCrosses = crossProduct({
         crossWith: [
             'color-in-foreground-light-mode',
-            'color-in-background-light-mode',
             'color-in-foreground-dark-mode',
-            'color-in-background-dark-mode',
-            'color-on-self-dark-mode',
+            'color-behind-bg-light-mode',
+            'color-behind-bg-dark-mode',
+            'color-behind-fg-light-mode',
+            'color-behind-fg-dark-mode',
             'color-on-self-light-mode',
+            'color-on-self-dark-mode',
         ],
         contrast: contrastLevels,
     });
@@ -275,33 +277,43 @@ export function buildColorTheme(
                               foreground: colorStrings,
                               background: defaultBackgroundString,
                           }
-                        : cross.crossWith === 'color-in-background-light-mode'
+                        : cross.crossWith === 'color-in-foreground-dark-mode'
                           ? {
-                                foreground: defaultBackgroundString,
-                                background: colorStrings,
+                                foreground: colorStrings,
+                                background: defaultForegroundString,
                             }
-                          : cross.crossWith === 'color-in-foreground-dark-mode'
+                          : cross.crossWith === 'color-on-self-dark-mode'
                             ? {
                                   foreground: colorStrings,
-                                  background: defaultForegroundString,
+                                  background: darkestSelfString,
                               }
-                            : cross.crossWith === 'color-in-background-dark-mode'
+                            : cross.crossWith === 'color-on-self-light-mode'
                               ? {
-                                    foreground: defaultForegroundString,
-                                    background: colorStrings,
+                                    foreground: colorStrings,
+                                    background: lightestSelfString,
                                 }
-                              : cross.crossWith === 'color-on-self-dark-mode'
+                              : cross.crossWith === 'color-behind-bg-light-mode'
                                 ? {
-                                      foreground: colorStrings,
-                                      background: darkestSelfString,
+                                      foreground: defaultBackgroundString,
+                                      background: colorStrings,
                                   }
-                                : // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-                                  cross.crossWith === 'color-on-self-light-mode'
+                                : cross.crossWith === 'color-behind-bg-dark-mode'
                                   ? {
-                                        foreground: colorStrings,
-                                        background: lightestSelfString,
+                                        foreground: defaultForegroundString,
+                                        background: colorStrings,
                                     }
-                                  : undefined;
+                                  : cross.crossWith === 'color-behind-fg-light-mode'
+                                    ? {
+                                          foreground: defaultForegroundString,
+                                          background: colorStrings,
+                                      }
+                                    : // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+                                      cross.crossWith === 'color-behind-fg-dark-mode'
+                                      ? {
+                                            foreground: defaultBackgroundString,
+                                            background: colorStrings,
+                                        }
+                                      : undefined;
 
                 if (!comparison) {
                     throw new Error(`Forgot to handle crossWith: '${cross.crossWith}'`);
@@ -322,6 +334,12 @@ export function buildColorTheme(
                 const isSelfContrast =
                     cross.crossWith === 'color-on-self-light-mode' ||
                     cross.crossWith === 'color-on-self-dark-mode';
+                const isBehindBg =
+                    cross.crossWith === 'color-behind-bg-light-mode' ||
+                    cross.crossWith === 'color-behind-bg-dark-mode';
+                const isBehindFg =
+                    cross.crossWith === 'color-behind-fg-light-mode' ||
+                    cross.crossWith === 'color-behind-fg-dark-mode';
 
                 const colorValue = mapObjectValues(comparison, (key, value) => {
                     if (check.isString(value)) {
@@ -341,8 +359,9 @@ export function buildColorTheme(
 
                 const isLightMode =
                     cross.crossWith === 'color-in-foreground-light-mode' ||
-                    cross.crossWith === 'color-in-background-light-mode' ||
-                    cross.crossWith === 'color-on-self-light-mode';
+                    cross.crossWith === 'color-on-self-light-mode' ||
+                    cross.crossWith === 'color-behind-bg-light-mode' ||
+                    cross.crossWith === 'color-behind-fg-light-mode';
 
                 const nameSuffix = isSelfContrast
                     ? [
@@ -350,15 +369,22 @@ export function buildColorTheme(
                           'self',
                           cross.contrast,
                       ]
-                    : cross.crossWith.includes('foreground')
+                    : isBehindBg
                       ? [
-                            'foreground',
+                            'behind',
+                            'bg',
                             cross.contrast,
                         ]
-                      : [
-                            'background',
-                            cross.contrast,
-                        ];
+                      : isBehindFg
+                        ? [
+                              'behind',
+                              'fg',
+                              cross.contrast,
+                          ]
+                        : [
+                              'foreground',
+                              cross.contrast,
+                          ];
 
                 const name = [
                     ...baseNameParts,
