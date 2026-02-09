@@ -1,7 +1,6 @@
 import {assert, check} from '@augment-vir/assert';
 import {
     getObjectTypedEntries,
-    getObjectTypedValues,
     log,
     type RequiredAndNotNull,
     type Values,
@@ -11,7 +10,6 @@ import {
     type CssVarName,
     type CssVarsSetup,
     defineCssVars,
-    setCssVarValue,
     type SingleCssVarDefinition,
 } from 'lit-css-vars';
 import {type RequireAtLeastOne, type Writable} from 'type-fest';
@@ -20,7 +18,6 @@ import {
     type ColorInitReference,
     type ColorInitValue,
     type ColorThemeInit,
-    type ColorThemeOverride,
 } from './color-theme-init.js';
 
 /**
@@ -65,6 +62,7 @@ export type ColorTheme<Init extends ColorThemeInit = ColorThemeInit> = {
         colors: Init;
         default: Readonly<DefaultColorThemeInit>;
     };
+    prefix: string;
 };
 
 /**
@@ -171,57 +169,6 @@ export type DefaultColorThemeInit = RequiredAndNotNull<NoRefColorInit> & {
  * @category Internal
  */
 export const themeDefaultKey = 'theme-default' satisfies CssVarName;
-
-/**
- * Set all color theme CSS vars on the given element. If no override is given, the theme color
- * default values are assigned.
- *
- * @category Color Theme
- */
-export function applyColorTheme<const Theme extends ColorTheme>(
-    /** This should usually be the top-level `html` element. */
-    element: HTMLElement,
-    fullTheme: Theme,
-    themeOverride?: ColorThemeOverride | undefined,
-) {
-    getObjectTypedValues(fullTheme.colors as Record<CssVarName, ColorThemeColor>).forEach(
-        (themeColor) => {
-            applyIndividualThemeColorValue({
-                element,
-                layerKey: 'background',
-                themeColor,
-                themeOverride,
-            });
-            applyIndividualThemeColorValue({
-                element,
-                layerKey: 'foreground',
-                themeColor,
-                themeOverride,
-            });
-        },
-    );
-}
-
-function applyIndividualThemeColorValue({
-    element,
-    layerKey,
-    themeOverride,
-    themeColor,
-}: {
-    element: HTMLElement;
-    layerKey: keyof ColorInit;
-    themeOverride: ColorThemeOverride | undefined;
-    themeColor: ColorThemeColor;
-}) {
-    const override = themeOverride?.overrides[String(themeColor[layerKey].name) as CssVarName];
-    const value: string | number = override || themeColor[layerKey].default;
-
-    setCssVarValue({
-        forCssVar: themeColor[layerKey],
-        onElement: element,
-        toValue: value,
-    });
-}
 
 /**
  * Define a color theme.
@@ -396,7 +343,8 @@ export function defineColorTheme<const Init extends ColorThemeInit>(
                 colors: allColorsInit,
                 default: defaultInit,
             },
-        } as ColorTheme<Init>;
+            prefix: defaultInit.prefix,
+        } satisfies ColorTheme<any> as ColorTheme<Init>;
     } catch (error) {
         globalThis.setTimeout(() => log.error(error));
         throw error;

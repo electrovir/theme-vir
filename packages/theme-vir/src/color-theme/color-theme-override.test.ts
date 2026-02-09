@@ -1,9 +1,12 @@
+/* eslint-disable @typescript-eslint/no-deprecated */
+
 import {assert} from '@augment-vir/assert';
 import {describe, it, testWeb} from '@augment-vir/test';
 import {colorCss} from '@electrovir/color';
 import {css, html} from 'element-vir';
+import {applyColorTheme} from './apply-color-theme.js';
 import {defineColorThemeOverride} from './color-theme-override.js';
-import {applyColorTheme, defineColorTheme} from './color-theme.js';
+import {defineColorTheme} from './color-theme.js';
 
 const mockTheme = defineColorTheme(
     {

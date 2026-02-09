@@ -1,5 +1,6 @@
 import {ElementBookApp} from 'element-book';
 import {css, defineElement, html} from 'element-vir';
+import {applyColorThemeBookPage} from '../color-theme/apply-color-theme.book.js';
 import {createColorThemeBookPages} from '../color-theme/color-theme-book-pages.js';
 import {mockColorTheme, mockOrange, mockThemeDarkMode} from '../color-theme/color-theme.mock.js';
 import {createTheme} from '../create-theme/create-theme.js';
@@ -38,6 +39,7 @@ export const VirThemeBookApp = defineElement()({
                     mockOrange,
                 ],
             }),
+            applyColorThemeBookPage,
         ];
 
         return html`
