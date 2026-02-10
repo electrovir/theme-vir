@@ -2,7 +2,7 @@ import {colorCss} from '@electrovir/color';
 import {defineBookPage} from 'element-book';
 import {css, defineElement, html, listen} from 'element-vir';
 import {ViraButton, viraTheme, viraThemeDarkOverride} from 'vira';
-import {applyGlobalColorTheme} from './apply-color-theme.js';
+import {applyColorThemeViaStyleElement} from './apply-color-theme.js';
 import {type ColorThemeColor} from './color-theme.js';
 
 const VirApplyThemeDemo = defineElement()({
@@ -62,7 +62,7 @@ const VirApplyThemeDemo = defineElement()({
                     updateState({
                         useDarkTheme: !state.useDarkTheme,
                     });
-                    applyGlobalColorTheme(
+                    applyColorThemeViaStyleElement(
                         viraTheme,
                         state.useDarkTheme ? viraThemeDarkOverride : undefined,
                     );
@@ -74,7 +74,7 @@ const VirApplyThemeDemo = defineElement()({
 });
 
 export const applyColorThemeBookPage = defineBookPage({
-    title: applyGlobalColorTheme.name,
+    title: applyColorThemeViaStyleElement.name,
     parent: undefined,
     defineExamples({defineExample}) {
         defineExample({
