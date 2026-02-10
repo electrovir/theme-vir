@@ -19,7 +19,7 @@ import {
     findColorAtContrastLevel,
 } from '@electrovir/color';
 import {type CssVarDefinitions, type CssVarName, type SingleCssVarDefinition} from 'lit-css-vars';
-import {type ColorInit} from './color-theme-init.js';
+import {type ColorInit, type ColorInitValue} from './color-theme-init.js';
 import {defineColorThemeOverride} from './color-theme-override.js';
 import {
     defineColorTheme,
@@ -315,6 +315,46 @@ export function buildColorTheme(
                                         }
                                       : undefined;
 
+                /** Tracks which default reference each string value in the comparison maps to. */
+                const referencesToDefault =
+                    cross.crossWith === 'color-in-foreground-light-mode'
+                        ? {
+                              background: {
+                                  refDefaultBackground: true as const,
+                              },
+                          }
+                        : cross.crossWith === 'color-in-foreground-dark-mode'
+                          ? {
+                                background: {
+                                    refDefaultBackground: true as const,
+                                },
+                            }
+                          : cross.crossWith === 'color-behind-bg-light-mode'
+                            ? {
+                                  foreground: {
+                                      refDefaultBackground: true as const,
+                                  },
+                              }
+                            : cross.crossWith === 'color-behind-bg-dark-mode'
+                              ? {
+                                    foreground: {
+                                        refDefaultBackground: true as const,
+                                    },
+                                }
+                              : cross.crossWith === 'color-behind-fg-light-mode'
+                                ? {
+                                      foreground: {
+                                          refDefaultForeground: true as const,
+                                      },
+                                  }
+                                : cross.crossWith === 'color-behind-fg-dark-mode'
+                                  ? {
+                                        foreground: {
+                                            refDefaultForeground: true as const,
+                                        },
+                                    }
+                                  : undefined;
+
                 if (!comparison) {
                     throw new Error(`Forgot to handle crossWith: '${cross.crossWith}'`);
                 }
@@ -341,21 +381,32 @@ export function buildColorTheme(
                     cross.crossWith === 'color-behind-fg-light-mode' ||
                     cross.crossWith === 'color-behind-fg-dark-mode';
 
-                const colorValue = mapObjectValues(comparison, (key, value) => {
-                    if (check.isString(value)) {
-                        // For self-contrast modes, use the CSS var reference for the background
-                        if (isSelfContrast && key === 'background') {
-                            const selfColor =
-                                cross.crossWith === 'color-on-self-light-mode'
-                                    ? lightestSelf
-                                    : darkestSelf;
-                            return selfColor?.definition.value ?? value;
+                const colorValue: ColorInit = mapObjectValues(
+                    comparison,
+                    (key, value): ColorInitValue => {
+                        if (check.isString(value)) {
+                            // For self-contrast modes, use the CSS var reference for the background
+                            if (isSelfContrast && key === 'background') {
+                                const selfColor =
+                                    cross.crossWith === 'color-on-self-light-mode'
+                                        ? lightestSelf
+                                        : darkestSelf;
+                                return selfColor?.definition.value || value;
+                            }
+                            const referenceToDefault =
+                                referencesToDefault &&
+                                check.isKeyOf(key, referencesToDefault) &&
+                                referencesToDefault[key];
+
+                            if (referenceToDefault) {
+                                return referenceToDefault;
+                            }
+                            return value;
+                        } else {
+                            return matchedColor.definition.value;
                         }
-                        return value;
-                    } else {
-                        return matchedColor.definition.value;
-                    }
-                });
+                    },
+                );
 
                 const isLightMode =
                     cross.crossWith === 'color-in-foreground-light-mode' ||

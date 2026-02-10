@@ -1,0 +1,10085 @@
+export default {
+    "buildColorTheme > defines a theme 1": {
+        "defaultLight": {
+            "colors": {
+                "theme-default": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-default-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-default-fg, black)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "black"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-default-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-default-bg, white)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "white"
+                    },
+                    "init": {
+                        "background": "white",
+                        "foreground": "black",
+                        "prefix": "vir"
+                    },
+                    "name": "theme-default"
+                },
+                "vir-red-foreground-small-body": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-foreground-small-body-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-foreground-small-body-fg, var(--vira-red-90, #760003))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vira-red-90, #760003)"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-foreground-small-body-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-foreground-small-body-bg, var(--vir-default-bg, white))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-default-bg, white)"
+                    },
+                    "init": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-90, #760003)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "refDefaultBackground": true
+                        }
+                    },
+                    "name": "vir-red-foreground-small-body"
+                },
+                "vir-red-foreground-body": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-foreground-body-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-foreground-body-fg, var(--vira-red-80, #a60012))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vira-red-80, #a60012)"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-foreground-body-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-foreground-body-bg, var(--vir-default-bg, white))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-default-bg, white)"
+                    },
+                    "init": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-80, #a60012)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "refDefaultBackground": true
+                        }
+                    },
+                    "name": "vir-red-foreground-body"
+                },
+                "vir-red-foreground-non-body": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-foreground-non-body-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-foreground-non-body-fg, var(--vira-red-60, #f9163a))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vira-red-60, #f9163a)"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-foreground-non-body-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-foreground-non-body-bg, var(--vir-default-bg, white))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-default-bg, white)"
+                    },
+                    "init": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-60, #f9163a)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "refDefaultBackground": true
+                        }
+                    },
+                    "name": "vir-red-foreground-non-body"
+                },
+                "vir-red-foreground-header": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-foreground-header-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-foreground-header-fg, var(--vira-red-50, #ff6065))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vira-red-50, #ff6065)"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-foreground-header-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-foreground-header-bg, var(--vir-default-bg, white))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-default-bg, white)"
+                    },
+                    "init": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-50, #ff6065)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "refDefaultBackground": true
+                        }
+                    },
+                    "name": "vir-red-foreground-header"
+                },
+                "vir-red-foreground-placeholder": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-foreground-placeholder-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-foreground-placeholder-fg, var(--vira-red-30, #ffa7a2))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vira-red-30, #ffa7a2)"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-foreground-placeholder-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-foreground-placeholder-bg, var(--vir-default-bg, white))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-default-bg, white)"
+                    },
+                    "init": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-30, #ffa7a2)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "refDefaultBackground": true
+                        }
+                    },
+                    "name": "vir-red-foreground-placeholder"
+                },
+                "vir-red-foreground-decoration": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-foreground-decoration-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-foreground-decoration-fg, var(--vira-red-20, #ffc1bc))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vira-red-20, #ffc1bc)"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-foreground-decoration-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-foreground-decoration-bg, var(--vir-default-bg, white))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-default-bg, white)"
+                    },
+                    "init": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-20, #ffc1bc)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "refDefaultBackground": true
+                        }
+                    },
+                    "name": "vir-red-foreground-decoration"
+                },
+                "vir-red-foreground-invisible": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-foreground-invisible-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-foreground-invisible-fg, var(--vira-red-10, #ffd9d5))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vira-red-10, #ffd9d5)"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-foreground-invisible-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-foreground-invisible-bg, var(--vir-default-bg, white))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-default-bg, white)"
+                    },
+                    "init": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-10, #ffd9d5)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "refDefaultBackground": true
+                        }
+                    },
+                    "name": "vir-red-foreground-invisible"
+                },
+                "vir-red-behind-bg-small-body": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-bg-small-body-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-bg-small-body-fg, var(--vir-default-bg, white))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-default-bg, white)"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-bg-small-body-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-bg-small-body-bg, var(--vira-red-90, #760003))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vira-red-90, #760003)"
+                    },
+                    "init": {
+                        "foreground": {
+                            "refDefaultBackground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-90, #760003)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-behind-bg-small-body"
+                },
+                "vir-red-behind-bg-body": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-bg-body-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-bg-body-fg, var(--vir-default-bg, white))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-default-bg, white)"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-bg-body-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-bg-body-bg, var(--vira-red-80, #a60012))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vira-red-80, #a60012)"
+                    },
+                    "init": {
+                        "foreground": {
+                            "refDefaultBackground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-80, #a60012)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-behind-bg-body"
+                },
+                "vir-red-behind-bg-non-body": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-bg-non-body-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-bg-non-body-fg, var(--vir-default-bg, white))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-default-bg, white)"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-bg-non-body-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-bg-non-body-bg, var(--vira-red-60, #f9163a))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vira-red-60, #f9163a)"
+                    },
+                    "init": {
+                        "foreground": {
+                            "refDefaultBackground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-60, #f9163a)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-behind-bg-non-body"
+                },
+                "vir-red-behind-bg-header": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-bg-header-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-bg-header-fg, var(--vir-default-bg, white))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-default-bg, white)"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-bg-header-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-bg-header-bg, var(--vira-red-40, #ff8886))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vira-red-40, #ff8886)"
+                    },
+                    "init": {
+                        "foreground": {
+                            "refDefaultBackground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-40, #ff8886)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-behind-bg-header"
+                },
+                "vir-red-behind-bg-placeholder": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-bg-placeholder-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-bg-placeholder-fg, var(--vir-default-bg, white))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-default-bg, white)"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-bg-placeholder-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-bg-placeholder-bg, var(--vira-red-30, #ffa7a2))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vira-red-30, #ffa7a2)"
+                    },
+                    "init": {
+                        "foreground": {
+                            "refDefaultBackground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-30, #ffa7a2)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-behind-bg-placeholder"
+                },
+                "vir-red-behind-bg-decoration": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-bg-decoration-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-bg-decoration-fg, var(--vir-default-bg, white))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-default-bg, white)"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-bg-decoration-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-bg-decoration-bg, var(--vira-red-20, #ffc1bc))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vira-red-20, #ffc1bc)"
+                    },
+                    "init": {
+                        "foreground": {
+                            "refDefaultBackground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-20, #ffc1bc)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-behind-bg-decoration"
+                },
+                "vir-red-behind-bg-invisible": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-bg-invisible-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-bg-invisible-fg, var(--vir-default-bg, white))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-default-bg, white)"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-bg-invisible-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-bg-invisible-bg, var(--vira-red-5, #ffe9e6))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vira-red-5, #ffe9e6)"
+                    },
+                    "init": {
+                        "foreground": {
+                            "refDefaultBackground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-5, #ffe9e6)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-behind-bg-invisible"
+                },
+                "vir-red-behind-fg-small-body": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-fg-small-body-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-fg-small-body-fg, var(--vir-default-fg, black))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-default-fg, black)"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-fg-small-body-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-fg-small-body-bg, var(--vira-red-5, #ffe9e6))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vira-red-5, #ffe9e6)"
+                    },
+                    "init": {
+                        "foreground": {
+                            "refDefaultForeground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-5, #ffe9e6)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-behind-fg-small-body"
+                },
+                "vir-red-behind-fg-body": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-fg-body-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-fg-body-fg, var(--vir-default-fg, black))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-default-fg, black)"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-fg-body-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-fg-body-bg, var(--vira-red-20, #ffc1bc))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vira-red-20, #ffc1bc)"
+                    },
+                    "init": {
+                        "foreground": {
+                            "refDefaultForeground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-20, #ffc1bc)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-behind-fg-body"
+                },
+                "vir-red-behind-fg-non-body": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-fg-non-body-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-fg-non-body-fg, var(--vir-default-fg, black))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-default-fg, black)"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-fg-non-body-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-fg-non-body-bg, var(--vira-red-30, #ffa7a2))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vira-red-30, #ffa7a2)"
+                    },
+                    "init": {
+                        "foreground": {
+                            "refDefaultForeground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-30, #ffa7a2)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-behind-fg-non-body"
+                },
+                "vir-red-behind-fg-header": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-fg-header-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-fg-header-fg, var(--vir-default-fg, black))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-default-fg, black)"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-fg-header-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-fg-header-bg, var(--vira-red-50, #ff6065))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vira-red-50, #ff6065)"
+                    },
+                    "init": {
+                        "foreground": {
+                            "refDefaultForeground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-50, #ff6065)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-behind-fg-header"
+                },
+                "vir-red-behind-fg-placeholder": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-fg-placeholder-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-fg-placeholder-fg, var(--vir-default-fg, black))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-default-fg, black)"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-fg-placeholder-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-fg-placeholder-bg, var(--vira-red-60, #f9163a))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vira-red-60, #f9163a)"
+                    },
+                    "init": {
+                        "foreground": {
+                            "refDefaultForeground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-60, #f9163a)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-behind-fg-placeholder"
+                },
+                "vir-red-behind-fg-decoration": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-fg-decoration-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-fg-decoration-fg, var(--vir-default-fg, black))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-default-fg, black)"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-fg-decoration-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-fg-decoration-bg, var(--vira-red-80, #a60012))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vira-red-80, #a60012)"
+                    },
+                    "init": {
+                        "foreground": {
+                            "refDefaultForeground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-80, #a60012)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-behind-fg-decoration"
+                },
+                "vir-red-behind-fg-invisible": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-fg-invisible-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-fg-invisible-fg, var(--vir-default-fg, black))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-default-fg, black)"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-fg-invisible-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-fg-invisible-bg, var(--vira-red-90, #760003))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vira-red-90, #760003)"
+                    },
+                    "init": {
+                        "foreground": {
+                            "refDefaultForeground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-90, #760003)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-behind-fg-invisible"
+                },
+                "vir-red-on-self-body": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-on-self-body-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-on-self-body-fg, var(--vira-red-90, #760003))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vira-red-90, #760003)"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-on-self-body-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-on-self-body-bg, var(--vira-red-5, #ffe9e6))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vira-red-5, #ffe9e6)"
+                    },
+                    "init": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-90, #760003)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-5, #ffe9e6)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-on-self-body"
+                },
+                "vir-red-on-self-non-body": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-on-self-non-body-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-on-self-non-body-fg, var(--vira-red-80, #a60012))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vira-red-80, #a60012)"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-on-self-non-body-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-on-self-non-body-bg, var(--vira-red-5, #ffe9e6))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vira-red-5, #ffe9e6)"
+                    },
+                    "init": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-80, #a60012)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-5, #ffe9e6)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-on-self-non-body"
+                },
+                "vir-red-on-self-header": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-on-self-header-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-on-self-header-fg, var(--vira-red-60, #f9163a))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vira-red-60, #f9163a)"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-on-self-header-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-on-self-header-bg, var(--vira-red-5, #ffe9e6))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vira-red-5, #ffe9e6)"
+                    },
+                    "init": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-60, #f9163a)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-5, #ffe9e6)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-on-self-header"
+                },
+                "vir-red-on-self-placeholder": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-on-self-placeholder-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-on-self-placeholder-fg, var(--vira-red-50, #ff6065))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vira-red-50, #ff6065)"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-on-self-placeholder-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-on-self-placeholder-bg, var(--vira-red-5, #ffe9e6))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vira-red-5, #ffe9e6)"
+                    },
+                    "init": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-50, #ff6065)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-5, #ffe9e6)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-on-self-placeholder"
+                },
+                "vir-red-on-self-decoration": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-on-self-decoration-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-on-self-decoration-fg, var(--vira-red-30, #ffa7a2))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vira-red-30, #ffa7a2)"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-on-self-decoration-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-on-self-decoration-bg, var(--vira-red-5, #ffe9e6))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vira-red-5, #ffe9e6)"
+                    },
+                    "init": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-30, #ffa7a2)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-5, #ffe9e6)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-on-self-decoration"
+                },
+                "vir-red-on-self-invisible": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-on-self-invisible-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-on-self-invisible-fg, var(--vira-red-20, #ffc1bc))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vira-red-20, #ffc1bc)"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-on-self-invisible-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-on-self-invisible-bg, var(--vira-red-5, #ffe9e6))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vira-red-5, #ffe9e6)"
+                    },
+                    "init": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-20, #ffc1bc)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-5, #ffe9e6)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-on-self-invisible"
+                }
+            },
+            "inverse": {
+                "theme-default": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-default-inverse-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-default-inverse-fg, white)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "white"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-default-inverse-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-default-inverse-bg, black)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "black"
+                    },
+                    "init": {
+                        "background": "white",
+                        "foreground": "black",
+                        "prefix": "vir"
+                    },
+                    "name": "theme-default"
+                },
+                "vir-red-foreground-small-body": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-foreground-small-body-inverse-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-foreground-small-body-inverse-fg, var(--vir-red-foreground-small-body-bg, var(--vir-default-bg, white)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-foreground-small-body-bg, var(--vir-default-bg, white))"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-foreground-small-body-inverse-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-foreground-small-body-inverse-bg, var(--vir-red-foreground-small-body-fg, var(--vira-red-90, #760003)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-foreground-small-body-fg, var(--vira-red-90, #760003))"
+                    },
+                    "init": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-90, #760003)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "refDefaultBackground": true
+                        }
+                    },
+                    "name": "vir-red-foreground-small-body"
+                },
+                "vir-red-foreground-body": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-foreground-body-inverse-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-foreground-body-inverse-fg, var(--vir-red-foreground-body-bg, var(--vir-default-bg, white)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-foreground-body-bg, var(--vir-default-bg, white))"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-foreground-body-inverse-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-foreground-body-inverse-bg, var(--vir-red-foreground-body-fg, var(--vira-red-80, #a60012)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-foreground-body-fg, var(--vira-red-80, #a60012))"
+                    },
+                    "init": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-80, #a60012)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "refDefaultBackground": true
+                        }
+                    },
+                    "name": "vir-red-foreground-body"
+                },
+                "vir-red-foreground-non-body": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-foreground-non-body-inverse-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-foreground-non-body-inverse-fg, var(--vir-red-foreground-non-body-bg, var(--vir-default-bg, white)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-foreground-non-body-bg, var(--vir-default-bg, white))"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-foreground-non-body-inverse-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-foreground-non-body-inverse-bg, var(--vir-red-foreground-non-body-fg, var(--vira-red-60, #f9163a)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-foreground-non-body-fg, var(--vira-red-60, #f9163a))"
+                    },
+                    "init": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-60, #f9163a)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "refDefaultBackground": true
+                        }
+                    },
+                    "name": "vir-red-foreground-non-body"
+                },
+                "vir-red-foreground-header": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-foreground-header-inverse-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-foreground-header-inverse-fg, var(--vir-red-foreground-header-bg, var(--vir-default-bg, white)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-foreground-header-bg, var(--vir-default-bg, white))"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-foreground-header-inverse-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-foreground-header-inverse-bg, var(--vir-red-foreground-header-fg, var(--vira-red-50, #ff6065)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-foreground-header-fg, var(--vira-red-50, #ff6065))"
+                    },
+                    "init": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-50, #ff6065)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "refDefaultBackground": true
+                        }
+                    },
+                    "name": "vir-red-foreground-header"
+                },
+                "vir-red-foreground-placeholder": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-foreground-placeholder-inverse-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-foreground-placeholder-inverse-fg, var(--vir-red-foreground-placeholder-bg, var(--vir-default-bg, white)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-foreground-placeholder-bg, var(--vir-default-bg, white))"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-foreground-placeholder-inverse-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-foreground-placeholder-inverse-bg, var(--vir-red-foreground-placeholder-fg, var(--vira-red-30, #ffa7a2)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-foreground-placeholder-fg, var(--vira-red-30, #ffa7a2))"
+                    },
+                    "init": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-30, #ffa7a2)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "refDefaultBackground": true
+                        }
+                    },
+                    "name": "vir-red-foreground-placeholder"
+                },
+                "vir-red-foreground-decoration": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-foreground-decoration-inverse-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-foreground-decoration-inverse-fg, var(--vir-red-foreground-decoration-bg, var(--vir-default-bg, white)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-foreground-decoration-bg, var(--vir-default-bg, white))"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-foreground-decoration-inverse-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-foreground-decoration-inverse-bg, var(--vir-red-foreground-decoration-fg, var(--vira-red-20, #ffc1bc)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-foreground-decoration-fg, var(--vira-red-20, #ffc1bc))"
+                    },
+                    "init": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-20, #ffc1bc)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "refDefaultBackground": true
+                        }
+                    },
+                    "name": "vir-red-foreground-decoration"
+                },
+                "vir-red-foreground-invisible": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-foreground-invisible-inverse-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-foreground-invisible-inverse-fg, var(--vir-red-foreground-invisible-bg, var(--vir-default-bg, white)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-foreground-invisible-bg, var(--vir-default-bg, white))"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-foreground-invisible-inverse-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-foreground-invisible-inverse-bg, var(--vir-red-foreground-invisible-fg, var(--vira-red-10, #ffd9d5)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-foreground-invisible-fg, var(--vira-red-10, #ffd9d5))"
+                    },
+                    "init": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-10, #ffd9d5)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "refDefaultBackground": true
+                        }
+                    },
+                    "name": "vir-red-foreground-invisible"
+                },
+                "vir-red-behind-bg-small-body": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-bg-small-body-inverse-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-bg-small-body-inverse-fg, var(--vir-red-behind-bg-small-body-bg, var(--vira-red-90, #760003)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-behind-bg-small-body-bg, var(--vira-red-90, #760003))"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-bg-small-body-inverse-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-bg-small-body-inverse-bg, var(--vir-red-behind-bg-small-body-fg, var(--vir-default-bg, white)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-behind-bg-small-body-fg, var(--vir-default-bg, white))"
+                    },
+                    "init": {
+                        "foreground": {
+                            "refDefaultBackground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-90, #760003)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-behind-bg-small-body"
+                },
+                "vir-red-behind-bg-body": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-bg-body-inverse-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-bg-body-inverse-fg, var(--vir-red-behind-bg-body-bg, var(--vira-red-80, #a60012)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-behind-bg-body-bg, var(--vira-red-80, #a60012))"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-bg-body-inverse-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-bg-body-inverse-bg, var(--vir-red-behind-bg-body-fg, var(--vir-default-bg, white)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-behind-bg-body-fg, var(--vir-default-bg, white))"
+                    },
+                    "init": {
+                        "foreground": {
+                            "refDefaultBackground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-80, #a60012)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-behind-bg-body"
+                },
+                "vir-red-behind-bg-non-body": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-bg-non-body-inverse-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-bg-non-body-inverse-fg, var(--vir-red-behind-bg-non-body-bg, var(--vira-red-60, #f9163a)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-behind-bg-non-body-bg, var(--vira-red-60, #f9163a))"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-bg-non-body-inverse-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-bg-non-body-inverse-bg, var(--vir-red-behind-bg-non-body-fg, var(--vir-default-bg, white)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-behind-bg-non-body-fg, var(--vir-default-bg, white))"
+                    },
+                    "init": {
+                        "foreground": {
+                            "refDefaultBackground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-60, #f9163a)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-behind-bg-non-body"
+                },
+                "vir-red-behind-bg-header": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-bg-header-inverse-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-bg-header-inverse-fg, var(--vir-red-behind-bg-header-bg, var(--vira-red-40, #ff8886)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-behind-bg-header-bg, var(--vira-red-40, #ff8886))"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-bg-header-inverse-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-bg-header-inverse-bg, var(--vir-red-behind-bg-header-fg, var(--vir-default-bg, white)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-behind-bg-header-fg, var(--vir-default-bg, white))"
+                    },
+                    "init": {
+                        "foreground": {
+                            "refDefaultBackground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-40, #ff8886)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-behind-bg-header"
+                },
+                "vir-red-behind-bg-placeholder": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-bg-placeholder-inverse-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-bg-placeholder-inverse-fg, var(--vir-red-behind-bg-placeholder-bg, var(--vira-red-30, #ffa7a2)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-behind-bg-placeholder-bg, var(--vira-red-30, #ffa7a2))"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-bg-placeholder-inverse-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-bg-placeholder-inverse-bg, var(--vir-red-behind-bg-placeholder-fg, var(--vir-default-bg, white)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-behind-bg-placeholder-fg, var(--vir-default-bg, white))"
+                    },
+                    "init": {
+                        "foreground": {
+                            "refDefaultBackground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-30, #ffa7a2)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-behind-bg-placeholder"
+                },
+                "vir-red-behind-bg-decoration": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-bg-decoration-inverse-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-bg-decoration-inverse-fg, var(--vir-red-behind-bg-decoration-bg, var(--vira-red-20, #ffc1bc)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-behind-bg-decoration-bg, var(--vira-red-20, #ffc1bc))"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-bg-decoration-inverse-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-bg-decoration-inverse-bg, var(--vir-red-behind-bg-decoration-fg, var(--vir-default-bg, white)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-behind-bg-decoration-fg, var(--vir-default-bg, white))"
+                    },
+                    "init": {
+                        "foreground": {
+                            "refDefaultBackground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-20, #ffc1bc)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-behind-bg-decoration"
+                },
+                "vir-red-behind-bg-invisible": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-bg-invisible-inverse-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-bg-invisible-inverse-fg, var(--vir-red-behind-bg-invisible-bg, var(--vira-red-5, #ffe9e6)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-behind-bg-invisible-bg, var(--vira-red-5, #ffe9e6))"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-bg-invisible-inverse-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-bg-invisible-inverse-bg, var(--vir-red-behind-bg-invisible-fg, var(--vir-default-bg, white)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-behind-bg-invisible-fg, var(--vir-default-bg, white))"
+                    },
+                    "init": {
+                        "foreground": {
+                            "refDefaultBackground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-5, #ffe9e6)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-behind-bg-invisible"
+                },
+                "vir-red-behind-fg-small-body": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-fg-small-body-inverse-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-fg-small-body-inverse-fg, var(--vir-red-behind-fg-small-body-bg, var(--vira-red-5, #ffe9e6)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-behind-fg-small-body-bg, var(--vira-red-5, #ffe9e6))"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-fg-small-body-inverse-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-fg-small-body-inverse-bg, var(--vir-red-behind-fg-small-body-fg, var(--vir-default-fg, black)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-behind-fg-small-body-fg, var(--vir-default-fg, black))"
+                    },
+                    "init": {
+                        "foreground": {
+                            "refDefaultForeground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-5, #ffe9e6)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-behind-fg-small-body"
+                },
+                "vir-red-behind-fg-body": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-fg-body-inverse-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-fg-body-inverse-fg, var(--vir-red-behind-fg-body-bg, var(--vira-red-20, #ffc1bc)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-behind-fg-body-bg, var(--vira-red-20, #ffc1bc))"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-fg-body-inverse-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-fg-body-inverse-bg, var(--vir-red-behind-fg-body-fg, var(--vir-default-fg, black)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-behind-fg-body-fg, var(--vir-default-fg, black))"
+                    },
+                    "init": {
+                        "foreground": {
+                            "refDefaultForeground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-20, #ffc1bc)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-behind-fg-body"
+                },
+                "vir-red-behind-fg-non-body": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-fg-non-body-inverse-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-fg-non-body-inverse-fg, var(--vir-red-behind-fg-non-body-bg, var(--vira-red-30, #ffa7a2)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-behind-fg-non-body-bg, var(--vira-red-30, #ffa7a2))"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-fg-non-body-inverse-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-fg-non-body-inverse-bg, var(--vir-red-behind-fg-non-body-fg, var(--vir-default-fg, black)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-behind-fg-non-body-fg, var(--vir-default-fg, black))"
+                    },
+                    "init": {
+                        "foreground": {
+                            "refDefaultForeground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-30, #ffa7a2)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-behind-fg-non-body"
+                },
+                "vir-red-behind-fg-header": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-fg-header-inverse-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-fg-header-inverse-fg, var(--vir-red-behind-fg-header-bg, var(--vira-red-50, #ff6065)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-behind-fg-header-bg, var(--vira-red-50, #ff6065))"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-fg-header-inverse-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-fg-header-inverse-bg, var(--vir-red-behind-fg-header-fg, var(--vir-default-fg, black)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-behind-fg-header-fg, var(--vir-default-fg, black))"
+                    },
+                    "init": {
+                        "foreground": {
+                            "refDefaultForeground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-50, #ff6065)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-behind-fg-header"
+                },
+                "vir-red-behind-fg-placeholder": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-fg-placeholder-inverse-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-fg-placeholder-inverse-fg, var(--vir-red-behind-fg-placeholder-bg, var(--vira-red-60, #f9163a)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-behind-fg-placeholder-bg, var(--vira-red-60, #f9163a))"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-fg-placeholder-inverse-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-fg-placeholder-inverse-bg, var(--vir-red-behind-fg-placeholder-fg, var(--vir-default-fg, black)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-behind-fg-placeholder-fg, var(--vir-default-fg, black))"
+                    },
+                    "init": {
+                        "foreground": {
+                            "refDefaultForeground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-60, #f9163a)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-behind-fg-placeholder"
+                },
+                "vir-red-behind-fg-decoration": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-fg-decoration-inverse-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-fg-decoration-inverse-fg, var(--vir-red-behind-fg-decoration-bg, var(--vira-red-80, #a60012)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-behind-fg-decoration-bg, var(--vira-red-80, #a60012))"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-fg-decoration-inverse-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-fg-decoration-inverse-bg, var(--vir-red-behind-fg-decoration-fg, var(--vir-default-fg, black)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-behind-fg-decoration-fg, var(--vir-default-fg, black))"
+                    },
+                    "init": {
+                        "foreground": {
+                            "refDefaultForeground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-80, #a60012)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-behind-fg-decoration"
+                },
+                "vir-red-behind-fg-invisible": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-fg-invisible-inverse-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-fg-invisible-inverse-fg, var(--vir-red-behind-fg-invisible-bg, var(--vira-red-90, #760003)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-behind-fg-invisible-bg, var(--vira-red-90, #760003))"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-behind-fg-invisible-inverse-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-behind-fg-invisible-inverse-bg, var(--vir-red-behind-fg-invisible-fg, var(--vir-default-fg, black)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-behind-fg-invisible-fg, var(--vir-default-fg, black))"
+                    },
+                    "init": {
+                        "foreground": {
+                            "refDefaultForeground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-90, #760003)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-behind-fg-invisible"
+                },
+                "vir-red-on-self-body": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-on-self-body-inverse-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-on-self-body-inverse-fg, var(--vir-red-on-self-body-bg, var(--vira-red-5, #ffe9e6)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-on-self-body-bg, var(--vira-red-5, #ffe9e6))"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-on-self-body-inverse-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-on-self-body-inverse-bg, var(--vir-red-on-self-body-fg, var(--vira-red-90, #760003)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-on-self-body-fg, var(--vira-red-90, #760003))"
+                    },
+                    "init": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-90, #760003)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-5, #ffe9e6)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-on-self-body"
+                },
+                "vir-red-on-self-non-body": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-on-self-non-body-inverse-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-on-self-non-body-inverse-fg, var(--vir-red-on-self-non-body-bg, var(--vira-red-5, #ffe9e6)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-on-self-non-body-bg, var(--vira-red-5, #ffe9e6))"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-on-self-non-body-inverse-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-on-self-non-body-inverse-bg, var(--vir-red-on-self-non-body-fg, var(--vira-red-80, #a60012)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-on-self-non-body-fg, var(--vira-red-80, #a60012))"
+                    },
+                    "init": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-80, #a60012)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-5, #ffe9e6)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-on-self-non-body"
+                },
+                "vir-red-on-self-header": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-on-self-header-inverse-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-on-self-header-inverse-fg, var(--vir-red-on-self-header-bg, var(--vira-red-5, #ffe9e6)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-on-self-header-bg, var(--vira-red-5, #ffe9e6))"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-on-self-header-inverse-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-on-self-header-inverse-bg, var(--vir-red-on-self-header-fg, var(--vira-red-60, #f9163a)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-on-self-header-fg, var(--vira-red-60, #f9163a))"
+                    },
+                    "init": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-60, #f9163a)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-5, #ffe9e6)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-on-self-header"
+                },
+                "vir-red-on-self-placeholder": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-on-self-placeholder-inverse-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-on-self-placeholder-inverse-fg, var(--vir-red-on-self-placeholder-bg, var(--vira-red-5, #ffe9e6)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-on-self-placeholder-bg, var(--vira-red-5, #ffe9e6))"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-on-self-placeholder-inverse-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-on-self-placeholder-inverse-bg, var(--vir-red-on-self-placeholder-fg, var(--vira-red-50, #ff6065)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-on-self-placeholder-fg, var(--vira-red-50, #ff6065))"
+                    },
+                    "init": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-50, #ff6065)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-5, #ffe9e6)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-on-self-placeholder"
+                },
+                "vir-red-on-self-decoration": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-on-self-decoration-inverse-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-on-self-decoration-inverse-fg, var(--vir-red-on-self-decoration-bg, var(--vira-red-5, #ffe9e6)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-on-self-decoration-bg, var(--vira-red-5, #ffe9e6))"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-on-self-decoration-inverse-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-on-self-decoration-inverse-bg, var(--vir-red-on-self-decoration-fg, var(--vira-red-30, #ffa7a2)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-on-self-decoration-fg, var(--vira-red-30, #ffa7a2))"
+                    },
+                    "init": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-30, #ffa7a2)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-5, #ffe9e6)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-on-self-decoration"
+                },
+                "vir-red-on-self-invisible": {
+                    "foreground": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-on-self-invisible-inverse-fg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-on-self-invisible-inverse-fg, var(--vir-red-on-self-invisible-bg, var(--vira-red-5, #ffe9e6)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-on-self-invisible-bg, var(--vira-red-5, #ffe9e6))"
+                    },
+                    "background": {
+                        "name": {
+                            "_$cssResult$": true,
+                            "cssText": "--vir-red-on-self-invisible-inverse-bg"
+                        },
+                        "value": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vir-red-on-self-invisible-inverse-bg, var(--vir-red-on-self-invisible-fg, var(--vira-red-20, #ffc1bc)))",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "syntax": "*",
+                        "default": "var(--vir-red-on-self-invisible-fg, var(--vira-red-20, #ffc1bc))"
+                    },
+                    "init": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-20, #ffc1bc)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-5, #ffe9e6)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "name": "vir-red-on-self-invisible"
+                }
+            },
+            "init": {
+                "colors": {
+                    "vir-red-foreground-small-body": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-90, #760003)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "refDefaultBackground": true
+                        }
+                    },
+                    "vir-red-foreground-body": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-80, #a60012)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "refDefaultBackground": true
+                        }
+                    },
+                    "vir-red-foreground-non-body": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-60, #f9163a)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "refDefaultBackground": true
+                        }
+                    },
+                    "vir-red-foreground-header": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-50, #ff6065)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "refDefaultBackground": true
+                        }
+                    },
+                    "vir-red-foreground-placeholder": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-30, #ffa7a2)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "refDefaultBackground": true
+                        }
+                    },
+                    "vir-red-foreground-decoration": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-20, #ffc1bc)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "refDefaultBackground": true
+                        }
+                    },
+                    "vir-red-foreground-invisible": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-10, #ffd9d5)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "refDefaultBackground": true
+                        }
+                    },
+                    "vir-red-behind-bg-small-body": {
+                        "foreground": {
+                            "refDefaultBackground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-90, #760003)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "vir-red-behind-bg-body": {
+                        "foreground": {
+                            "refDefaultBackground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-80, #a60012)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "vir-red-behind-bg-non-body": {
+                        "foreground": {
+                            "refDefaultBackground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-60, #f9163a)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "vir-red-behind-bg-header": {
+                        "foreground": {
+                            "refDefaultBackground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-40, #ff8886)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "vir-red-behind-bg-placeholder": {
+                        "foreground": {
+                            "refDefaultBackground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-30, #ffa7a2)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "vir-red-behind-bg-decoration": {
+                        "foreground": {
+                            "refDefaultBackground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-20, #ffc1bc)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "vir-red-behind-bg-invisible": {
+                        "foreground": {
+                            "refDefaultBackground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-5, #ffe9e6)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "vir-red-behind-fg-small-body": {
+                        "foreground": {
+                            "refDefaultForeground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-5, #ffe9e6)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "vir-red-behind-fg-body": {
+                        "foreground": {
+                            "refDefaultForeground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-20, #ffc1bc)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "vir-red-behind-fg-non-body": {
+                        "foreground": {
+                            "refDefaultForeground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-30, #ffa7a2)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "vir-red-behind-fg-header": {
+                        "foreground": {
+                            "refDefaultForeground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-50, #ff6065)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "vir-red-behind-fg-placeholder": {
+                        "foreground": {
+                            "refDefaultForeground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-60, #f9163a)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "vir-red-behind-fg-decoration": {
+                        "foreground": {
+                            "refDefaultForeground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-80, #a60012)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "vir-red-behind-fg-invisible": {
+                        "foreground": {
+                            "refDefaultForeground": true
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-90, #760003)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "vir-red-on-self-body": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-90, #760003)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-5, #ffe9e6)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "vir-red-on-self-non-body": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-80, #a60012)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-5, #ffe9e6)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "vir-red-on-self-header": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-60, #f9163a)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-5, #ffe9e6)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "vir-red-on-self-placeholder": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-50, #ff6065)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-5, #ffe9e6)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "vir-red-on-self-decoration": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-30, #ffa7a2)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-5, #ffe9e6)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    },
+                    "vir-red-on-self-invisible": {
+                        "foreground": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-20, #ffc1bc)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        },
+                        "background": {
+                            "_$cssResult$": true,
+                            "cssText": "var(--vira-red-5, #ffe9e6)",
+                            "_strings": [
+                                "var(",
+                                ", ",
+                                ")"
+                            ]
+                        }
+                    }
+                },
+                "default": {
+                    "background": "white",
+                    "foreground": "black",
+                    "prefix": "vir"
+                }
+            },
+            "prefix": "vir"
+        },
+        "darkOverride": {
+            "name": "dark",
+            "overrides": {
+                "--vir-default-bg": "black",
+                "--vir-default-fg": "white",
+                "--vir-red-foreground-small-body-fg": "var(--vira-red-5, #ffe9e6)",
+                "--vir-red-foreground-small-body-bg": "var(--vir-default-bg, white)",
+                "--vir-red-foreground-body-fg": "var(--vira-red-20, #ffc1bc)",
+                "--vir-red-foreground-body-bg": "var(--vir-default-bg, white)",
+                "--vir-red-foreground-non-body-fg": "var(--vira-red-30, #ffa7a2)",
+                "--vir-red-foreground-non-body-bg": "var(--vir-default-bg, white)",
+                "--vir-red-foreground-header-fg": "var(--vira-red-50, #ff6065)",
+                "--vir-red-foreground-header-bg": "var(--vir-default-bg, white)",
+                "--vir-red-foreground-placeholder-fg": "var(--vira-red-60, #f9163a)",
+                "--vir-red-foreground-placeholder-bg": "var(--vir-default-bg, white)",
+                "--vir-red-foreground-decoration-fg": "var(--vira-red-80, #a60012)",
+                "--vir-red-foreground-decoration-bg": "var(--vir-default-bg, white)",
+                "--vir-red-foreground-invisible-fg": "var(--vira-red-90, #760003)",
+                "--vir-red-foreground-invisible-bg": "var(--vir-default-bg, white)",
+                "--vir-red-behind-bg-small-body-fg": "var(--vir-default-bg, white)",
+                "--vir-red-behind-bg-small-body-bg": "var(--vira-red-5, #ffe9e6)",
+                "--vir-red-behind-bg-body-fg": "var(--vir-default-bg, white)",
+                "--vir-red-behind-bg-body-bg": "var(--vira-red-20, #ffc1bc)",
+                "--vir-red-behind-bg-non-body-fg": "var(--vir-default-bg, white)",
+                "--vir-red-behind-bg-non-body-bg": "var(--vira-red-30, #ffa7a2)",
+                "--vir-red-behind-bg-header-fg": "var(--vir-default-bg, white)",
+                "--vir-red-behind-bg-header-bg": "var(--vira-red-50, #ff6065)",
+                "--vir-red-behind-bg-placeholder-fg": "var(--vir-default-bg, white)",
+                "--vir-red-behind-bg-placeholder-bg": "var(--vira-red-60, #f9163a)",
+                "--vir-red-behind-bg-decoration-fg": "var(--vir-default-bg, white)",
+                "--vir-red-behind-bg-decoration-bg": "var(--vira-red-80, #a60012)",
+                "--vir-red-behind-bg-invisible-fg": "var(--vir-default-bg, white)",
+                "--vir-red-behind-bg-invisible-bg": "var(--vira-red-90, #760003)",
+                "--vir-red-behind-fg-small-body-fg": "var(--vir-default-fg, black)",
+                "--vir-red-behind-fg-small-body-bg": "var(--vira-red-90, #760003)",
+                "--vir-red-behind-fg-body-fg": "var(--vir-default-fg, black)",
+                "--vir-red-behind-fg-body-bg": "var(--vira-red-80, #a60012)",
+                "--vir-red-behind-fg-non-body-fg": "var(--vir-default-fg, black)",
+                "--vir-red-behind-fg-non-body-bg": "var(--vira-red-60, #f9163a)",
+                "--vir-red-behind-fg-header-fg": "var(--vir-default-fg, black)",
+                "--vir-red-behind-fg-header-bg": "var(--vira-red-40, #ff8886)",
+                "--vir-red-behind-fg-placeholder-fg": "var(--vir-default-fg, black)",
+                "--vir-red-behind-fg-placeholder-bg": "var(--vira-red-30, #ffa7a2)",
+                "--vir-red-behind-fg-decoration-fg": "var(--vir-default-fg, black)",
+                "--vir-red-behind-fg-decoration-bg": "var(--vira-red-20, #ffc1bc)",
+                "--vir-red-behind-fg-invisible-fg": "var(--vir-default-fg, black)",
+                "--vir-red-behind-fg-invisible-bg": "var(--vira-red-5, #ffe9e6)",
+                "--vir-red-on-self-body-fg": "var(--vira-red-10, #ffd9d5)",
+                "--vir-red-on-self-body-bg": "var(--vira-red-90, #760003)",
+                "--vir-red-on-self-non-body-fg": "var(--vira-red-20, #ffc1bc)",
+                "--vir-red-on-self-non-body-bg": "var(--vira-red-90, #760003)",
+                "--vir-red-on-self-header-fg": "var(--vira-red-40, #ff8886)",
+                "--vir-red-on-self-header-bg": "var(--vira-red-90, #760003)",
+                "--vir-red-on-self-placeholder-fg": "var(--vira-red-50, #ff6065)",
+                "--vir-red-on-self-placeholder-bg": "var(--vira-red-90, #760003)",
+                "--vir-red-on-self-decoration-fg": "var(--vira-red-70, #d2001d)",
+                "--vir-red-on-self-decoration-bg": "var(--vira-red-90, #760003)",
+                "--vir-red-on-self-invisible-fg": "var(--vira-red-80, #a60012)",
+                "--vir-red-on-self-invisible-bg": "var(--vira-red-90, #760003)"
+            },
+            "originalTheme": {
+                "colors": {
+                    "theme-default": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-default-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-default-fg, black)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "black"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-default-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-default-bg, white)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "white"
+                        },
+                        "init": {
+                            "background": "white",
+                            "foreground": "black",
+                            "prefix": "vir"
+                        },
+                        "name": "theme-default"
+                    },
+                    "vir-red-foreground-small-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-small-body-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-small-body-fg, var(--vira-red-90, #760003))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-90, #760003)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-small-body-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-small-body-bg, var(--vir-default-bg, white))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-bg, white)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "name": "vir-red-foreground-small-body"
+                    },
+                    "vir-red-foreground-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-body-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-body-fg, var(--vira-red-80, #a60012))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-80, #a60012)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-body-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-body-bg, var(--vir-default-bg, white))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-bg, white)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-80, #a60012)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "name": "vir-red-foreground-body"
+                    },
+                    "vir-red-foreground-non-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-non-body-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-non-body-fg, var(--vira-red-60, #f9163a))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-60, #f9163a)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-non-body-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-non-body-bg, var(--vir-default-bg, white))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-bg, white)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-60, #f9163a)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "name": "vir-red-foreground-non-body"
+                    },
+                    "vir-red-foreground-header": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-header-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-header-fg, var(--vira-red-50, #ff6065))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-50, #ff6065)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-header-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-header-bg, var(--vir-default-bg, white))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-bg, white)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-50, #ff6065)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "name": "vir-red-foreground-header"
+                    },
+                    "vir-red-foreground-placeholder": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-placeholder-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-placeholder-fg, var(--vira-red-30, #ffa7a2))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-30, #ffa7a2)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-placeholder-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-placeholder-bg, var(--vir-default-bg, white))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-bg, white)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-30, #ffa7a2)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "name": "vir-red-foreground-placeholder"
+                    },
+                    "vir-red-foreground-decoration": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-decoration-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-decoration-fg, var(--vira-red-20, #ffc1bc))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-20, #ffc1bc)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-decoration-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-decoration-bg, var(--vir-default-bg, white))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-bg, white)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-20, #ffc1bc)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "name": "vir-red-foreground-decoration"
+                    },
+                    "vir-red-foreground-invisible": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-invisible-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-invisible-fg, var(--vira-red-10, #ffd9d5))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-10, #ffd9d5)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-invisible-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-invisible-bg, var(--vir-default-bg, white))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-bg, white)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-10, #ffd9d5)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "name": "vir-red-foreground-invisible"
+                    },
+                    "vir-red-behind-bg-small-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-small-body-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-small-body-fg, var(--vir-default-bg, white))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-bg, white)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-small-body-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-small-body-bg, var(--vira-red-90, #760003))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-90, #760003)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-bg-small-body"
+                    },
+                    "vir-red-behind-bg-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-body-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-body-fg, var(--vir-default-bg, white))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-bg, white)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-body-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-body-bg, var(--vira-red-80, #a60012))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-80, #a60012)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-80, #a60012)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-bg-body"
+                    },
+                    "vir-red-behind-bg-non-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-non-body-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-non-body-fg, var(--vir-default-bg, white))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-bg, white)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-non-body-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-non-body-bg, var(--vira-red-60, #f9163a))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-60, #f9163a)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-60, #f9163a)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-bg-non-body"
+                    },
+                    "vir-red-behind-bg-header": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-header-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-header-fg, var(--vir-default-bg, white))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-bg, white)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-header-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-header-bg, var(--vira-red-40, #ff8886))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-40, #ff8886)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-40, #ff8886)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-bg-header"
+                    },
+                    "vir-red-behind-bg-placeholder": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-placeholder-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-placeholder-fg, var(--vir-default-bg, white))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-bg, white)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-placeholder-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-placeholder-bg, var(--vira-red-30, #ffa7a2))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-30, #ffa7a2)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-30, #ffa7a2)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-bg-placeholder"
+                    },
+                    "vir-red-behind-bg-decoration": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-decoration-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-decoration-fg, var(--vir-default-bg, white))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-bg, white)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-decoration-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-decoration-bg, var(--vira-red-20, #ffc1bc))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-20, #ffc1bc)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-20, #ffc1bc)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-bg-decoration"
+                    },
+                    "vir-red-behind-bg-invisible": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-invisible-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-invisible-fg, var(--vir-default-bg, white))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-bg, white)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-invisible-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-invisible-bg, var(--vira-red-5, #ffe9e6))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-5, #ffe9e6)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-5, #ffe9e6)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-bg-invisible"
+                    },
+                    "vir-red-behind-fg-small-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-small-body-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-small-body-fg, var(--vir-default-fg, black))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-fg, black)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-small-body-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-small-body-bg, var(--vira-red-5, #ffe9e6))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-5, #ffe9e6)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-5, #ffe9e6)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-fg-small-body"
+                    },
+                    "vir-red-behind-fg-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-body-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-body-fg, var(--vir-default-fg, black))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-fg, black)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-body-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-body-bg, var(--vira-red-20, #ffc1bc))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-20, #ffc1bc)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-20, #ffc1bc)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-fg-body"
+                    },
+                    "vir-red-behind-fg-non-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-non-body-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-non-body-fg, var(--vir-default-fg, black))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-fg, black)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-non-body-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-non-body-bg, var(--vira-red-30, #ffa7a2))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-30, #ffa7a2)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-30, #ffa7a2)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-fg-non-body"
+                    },
+                    "vir-red-behind-fg-header": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-header-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-header-fg, var(--vir-default-fg, black))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-fg, black)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-header-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-header-bg, var(--vira-red-50, #ff6065))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-50, #ff6065)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-50, #ff6065)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-fg-header"
+                    },
+                    "vir-red-behind-fg-placeholder": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-placeholder-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-placeholder-fg, var(--vir-default-fg, black))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-fg, black)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-placeholder-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-placeholder-bg, var(--vira-red-60, #f9163a))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-60, #f9163a)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-60, #f9163a)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-fg-placeholder"
+                    },
+                    "vir-red-behind-fg-decoration": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-decoration-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-decoration-fg, var(--vir-default-fg, black))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-fg, black)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-decoration-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-decoration-bg, var(--vira-red-80, #a60012))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-80, #a60012)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-80, #a60012)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-fg-decoration"
+                    },
+                    "vir-red-behind-fg-invisible": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-invisible-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-invisible-fg, var(--vir-default-fg, black))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-fg, black)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-invisible-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-invisible-bg, var(--vira-red-90, #760003))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-90, #760003)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-fg-invisible"
+                    },
+                    "vir-red-on-self-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-body-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-body-fg, var(--vira-red-90, #760003))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-90, #760003)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-body-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-body-bg, var(--vira-red-5, #ffe9e6))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-5, #ffe9e6)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-5, #ffe9e6)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-on-self-body"
+                    },
+                    "vir-red-on-self-non-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-non-body-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-non-body-fg, var(--vira-red-80, #a60012))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-80, #a60012)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-non-body-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-non-body-bg, var(--vira-red-5, #ffe9e6))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-5, #ffe9e6)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-80, #a60012)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-5, #ffe9e6)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-on-self-non-body"
+                    },
+                    "vir-red-on-self-header": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-header-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-header-fg, var(--vira-red-60, #f9163a))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-60, #f9163a)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-header-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-header-bg, var(--vira-red-5, #ffe9e6))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-5, #ffe9e6)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-60, #f9163a)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-5, #ffe9e6)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-on-self-header"
+                    },
+                    "vir-red-on-self-placeholder": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-placeholder-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-placeholder-fg, var(--vira-red-50, #ff6065))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-50, #ff6065)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-placeholder-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-placeholder-bg, var(--vira-red-5, #ffe9e6))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-5, #ffe9e6)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-50, #ff6065)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-5, #ffe9e6)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-on-self-placeholder"
+                    },
+                    "vir-red-on-self-decoration": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-decoration-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-decoration-fg, var(--vira-red-30, #ffa7a2))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-30, #ffa7a2)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-decoration-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-decoration-bg, var(--vira-red-5, #ffe9e6))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-5, #ffe9e6)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-30, #ffa7a2)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-5, #ffe9e6)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-on-self-decoration"
+                    },
+                    "vir-red-on-self-invisible": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-invisible-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-invisible-fg, var(--vira-red-20, #ffc1bc))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-20, #ffc1bc)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-invisible-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-invisible-bg, var(--vira-red-5, #ffe9e6))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-5, #ffe9e6)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-20, #ffc1bc)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-5, #ffe9e6)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-on-self-invisible"
+                    }
+                },
+                "inverse": {
+                    "theme-default": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-default-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-default-inverse-fg, white)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "white"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-default-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-default-inverse-bg, black)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "black"
+                        },
+                        "init": {
+                            "background": "white",
+                            "foreground": "black",
+                            "prefix": "vir"
+                        },
+                        "name": "theme-default"
+                    },
+                    "vir-red-foreground-small-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-small-body-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-small-body-inverse-fg, var(--vir-red-foreground-small-body-bg, var(--vir-default-bg, white)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-foreground-small-body-bg, var(--vir-default-bg, white))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-small-body-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-small-body-inverse-bg, var(--vir-red-foreground-small-body-fg, var(--vira-red-90, #760003)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-foreground-small-body-fg, var(--vira-red-90, #760003))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "name": "vir-red-foreground-small-body"
+                    },
+                    "vir-red-foreground-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-body-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-body-inverse-fg, var(--vir-red-foreground-body-bg, var(--vir-default-bg, white)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-foreground-body-bg, var(--vir-default-bg, white))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-body-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-body-inverse-bg, var(--vir-red-foreground-body-fg, var(--vira-red-80, #a60012)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-foreground-body-fg, var(--vira-red-80, #a60012))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-80, #a60012)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "name": "vir-red-foreground-body"
+                    },
+                    "vir-red-foreground-non-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-non-body-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-non-body-inverse-fg, var(--vir-red-foreground-non-body-bg, var(--vir-default-bg, white)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-foreground-non-body-bg, var(--vir-default-bg, white))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-non-body-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-non-body-inverse-bg, var(--vir-red-foreground-non-body-fg, var(--vira-red-60, #f9163a)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-foreground-non-body-fg, var(--vira-red-60, #f9163a))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-60, #f9163a)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "name": "vir-red-foreground-non-body"
+                    },
+                    "vir-red-foreground-header": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-header-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-header-inverse-fg, var(--vir-red-foreground-header-bg, var(--vir-default-bg, white)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-foreground-header-bg, var(--vir-default-bg, white))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-header-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-header-inverse-bg, var(--vir-red-foreground-header-fg, var(--vira-red-50, #ff6065)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-foreground-header-fg, var(--vira-red-50, #ff6065))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-50, #ff6065)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "name": "vir-red-foreground-header"
+                    },
+                    "vir-red-foreground-placeholder": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-placeholder-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-placeholder-inverse-fg, var(--vir-red-foreground-placeholder-bg, var(--vir-default-bg, white)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-foreground-placeholder-bg, var(--vir-default-bg, white))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-placeholder-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-placeholder-inverse-bg, var(--vir-red-foreground-placeholder-fg, var(--vira-red-30, #ffa7a2)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-foreground-placeholder-fg, var(--vira-red-30, #ffa7a2))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-30, #ffa7a2)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "name": "vir-red-foreground-placeholder"
+                    },
+                    "vir-red-foreground-decoration": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-decoration-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-decoration-inverse-fg, var(--vir-red-foreground-decoration-bg, var(--vir-default-bg, white)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-foreground-decoration-bg, var(--vir-default-bg, white))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-decoration-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-decoration-inverse-bg, var(--vir-red-foreground-decoration-fg, var(--vira-red-20, #ffc1bc)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-foreground-decoration-fg, var(--vira-red-20, #ffc1bc))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-20, #ffc1bc)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "name": "vir-red-foreground-decoration"
+                    },
+                    "vir-red-foreground-invisible": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-invisible-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-invisible-inverse-fg, var(--vir-red-foreground-invisible-bg, var(--vir-default-bg, white)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-foreground-invisible-bg, var(--vir-default-bg, white))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-invisible-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-invisible-inverse-bg, var(--vir-red-foreground-invisible-fg, var(--vira-red-10, #ffd9d5)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-foreground-invisible-fg, var(--vira-red-10, #ffd9d5))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-10, #ffd9d5)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "name": "vir-red-foreground-invisible"
+                    },
+                    "vir-red-behind-bg-small-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-small-body-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-small-body-inverse-fg, var(--vir-red-behind-bg-small-body-bg, var(--vira-red-90, #760003)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-bg-small-body-bg, var(--vira-red-90, #760003))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-small-body-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-small-body-inverse-bg, var(--vir-red-behind-bg-small-body-fg, var(--vir-default-bg, white)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-bg-small-body-fg, var(--vir-default-bg, white))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-bg-small-body"
+                    },
+                    "vir-red-behind-bg-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-body-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-body-inverse-fg, var(--vir-red-behind-bg-body-bg, var(--vira-red-80, #a60012)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-bg-body-bg, var(--vira-red-80, #a60012))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-body-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-body-inverse-bg, var(--vir-red-behind-bg-body-fg, var(--vir-default-bg, white)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-bg-body-fg, var(--vir-default-bg, white))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-80, #a60012)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-bg-body"
+                    },
+                    "vir-red-behind-bg-non-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-non-body-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-non-body-inverse-fg, var(--vir-red-behind-bg-non-body-bg, var(--vira-red-60, #f9163a)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-bg-non-body-bg, var(--vira-red-60, #f9163a))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-non-body-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-non-body-inverse-bg, var(--vir-red-behind-bg-non-body-fg, var(--vir-default-bg, white)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-bg-non-body-fg, var(--vir-default-bg, white))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-60, #f9163a)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-bg-non-body"
+                    },
+                    "vir-red-behind-bg-header": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-header-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-header-inverse-fg, var(--vir-red-behind-bg-header-bg, var(--vira-red-40, #ff8886)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-bg-header-bg, var(--vira-red-40, #ff8886))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-header-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-header-inverse-bg, var(--vir-red-behind-bg-header-fg, var(--vir-default-bg, white)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-bg-header-fg, var(--vir-default-bg, white))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-40, #ff8886)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-bg-header"
+                    },
+                    "vir-red-behind-bg-placeholder": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-placeholder-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-placeholder-inverse-fg, var(--vir-red-behind-bg-placeholder-bg, var(--vira-red-30, #ffa7a2)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-bg-placeholder-bg, var(--vira-red-30, #ffa7a2))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-placeholder-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-placeholder-inverse-bg, var(--vir-red-behind-bg-placeholder-fg, var(--vir-default-bg, white)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-bg-placeholder-fg, var(--vir-default-bg, white))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-30, #ffa7a2)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-bg-placeholder"
+                    },
+                    "vir-red-behind-bg-decoration": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-decoration-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-decoration-inverse-fg, var(--vir-red-behind-bg-decoration-bg, var(--vira-red-20, #ffc1bc)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-bg-decoration-bg, var(--vira-red-20, #ffc1bc))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-decoration-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-decoration-inverse-bg, var(--vir-red-behind-bg-decoration-fg, var(--vir-default-bg, white)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-bg-decoration-fg, var(--vir-default-bg, white))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-20, #ffc1bc)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-bg-decoration"
+                    },
+                    "vir-red-behind-bg-invisible": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-invisible-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-invisible-inverse-fg, var(--vir-red-behind-bg-invisible-bg, var(--vira-red-5, #ffe9e6)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-bg-invisible-bg, var(--vira-red-5, #ffe9e6))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-invisible-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-invisible-inverse-bg, var(--vir-red-behind-bg-invisible-fg, var(--vir-default-bg, white)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-bg-invisible-fg, var(--vir-default-bg, white))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-5, #ffe9e6)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-bg-invisible"
+                    },
+                    "vir-red-behind-fg-small-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-small-body-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-small-body-inverse-fg, var(--vir-red-behind-fg-small-body-bg, var(--vira-red-5, #ffe9e6)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-fg-small-body-bg, var(--vira-red-5, #ffe9e6))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-small-body-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-small-body-inverse-bg, var(--vir-red-behind-fg-small-body-fg, var(--vir-default-fg, black)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-fg-small-body-fg, var(--vir-default-fg, black))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-5, #ffe9e6)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-fg-small-body"
+                    },
+                    "vir-red-behind-fg-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-body-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-body-inverse-fg, var(--vir-red-behind-fg-body-bg, var(--vira-red-20, #ffc1bc)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-fg-body-bg, var(--vira-red-20, #ffc1bc))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-body-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-body-inverse-bg, var(--vir-red-behind-fg-body-fg, var(--vir-default-fg, black)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-fg-body-fg, var(--vir-default-fg, black))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-20, #ffc1bc)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-fg-body"
+                    },
+                    "vir-red-behind-fg-non-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-non-body-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-non-body-inverse-fg, var(--vir-red-behind-fg-non-body-bg, var(--vira-red-30, #ffa7a2)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-fg-non-body-bg, var(--vira-red-30, #ffa7a2))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-non-body-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-non-body-inverse-bg, var(--vir-red-behind-fg-non-body-fg, var(--vir-default-fg, black)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-fg-non-body-fg, var(--vir-default-fg, black))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-30, #ffa7a2)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-fg-non-body"
+                    },
+                    "vir-red-behind-fg-header": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-header-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-header-inverse-fg, var(--vir-red-behind-fg-header-bg, var(--vira-red-50, #ff6065)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-fg-header-bg, var(--vira-red-50, #ff6065))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-header-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-header-inverse-bg, var(--vir-red-behind-fg-header-fg, var(--vir-default-fg, black)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-fg-header-fg, var(--vir-default-fg, black))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-50, #ff6065)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-fg-header"
+                    },
+                    "vir-red-behind-fg-placeholder": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-placeholder-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-placeholder-inverse-fg, var(--vir-red-behind-fg-placeholder-bg, var(--vira-red-60, #f9163a)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-fg-placeholder-bg, var(--vira-red-60, #f9163a))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-placeholder-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-placeholder-inverse-bg, var(--vir-red-behind-fg-placeholder-fg, var(--vir-default-fg, black)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-fg-placeholder-fg, var(--vir-default-fg, black))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-60, #f9163a)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-fg-placeholder"
+                    },
+                    "vir-red-behind-fg-decoration": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-decoration-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-decoration-inverse-fg, var(--vir-red-behind-fg-decoration-bg, var(--vira-red-80, #a60012)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-fg-decoration-bg, var(--vira-red-80, #a60012))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-decoration-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-decoration-inverse-bg, var(--vir-red-behind-fg-decoration-fg, var(--vir-default-fg, black)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-fg-decoration-fg, var(--vir-default-fg, black))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-80, #a60012)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-fg-decoration"
+                    },
+                    "vir-red-behind-fg-invisible": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-invisible-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-invisible-inverse-fg, var(--vir-red-behind-fg-invisible-bg, var(--vira-red-90, #760003)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-fg-invisible-bg, var(--vira-red-90, #760003))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-invisible-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-invisible-inverse-bg, var(--vir-red-behind-fg-invisible-fg, var(--vir-default-fg, black)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-fg-invisible-fg, var(--vir-default-fg, black))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-fg-invisible"
+                    },
+                    "vir-red-on-self-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-body-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-body-inverse-fg, var(--vir-red-on-self-body-bg, var(--vira-red-5, #ffe9e6)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-on-self-body-bg, var(--vira-red-5, #ffe9e6))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-body-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-body-inverse-bg, var(--vir-red-on-self-body-fg, var(--vira-red-90, #760003)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-on-self-body-fg, var(--vira-red-90, #760003))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-5, #ffe9e6)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-on-self-body"
+                    },
+                    "vir-red-on-self-non-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-non-body-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-non-body-inverse-fg, var(--vir-red-on-self-non-body-bg, var(--vira-red-5, #ffe9e6)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-on-self-non-body-bg, var(--vira-red-5, #ffe9e6))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-non-body-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-non-body-inverse-bg, var(--vir-red-on-self-non-body-fg, var(--vira-red-80, #a60012)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-on-self-non-body-fg, var(--vira-red-80, #a60012))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-80, #a60012)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-5, #ffe9e6)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-on-self-non-body"
+                    },
+                    "vir-red-on-self-header": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-header-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-header-inverse-fg, var(--vir-red-on-self-header-bg, var(--vira-red-5, #ffe9e6)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-on-self-header-bg, var(--vira-red-5, #ffe9e6))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-header-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-header-inverse-bg, var(--vir-red-on-self-header-fg, var(--vira-red-60, #f9163a)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-on-self-header-fg, var(--vira-red-60, #f9163a))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-60, #f9163a)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-5, #ffe9e6)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-on-self-header"
+                    },
+                    "vir-red-on-self-placeholder": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-placeholder-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-placeholder-inverse-fg, var(--vir-red-on-self-placeholder-bg, var(--vira-red-5, #ffe9e6)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-on-self-placeholder-bg, var(--vira-red-5, #ffe9e6))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-placeholder-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-placeholder-inverse-bg, var(--vir-red-on-self-placeholder-fg, var(--vira-red-50, #ff6065)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-on-self-placeholder-fg, var(--vira-red-50, #ff6065))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-50, #ff6065)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-5, #ffe9e6)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-on-self-placeholder"
+                    },
+                    "vir-red-on-self-decoration": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-decoration-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-decoration-inverse-fg, var(--vir-red-on-self-decoration-bg, var(--vira-red-5, #ffe9e6)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-on-self-decoration-bg, var(--vira-red-5, #ffe9e6))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-decoration-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-decoration-inverse-bg, var(--vir-red-on-self-decoration-fg, var(--vira-red-30, #ffa7a2)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-on-self-decoration-fg, var(--vira-red-30, #ffa7a2))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-30, #ffa7a2)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-5, #ffe9e6)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-on-self-decoration"
+                    },
+                    "vir-red-on-self-invisible": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-invisible-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-invisible-inverse-fg, var(--vir-red-on-self-invisible-bg, var(--vira-red-5, #ffe9e6)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-on-self-invisible-bg, var(--vira-red-5, #ffe9e6))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-invisible-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-invisible-inverse-bg, var(--vir-red-on-self-invisible-fg, var(--vira-red-20, #ffc1bc)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-on-self-invisible-fg, var(--vira-red-20, #ffc1bc))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-20, #ffc1bc)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-5, #ffe9e6)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-on-self-invisible"
+                    }
+                },
+                "init": {
+                    "colors": {
+                        "vir-red-foreground-small-body": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "vir-red-foreground-body": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-80, #a60012)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "vir-red-foreground-non-body": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-60, #f9163a)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "vir-red-foreground-header": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-50, #ff6065)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "vir-red-foreground-placeholder": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-30, #ffa7a2)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "vir-red-foreground-decoration": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-20, #ffc1bc)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "vir-red-foreground-invisible": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-10, #ffd9d5)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "vir-red-behind-bg-small-body": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-behind-bg-body": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-80, #a60012)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-behind-bg-non-body": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-60, #f9163a)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-behind-bg-header": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-40, #ff8886)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-behind-bg-placeholder": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-30, #ffa7a2)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-behind-bg-decoration": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-20, #ffc1bc)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-behind-bg-invisible": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-5, #ffe9e6)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-behind-fg-small-body": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-5, #ffe9e6)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-behind-fg-body": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-20, #ffc1bc)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-behind-fg-non-body": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-30, #ffa7a2)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-behind-fg-header": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-50, #ff6065)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-behind-fg-placeholder": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-60, #f9163a)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-behind-fg-decoration": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-80, #a60012)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-behind-fg-invisible": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-on-self-body": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-5, #ffe9e6)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-on-self-non-body": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-80, #a60012)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-5, #ffe9e6)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-on-self-header": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-60, #f9163a)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-5, #ffe9e6)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-on-self-placeholder": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-50, #ff6065)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-5, #ffe9e6)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-on-self-decoration": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-30, #ffa7a2)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-5, #ffe9e6)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-on-self-invisible": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-20, #ffc1bc)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-5, #ffe9e6)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        }
+                    },
+                    "default": {
+                        "background": "white",
+                        "foreground": "black",
+                        "prefix": "vir"
+                    }
+                },
+                "prefix": "vir"
+            },
+            "asTheme": {
+                "colors": {
+                    "theme-default": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-default-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-default-fg, white)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "white"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-default-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-default-bg, black)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "black"
+                        },
+                        "init": {
+                            "background": "black",
+                            "foreground": "white",
+                            "prefix": "vir"
+                        },
+                        "name": "theme-default"
+                    },
+                    "vir-red-foreground-small-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-small-body-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-small-body-fg, var(--vira-red-5, #ffe9e6))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-5, #ffe9e6)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-small-body-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-small-body-bg, var(--vir-default-bg, black))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-bg, black)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-5, #ffe9e6)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "name": "vir-red-foreground-small-body"
+                    },
+                    "vir-red-foreground-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-body-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-body-fg, var(--vira-red-20, #ffc1bc))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-20, #ffc1bc)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-body-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-body-bg, var(--vir-default-bg, black))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-bg, black)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-20, #ffc1bc)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "name": "vir-red-foreground-body"
+                    },
+                    "vir-red-foreground-non-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-non-body-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-non-body-fg, var(--vira-red-30, #ffa7a2))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-30, #ffa7a2)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-non-body-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-non-body-bg, var(--vir-default-bg, black))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-bg, black)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-30, #ffa7a2)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "name": "vir-red-foreground-non-body"
+                    },
+                    "vir-red-foreground-header": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-header-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-header-fg, var(--vira-red-50, #ff6065))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-50, #ff6065)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-header-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-header-bg, var(--vir-default-bg, black))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-bg, black)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-50, #ff6065)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "name": "vir-red-foreground-header"
+                    },
+                    "vir-red-foreground-placeholder": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-placeholder-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-placeholder-fg, var(--vira-red-60, #f9163a))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-60, #f9163a)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-placeholder-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-placeholder-bg, var(--vir-default-bg, black))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-bg, black)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-60, #f9163a)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "name": "vir-red-foreground-placeholder"
+                    },
+                    "vir-red-foreground-decoration": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-decoration-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-decoration-fg, var(--vira-red-80, #a60012))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-80, #a60012)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-decoration-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-decoration-bg, var(--vir-default-bg, black))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-bg, black)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-80, #a60012)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "name": "vir-red-foreground-decoration"
+                    },
+                    "vir-red-foreground-invisible": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-invisible-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-invisible-fg, var(--vira-red-90, #760003))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-90, #760003)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-invisible-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-invisible-bg, var(--vir-default-bg, black))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-bg, black)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "name": "vir-red-foreground-invisible"
+                    },
+                    "vir-red-behind-bg-small-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-small-body-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-small-body-fg, var(--vir-default-bg, black))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-bg, black)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-small-body-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-small-body-bg, var(--vira-red-5, #ffe9e6))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-5, #ffe9e6)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-5, #ffe9e6)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-bg-small-body"
+                    },
+                    "vir-red-behind-bg-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-body-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-body-fg, var(--vir-default-bg, black))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-bg, black)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-body-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-body-bg, var(--vira-red-20, #ffc1bc))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-20, #ffc1bc)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-20, #ffc1bc)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-bg-body"
+                    },
+                    "vir-red-behind-bg-non-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-non-body-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-non-body-fg, var(--vir-default-bg, black))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-bg, black)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-non-body-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-non-body-bg, var(--vira-red-30, #ffa7a2))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-30, #ffa7a2)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-30, #ffa7a2)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-bg-non-body"
+                    },
+                    "vir-red-behind-bg-header": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-header-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-header-fg, var(--vir-default-bg, black))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-bg, black)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-header-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-header-bg, var(--vira-red-50, #ff6065))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-50, #ff6065)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-50, #ff6065)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-bg-header"
+                    },
+                    "vir-red-behind-bg-placeholder": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-placeholder-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-placeholder-fg, var(--vir-default-bg, black))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-bg, black)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-placeholder-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-placeholder-bg, var(--vira-red-60, #f9163a))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-60, #f9163a)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-60, #f9163a)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-bg-placeholder"
+                    },
+                    "vir-red-behind-bg-decoration": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-decoration-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-decoration-fg, var(--vir-default-bg, black))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-bg, black)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-decoration-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-decoration-bg, var(--vira-red-80, #a60012))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-80, #a60012)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-80, #a60012)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-bg-decoration"
+                    },
+                    "vir-red-behind-bg-invisible": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-invisible-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-invisible-fg, var(--vir-default-bg, black))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-bg, black)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-invisible-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-invisible-bg, var(--vira-red-90, #760003))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-90, #760003)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-bg-invisible"
+                    },
+                    "vir-red-behind-fg-small-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-small-body-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-small-body-fg, var(--vir-default-fg, white))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-fg, white)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-small-body-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-small-body-bg, var(--vira-red-90, #760003))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-90, #760003)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-fg-small-body"
+                    },
+                    "vir-red-behind-fg-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-body-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-body-fg, var(--vir-default-fg, white))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-fg, white)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-body-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-body-bg, var(--vira-red-80, #a60012))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-80, #a60012)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-80, #a60012)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-fg-body"
+                    },
+                    "vir-red-behind-fg-non-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-non-body-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-non-body-fg, var(--vir-default-fg, white))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-fg, white)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-non-body-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-non-body-bg, var(--vira-red-60, #f9163a))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-60, #f9163a)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-60, #f9163a)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-fg-non-body"
+                    },
+                    "vir-red-behind-fg-header": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-header-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-header-fg, var(--vir-default-fg, white))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-fg, white)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-header-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-header-bg, var(--vira-red-40, #ff8886))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-40, #ff8886)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-40, #ff8886)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-fg-header"
+                    },
+                    "vir-red-behind-fg-placeholder": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-placeholder-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-placeholder-fg, var(--vir-default-fg, white))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-fg, white)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-placeholder-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-placeholder-bg, var(--vira-red-30, #ffa7a2))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-30, #ffa7a2)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-30, #ffa7a2)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-fg-placeholder"
+                    },
+                    "vir-red-behind-fg-decoration": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-decoration-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-decoration-fg, var(--vir-default-fg, white))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-fg, white)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-decoration-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-decoration-bg, var(--vira-red-20, #ffc1bc))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-20, #ffc1bc)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-20, #ffc1bc)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-fg-decoration"
+                    },
+                    "vir-red-behind-fg-invisible": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-invisible-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-invisible-fg, var(--vir-default-fg, white))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-default-fg, white)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-invisible-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-invisible-bg, var(--vira-red-5, #ffe9e6))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-5, #ffe9e6)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-5, #ffe9e6)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-fg-invisible"
+                    },
+                    "vir-red-on-self-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-body-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-body-fg, var(--vira-red-10, #ffd9d5))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-10, #ffd9d5)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-body-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-body-bg, var(--vira-red-90, #760003))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-90, #760003)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-10, #ffd9d5)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-on-self-body"
+                    },
+                    "vir-red-on-self-non-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-non-body-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-non-body-fg, var(--vira-red-20, #ffc1bc))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-20, #ffc1bc)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-non-body-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-non-body-bg, var(--vira-red-90, #760003))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-90, #760003)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-20, #ffc1bc)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-on-self-non-body"
+                    },
+                    "vir-red-on-self-header": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-header-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-header-fg, var(--vira-red-40, #ff8886))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-40, #ff8886)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-header-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-header-bg, var(--vira-red-90, #760003))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-90, #760003)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-40, #ff8886)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-on-self-header"
+                    },
+                    "vir-red-on-self-placeholder": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-placeholder-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-placeholder-fg, var(--vira-red-50, #ff6065))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-50, #ff6065)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-placeholder-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-placeholder-bg, var(--vira-red-90, #760003))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-90, #760003)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-50, #ff6065)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-on-self-placeholder"
+                    },
+                    "vir-red-on-self-decoration": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-decoration-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-decoration-fg, var(--vira-red-70, #d2001d))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-70, #d2001d)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-decoration-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-decoration-bg, var(--vira-red-90, #760003))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-90, #760003)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-70, #d2001d)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-on-self-decoration"
+                    },
+                    "vir-red-on-self-invisible": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-invisible-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-invisible-fg, var(--vira-red-80, #a60012))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-80, #a60012)"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-invisible-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-invisible-bg, var(--vira-red-90, #760003))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vira-red-90, #760003)"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-80, #a60012)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-on-self-invisible"
+                    }
+                },
+                "inverse": {
+                    "theme-default": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-default-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-default-inverse-fg, black)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "black"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-default-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-default-inverse-bg, white)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "white"
+                        },
+                        "init": {
+                            "background": "black",
+                            "foreground": "white",
+                            "prefix": "vir"
+                        },
+                        "name": "theme-default"
+                    },
+                    "vir-red-foreground-small-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-small-body-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-small-body-inverse-fg, var(--vir-red-foreground-small-body-bg, var(--vir-default-bg, black)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-foreground-small-body-bg, var(--vir-default-bg, black))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-small-body-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-small-body-inverse-bg, var(--vir-red-foreground-small-body-fg, var(--vira-red-5, #ffe9e6)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-foreground-small-body-fg, var(--vira-red-5, #ffe9e6))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-5, #ffe9e6)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "name": "vir-red-foreground-small-body"
+                    },
+                    "vir-red-foreground-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-body-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-body-inverse-fg, var(--vir-red-foreground-body-bg, var(--vir-default-bg, black)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-foreground-body-bg, var(--vir-default-bg, black))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-body-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-body-inverse-bg, var(--vir-red-foreground-body-fg, var(--vira-red-20, #ffc1bc)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-foreground-body-fg, var(--vira-red-20, #ffc1bc))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-20, #ffc1bc)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "name": "vir-red-foreground-body"
+                    },
+                    "vir-red-foreground-non-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-non-body-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-non-body-inverse-fg, var(--vir-red-foreground-non-body-bg, var(--vir-default-bg, black)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-foreground-non-body-bg, var(--vir-default-bg, black))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-non-body-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-non-body-inverse-bg, var(--vir-red-foreground-non-body-fg, var(--vira-red-30, #ffa7a2)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-foreground-non-body-fg, var(--vira-red-30, #ffa7a2))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-30, #ffa7a2)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "name": "vir-red-foreground-non-body"
+                    },
+                    "vir-red-foreground-header": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-header-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-header-inverse-fg, var(--vir-red-foreground-header-bg, var(--vir-default-bg, black)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-foreground-header-bg, var(--vir-default-bg, black))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-header-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-header-inverse-bg, var(--vir-red-foreground-header-fg, var(--vira-red-50, #ff6065)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-foreground-header-fg, var(--vira-red-50, #ff6065))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-50, #ff6065)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "name": "vir-red-foreground-header"
+                    },
+                    "vir-red-foreground-placeholder": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-placeholder-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-placeholder-inverse-fg, var(--vir-red-foreground-placeholder-bg, var(--vir-default-bg, black)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-foreground-placeholder-bg, var(--vir-default-bg, black))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-placeholder-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-placeholder-inverse-bg, var(--vir-red-foreground-placeholder-fg, var(--vira-red-60, #f9163a)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-foreground-placeholder-fg, var(--vira-red-60, #f9163a))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-60, #f9163a)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "name": "vir-red-foreground-placeholder"
+                    },
+                    "vir-red-foreground-decoration": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-decoration-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-decoration-inverse-fg, var(--vir-red-foreground-decoration-bg, var(--vir-default-bg, black)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-foreground-decoration-bg, var(--vir-default-bg, black))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-decoration-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-decoration-inverse-bg, var(--vir-red-foreground-decoration-fg, var(--vira-red-80, #a60012)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-foreground-decoration-fg, var(--vira-red-80, #a60012))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-80, #a60012)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "name": "vir-red-foreground-decoration"
+                    },
+                    "vir-red-foreground-invisible": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-invisible-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-invisible-inverse-fg, var(--vir-red-foreground-invisible-bg, var(--vir-default-bg, black)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-foreground-invisible-bg, var(--vir-default-bg, black))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-foreground-invisible-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-foreground-invisible-inverse-bg, var(--vir-red-foreground-invisible-fg, var(--vira-red-90, #760003)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-foreground-invisible-fg, var(--vira-red-90, #760003))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "name": "vir-red-foreground-invisible"
+                    },
+                    "vir-red-behind-bg-small-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-small-body-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-small-body-inverse-fg, var(--vir-red-behind-bg-small-body-bg, var(--vira-red-5, #ffe9e6)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-bg-small-body-bg, var(--vira-red-5, #ffe9e6))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-small-body-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-small-body-inverse-bg, var(--vir-red-behind-bg-small-body-fg, var(--vir-default-bg, black)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-bg-small-body-fg, var(--vir-default-bg, black))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-5, #ffe9e6)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-bg-small-body"
+                    },
+                    "vir-red-behind-bg-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-body-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-body-inverse-fg, var(--vir-red-behind-bg-body-bg, var(--vira-red-20, #ffc1bc)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-bg-body-bg, var(--vira-red-20, #ffc1bc))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-body-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-body-inverse-bg, var(--vir-red-behind-bg-body-fg, var(--vir-default-bg, black)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-bg-body-fg, var(--vir-default-bg, black))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-20, #ffc1bc)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-bg-body"
+                    },
+                    "vir-red-behind-bg-non-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-non-body-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-non-body-inverse-fg, var(--vir-red-behind-bg-non-body-bg, var(--vira-red-30, #ffa7a2)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-bg-non-body-bg, var(--vira-red-30, #ffa7a2))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-non-body-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-non-body-inverse-bg, var(--vir-red-behind-bg-non-body-fg, var(--vir-default-bg, black)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-bg-non-body-fg, var(--vir-default-bg, black))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-30, #ffa7a2)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-bg-non-body"
+                    },
+                    "vir-red-behind-bg-header": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-header-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-header-inverse-fg, var(--vir-red-behind-bg-header-bg, var(--vira-red-50, #ff6065)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-bg-header-bg, var(--vira-red-50, #ff6065))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-header-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-header-inverse-bg, var(--vir-red-behind-bg-header-fg, var(--vir-default-bg, black)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-bg-header-fg, var(--vir-default-bg, black))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-50, #ff6065)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-bg-header"
+                    },
+                    "vir-red-behind-bg-placeholder": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-placeholder-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-placeholder-inverse-fg, var(--vir-red-behind-bg-placeholder-bg, var(--vira-red-60, #f9163a)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-bg-placeholder-bg, var(--vira-red-60, #f9163a))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-placeholder-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-placeholder-inverse-bg, var(--vir-red-behind-bg-placeholder-fg, var(--vir-default-bg, black)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-bg-placeholder-fg, var(--vir-default-bg, black))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-60, #f9163a)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-bg-placeholder"
+                    },
+                    "vir-red-behind-bg-decoration": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-decoration-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-decoration-inverse-fg, var(--vir-red-behind-bg-decoration-bg, var(--vira-red-80, #a60012)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-bg-decoration-bg, var(--vira-red-80, #a60012))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-decoration-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-decoration-inverse-bg, var(--vir-red-behind-bg-decoration-fg, var(--vir-default-bg, black)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-bg-decoration-fg, var(--vir-default-bg, black))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-80, #a60012)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-bg-decoration"
+                    },
+                    "vir-red-behind-bg-invisible": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-invisible-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-invisible-inverse-fg, var(--vir-red-behind-bg-invisible-bg, var(--vira-red-90, #760003)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-bg-invisible-bg, var(--vira-red-90, #760003))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-bg-invisible-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-bg-invisible-inverse-bg, var(--vir-red-behind-bg-invisible-fg, var(--vir-default-bg, black)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-bg-invisible-fg, var(--vir-default-bg, black))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-bg-invisible"
+                    },
+                    "vir-red-behind-fg-small-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-small-body-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-small-body-inverse-fg, var(--vir-red-behind-fg-small-body-bg, var(--vira-red-90, #760003)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-fg-small-body-bg, var(--vira-red-90, #760003))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-small-body-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-small-body-inverse-bg, var(--vir-red-behind-fg-small-body-fg, var(--vir-default-fg, white)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-fg-small-body-fg, var(--vir-default-fg, white))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-fg-small-body"
+                    },
+                    "vir-red-behind-fg-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-body-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-body-inverse-fg, var(--vir-red-behind-fg-body-bg, var(--vira-red-80, #a60012)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-fg-body-bg, var(--vira-red-80, #a60012))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-body-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-body-inverse-bg, var(--vir-red-behind-fg-body-fg, var(--vir-default-fg, white)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-fg-body-fg, var(--vir-default-fg, white))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-80, #a60012)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-fg-body"
+                    },
+                    "vir-red-behind-fg-non-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-non-body-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-non-body-inverse-fg, var(--vir-red-behind-fg-non-body-bg, var(--vira-red-60, #f9163a)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-fg-non-body-bg, var(--vira-red-60, #f9163a))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-non-body-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-non-body-inverse-bg, var(--vir-red-behind-fg-non-body-fg, var(--vir-default-fg, white)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-fg-non-body-fg, var(--vir-default-fg, white))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-60, #f9163a)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-fg-non-body"
+                    },
+                    "vir-red-behind-fg-header": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-header-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-header-inverse-fg, var(--vir-red-behind-fg-header-bg, var(--vira-red-40, #ff8886)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-fg-header-bg, var(--vira-red-40, #ff8886))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-header-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-header-inverse-bg, var(--vir-red-behind-fg-header-fg, var(--vir-default-fg, white)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-fg-header-fg, var(--vir-default-fg, white))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-40, #ff8886)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-fg-header"
+                    },
+                    "vir-red-behind-fg-placeholder": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-placeholder-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-placeholder-inverse-fg, var(--vir-red-behind-fg-placeholder-bg, var(--vira-red-30, #ffa7a2)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-fg-placeholder-bg, var(--vira-red-30, #ffa7a2))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-placeholder-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-placeholder-inverse-bg, var(--vir-red-behind-fg-placeholder-fg, var(--vir-default-fg, white)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-fg-placeholder-fg, var(--vir-default-fg, white))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-30, #ffa7a2)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-fg-placeholder"
+                    },
+                    "vir-red-behind-fg-decoration": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-decoration-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-decoration-inverse-fg, var(--vir-red-behind-fg-decoration-bg, var(--vira-red-20, #ffc1bc)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-fg-decoration-bg, var(--vira-red-20, #ffc1bc))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-decoration-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-decoration-inverse-bg, var(--vir-red-behind-fg-decoration-fg, var(--vir-default-fg, white)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-fg-decoration-fg, var(--vir-default-fg, white))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-20, #ffc1bc)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-fg-decoration"
+                    },
+                    "vir-red-behind-fg-invisible": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-invisible-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-invisible-inverse-fg, var(--vir-red-behind-fg-invisible-bg, var(--vira-red-5, #ffe9e6)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-fg-invisible-bg, var(--vira-red-5, #ffe9e6))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-behind-fg-invisible-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-behind-fg-invisible-inverse-bg, var(--vir-red-behind-fg-invisible-fg, var(--vir-default-fg, white)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-behind-fg-invisible-fg, var(--vir-default-fg, white))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-5, #ffe9e6)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-behind-fg-invisible"
+                    },
+                    "vir-red-on-self-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-body-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-body-inverse-fg, var(--vir-red-on-self-body-bg, var(--vira-red-90, #760003)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-on-self-body-bg, var(--vira-red-90, #760003))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-body-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-body-inverse-bg, var(--vir-red-on-self-body-fg, var(--vira-red-10, #ffd9d5)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-on-self-body-fg, var(--vira-red-10, #ffd9d5))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-10, #ffd9d5)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-on-self-body"
+                    },
+                    "vir-red-on-self-non-body": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-non-body-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-non-body-inverse-fg, var(--vir-red-on-self-non-body-bg, var(--vira-red-90, #760003)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-on-self-non-body-bg, var(--vira-red-90, #760003))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-non-body-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-non-body-inverse-bg, var(--vir-red-on-self-non-body-fg, var(--vira-red-20, #ffc1bc)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-on-self-non-body-fg, var(--vira-red-20, #ffc1bc))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-20, #ffc1bc)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-on-self-non-body"
+                    },
+                    "vir-red-on-self-header": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-header-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-header-inverse-fg, var(--vir-red-on-self-header-bg, var(--vira-red-90, #760003)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-on-self-header-bg, var(--vira-red-90, #760003))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-header-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-header-inverse-bg, var(--vir-red-on-self-header-fg, var(--vira-red-40, #ff8886)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-on-self-header-fg, var(--vira-red-40, #ff8886))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-40, #ff8886)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-on-self-header"
+                    },
+                    "vir-red-on-self-placeholder": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-placeholder-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-placeholder-inverse-fg, var(--vir-red-on-self-placeholder-bg, var(--vira-red-90, #760003)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-on-self-placeholder-bg, var(--vira-red-90, #760003))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-placeholder-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-placeholder-inverse-bg, var(--vir-red-on-self-placeholder-fg, var(--vira-red-50, #ff6065)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-on-self-placeholder-fg, var(--vira-red-50, #ff6065))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-50, #ff6065)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-on-self-placeholder"
+                    },
+                    "vir-red-on-self-decoration": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-decoration-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-decoration-inverse-fg, var(--vir-red-on-self-decoration-bg, var(--vira-red-90, #760003)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-on-self-decoration-bg, var(--vira-red-90, #760003))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-decoration-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-decoration-inverse-bg, var(--vir-red-on-self-decoration-fg, var(--vira-red-70, #d2001d)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-on-self-decoration-fg, var(--vira-red-70, #d2001d))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-70, #d2001d)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-on-self-decoration"
+                    },
+                    "vir-red-on-self-invisible": {
+                        "foreground": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-invisible-inverse-fg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-invisible-inverse-fg, var(--vir-red-on-self-invisible-bg, var(--vira-red-90, #760003)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-on-self-invisible-bg, var(--vira-red-90, #760003))"
+                        },
+                        "background": {
+                            "name": {
+                                "_$cssResult$": true,
+                                "cssText": "--vir-red-on-self-invisible-inverse-bg"
+                            },
+                            "value": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vir-red-on-self-invisible-inverse-bg, var(--vir-red-on-self-invisible-fg, var(--vira-red-80, #a60012)))",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "syntax": "*",
+                            "default": "var(--vir-red-on-self-invisible-fg, var(--vira-red-80, #a60012))"
+                        },
+                        "init": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-80, #a60012)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "name": "vir-red-on-self-invisible"
+                    }
+                },
+                "init": {
+                    "colors": {
+                        "vir-red-foreground-small-body": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-5, #ffe9e6)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "vir-red-foreground-body": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-20, #ffc1bc)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "vir-red-foreground-non-body": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-30, #ffa7a2)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "vir-red-foreground-header": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-50, #ff6065)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "vir-red-foreground-placeholder": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-60, #f9163a)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "vir-red-foreground-decoration": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-80, #a60012)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "vir-red-foreground-invisible": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "refDefaultBackground": true
+                            }
+                        },
+                        "vir-red-behind-bg-small-body": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-5, #ffe9e6)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-behind-bg-body": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-20, #ffc1bc)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-behind-bg-non-body": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-30, #ffa7a2)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-behind-bg-header": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-50, #ff6065)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-behind-bg-placeholder": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-60, #f9163a)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-behind-bg-decoration": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-80, #a60012)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-behind-bg-invisible": {
+                            "foreground": {
+                                "refDefaultBackground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-behind-fg-small-body": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-behind-fg-body": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-80, #a60012)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-behind-fg-non-body": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-60, #f9163a)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-behind-fg-header": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-40, #ff8886)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-behind-fg-placeholder": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-30, #ffa7a2)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-behind-fg-decoration": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-20, #ffc1bc)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-behind-fg-invisible": {
+                            "foreground": {
+                                "refDefaultForeground": true
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-5, #ffe9e6)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-on-self-body": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-10, #ffd9d5)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-on-self-non-body": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-20, #ffc1bc)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-on-self-header": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-40, #ff8886)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-on-self-placeholder": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-50, #ff6065)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-on-self-decoration": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-70, #d2001d)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        },
+                        "vir-red-on-self-invisible": {
+                            "foreground": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-80, #a60012)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            },
+                            "background": {
+                                "_$cssResult$": true,
+                                "cssText": "var(--vira-red-90, #760003)",
+                                "_strings": [
+                                    "var(",
+                                    ", ",
+                                    ")"
+                                ]
+                            }
+                        }
+                    },
+                    "default": {
+                        "background": "black",
+                        "foreground": "white",
+                        "prefix": "vir"
+                    }
+                },
+                "prefix": "vir"
+            }
+        }
+    }
+};

@@ -8,7 +8,6 @@ import {
     themeDefaultKey,
     type ColorTheme,
     type ColorThemeColor,
-    type DefaultColorThemeInit,
     type NoRefColorInit,
 } from './color-theme.js';
 
@@ -25,15 +24,13 @@ export type ColorThemeOverrideInit<Theme extends ColorTheme = ColorTheme> = Omit
 >;
 
 function applyCssVarOverride({
-    overriddenDefault,
-    overriddenColors,
+    originalTheme,
     layerKey,
     themeColor,
     override,
     overrideValues,
 }: {
-    overriddenDefault: Readonly<DefaultColorThemeInit>;
-    overriddenColors: ColorThemeInit;
+    originalTheme: ColorTheme;
     layerKey: keyof ColorInit;
     themeColor: Readonly<Pick<ColorThemeColor, keyof ColorInit>>;
     override: ColorInit | undefined;
@@ -46,7 +43,12 @@ function applyCssVarOverride({
     }
 
     overrideValues[String(themeColor[layerKey].name) as CssVarName] = String(
-        createColorCssVarDefault(layerKey, layerOverride, overriddenDefault, overriddenColors),
+        createColorCssVarDefault(
+            layerKey,
+            layerOverride,
+            originalTheme.init.default,
+            originalTheme.init.colors,
+        ),
     );
 }
 
@@ -70,34 +72,12 @@ export function defineColorThemeOverride<const Init extends ColorThemeInit>(
         }>
     >,
 ): ColorThemeOverride<Init> {
-    const overriddenDefault = {
-        ...originalTheme.init.default,
-        ...defaultOverride,
-    };
-
-    const asThemeColorInit: ColorThemeInit = mapObjectValues(
-        originalTheme.init.colors as ColorThemeInit,
-        (colorName, colorInit): ColorInit => {
-            const override: ColorInit | undefined = (
-                colorOverrides as ColorThemeOverrideInit | undefined
-            )?.[colorName];
-
-            const newInit: ColorInit = {
-                ...colorInit,
-                ...override,
-            };
-
-            return newInit;
-        },
-    );
-
     const defaultValues: ColorThemeOverride['overrides'] = {};
 
     if (defaultOverride) {
         getObjectTypedKeys(defaultOverride).forEach((layerKey) => {
             applyCssVarOverride({
-                overriddenDefault,
-                overriddenColors: asThemeColorInit,
+                originalTheme,
                 layerKey,
                 override: defaultOverride,
                 themeColor: originalTheme.colors[themeDefaultKey],
@@ -123,16 +103,14 @@ export function defineColorThemeOverride<const Init extends ColorThemeInit>(
                 }
 
                 applyCssVarOverride({
-                    overriddenDefault,
-                    overriddenColors: asThemeColorInit,
+                    originalTheme,
                     layerKey: 'foreground',
                     override,
                     themeColor,
                     overrideValues: colorValues,
                 });
                 applyCssVarOverride({
-                    overriddenDefault,
-                    overriddenColors: asThemeColorInit,
+                    originalTheme,
                     layerKey: 'background',
                     override,
                     themeColor,
@@ -142,7 +120,29 @@ export function defineColorThemeOverride<const Init extends ColorThemeInit>(
         );
     }
 
-    const asTheme: ColorTheme<Init> = defineColorTheme(overriddenDefault, asThemeColorInit as Init);
+    const asThemeColorInit: ColorThemeInit = mapObjectValues(
+        originalTheme.init.colors as ColorThemeInit,
+        (colorName, colorInit): ColorInit => {
+            const override: ColorInit | undefined = (
+                colorOverrides as ColorThemeOverrideInit | undefined
+            )?.[colorName];
+
+            const newInit: ColorInit = {
+                ...colorInit,
+                ...override,
+            };
+
+            return newInit;
+        },
+    );
+
+    const asTheme: ColorTheme<Init> = defineColorTheme(
+        {
+            ...originalTheme.init.default,
+            ...defaultOverride,
+        },
+        asThemeColorInit as Init,
+    );
 
     return {
         name: overrideName,
