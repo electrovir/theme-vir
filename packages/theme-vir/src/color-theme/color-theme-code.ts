@@ -206,7 +206,8 @@ function colorInitToCode(
 
     if (
         'foreground' in colorInit &&
-        (!defaultInit || !colorInitValuesEqual(colorInit.foreground, defaultInit.foreground))
+        (!defaultInit || !colorInitValuesEqual(colorInit.foreground, defaultInit.foreground)) &&
+        !check.hasKey(colorInit.foreground, 'refDefaultForeground')
     ) {
         // Check if foreground matches default background (use refDefaultBackground)
         if (defaultInit && colorInitValuesEqual(colorInit.foreground, defaultInit.background)) {
@@ -221,7 +222,8 @@ function colorInitToCode(
     }
     if (
         'background' in colorInit &&
-        (!defaultInit || !colorInitValuesEqual(colorInit.background, defaultInit.background))
+        (!defaultInit || !colorInitValuesEqual(colorInit.background, defaultInit.background)) &&
+        !check.hasKey(colorInit.background, 'refDefaultBackground')
     ) {
         // Check if background matches default foreground (use refDefaultForeground)
         if (defaultInit && colorInitValuesEqual(colorInit.background, defaultInit.foreground)) {
