@@ -1,6 +1,7 @@
 import {check} from '@augment-vir/assert';
 import {
     getObjectTypedEntries,
+    kebabCaseToCamelCase,
     type PartialWithUndefined,
     type RequiredAndNotNull,
 } from '@augment-vir/common';
@@ -127,7 +128,9 @@ function generateOverrideCode(
         parts.push(`${tab(2)}colorOverrides: {\n${colorOverrideEntries.join('\n')}\n${tab(2)}},`);
     }
 
-    return `export const ${override.name}Override = defineColorThemeOverride(\n${tab(1)}theme,\n${tab(1)}'${override.name}',\n${tab(1)}{\n${parts.join('\n')}\n${tab(1)}},\n);`;
+    const camelCaseName = kebabCaseToCamelCase(override.name);
+
+    return `export const ${camelCaseName}Override = defineColorThemeOverride(\n${tab(1)}theme,\n${tab(1)}'${override.name}',\n${tab(1)}{\n${parts.join('\n')}\n${tab(1)}},\n);`;
 }
 
 function tab(level: number): string {
