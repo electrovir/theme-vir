@@ -12,12 +12,7 @@ import {
     type PartialWithUndefined,
     type RequiredAndNotNull,
 } from '@augment-vir/common';
-import {
-    ContrastLevelName,
-    contrastLevelLabel,
-    findClosestColor,
-    findColorAtContrastLevel,
-} from '@electrovir/color';
+import {ContrastLevelName, contrastLevelLabel, findColorAtContrastLevel} from '@electrovir/color';
 import {type CssVarDefinitions, type CssVarName, type SingleCssVarDefinition} from 'lit-css-vars';
 import {type ColorInit, type ColorInitValue} from './color-theme-init.js';
 import {defineColorThemeOverride} from './color-theme-override.js';
@@ -259,11 +254,26 @@ export function buildColorTheme(
                 value: color,
             }));
 
-            const lightestSelfString = findClosestColor('white', colorStrings);
-            const darkestSelfString = findClosestColor('black', colorStrings);
-            const lightestSelf = colorByDefault[lightestSelfString];
-            const darkestSelf = colorByDefault[darkestSelfString];
-
+            const lightSelfFgString = assertWrap.isTruthy(
+                findColorAtContrastLevel(
+                    {
+                        foreground: colorStrings,
+                        background: defaultBackgroundString,
+                    },
+                    ContrastLevelName.SmallBodyText,
+                ),
+                `Failed to find light mode small body text color for ${firstColor.colorName}`,
+            );
+            const darkSelfFgString = assertWrap.isTruthy(
+                findColorAtContrastLevel(
+                    {
+                        foreground: colorStrings,
+                        background: defaultForegroundString,
+                    },
+                    ContrastLevelName.SmallBodyText,
+                ),
+                `Failed to find dark mode small body text color for ${firstColor.colorName}`,
+            );
             // Pre-compute base name parts that don't change per cross
             const baseNameParts = [
                 prefix,
@@ -284,13 +294,13 @@ export function buildColorTheme(
                             }
                           : cross.crossWith === 'color-on-self-dark-mode'
                             ? {
-                                  foreground: colorStrings,
-                                  background: darkestSelfString,
+                                  foreground: darkSelfFgString,
+                                  background: colorStrings,
                               }
                             : cross.crossWith === 'color-on-self-light-mode'
                               ? {
-                                    foreground: colorStrings,
-                                    background: lightestSelfString,
+                                    foreground: lightSelfFgString,
+                                    background: colorStrings,
                                 }
                               : cross.crossWith === 'color-behind-bg-light-mode'
                                 ? {
@@ -385,13 +395,17 @@ export function buildColorTheme(
                     comparison,
                     (key, value): ColorInitValue => {
                         if (check.isString(value)) {
-                            // For self-contrast modes, use the CSS var reference for the background
-                            if (isSelfContrast && key === 'background') {
-                                const selfColor =
+                            /**
+                             * For self-contrast modes, the foreground is the fixed string side —
+                             * use its CSS var reference
+                             */
+                            if (isSelfContrast && key === 'foreground') {
+                                const selfFg =
                                     cross.crossWith === 'color-on-self-light-mode'
-                                        ? lightestSelf
-                                        : darkestSelf;
-                                return selfColor?.definition.value || value;
+                                        ? lightSelfFgString
+                                        : darkSelfFgString;
+                                const selfFgColor = selfFg ? colorByDefault[selfFg] : undefined;
+                                return selfFgColor?.definition.value || value;
                             }
                             const referenceToDefault =
                                 referencesToDefault &&
