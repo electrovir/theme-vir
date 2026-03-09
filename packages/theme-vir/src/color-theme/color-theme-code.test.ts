@@ -8,16 +8,25 @@ import {generateThemeCode} from './color-theme-code.js';
 describe(generateThemeCode.name, () => {
     it('generates code', async (testContext) => {
         const colorPalette = defineCssVars({
-            'vira-red-5': '#ffe9e6',
-            'vira-red-10': '#ffd9d5',
-            'vira-red-20': '#ffc1bc',
-            'vira-red-30': '#ffa7a2',
-            'vira-red-40': '#ff8886',
-            'vira-red-50': '#ff6065',
-            'vira-red-60': '#f9163a',
-            'vira-red-70': '#d2001d',
-            'vira-red-80': '#a60012',
-            'vira-red-90': '#760003',
+            'vira-red-100': '#FFF6F5',
+            'vira-red-150': '#FFEDEB',
+            'vira-red-200': '#FFE4E1',
+            'vira-red-250': '#FFDCD8',
+            'vira-red-300': '#FFD1CB',
+            'vira-red-350': '#FFC1B8',
+            'vira-red-400': '#FFA79B',
+            'vira-red-450': '#FF8274',
+            'vira-red-500': '#FF564A',
+            'vira-red-550': '#F43A32',
+            'vira-red-600': '#E2322C',
+            'vira-red-650': '#D02C27',
+            'vira-red-700': '#BB2520',
+            'vira-red-750': '#9E231D',
+            'vira-red-800': '#82211A',
+            'vira-red-850': '#701A13',
+            'vira-red-900': '#611710',
+            'vira-red-950': '#52140D',
+            'vira-red-1000': '#43130D',
         });
 
         const theme = buildColorTheme(colorPalette);

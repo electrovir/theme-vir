@@ -41,8 +41,12 @@ export type AllThemeOptions<TagPrefix extends string> = Required<RequiredThemeOp
 export function createDefaultThemeOptions(): AllThemeOptions<any> {
     const defaultFont: FontStyle = {
         family: 'sans-serif',
-        lineHeight: {ratio: 1.1},
-        size: {pixels: 14},
+        lineHeight: {
+            ratio: 1.1,
+        },
+        size: {
+            pixels: 14,
+        },
         weight: 400,
     };
 
@@ -62,31 +66,43 @@ export function createDefaultThemeOptions(): AllThemeOptions<any> {
             monospace: {
                 ...defaultFont,
                 family: 'monospace',
-                size: {ratio: 1.2},
+                size: {
+                    ratio: 1.2,
+                },
             },
             headings: {
                 h1: {
                     ...bold,
-                    size: {ratio: 2},
+                    size: {
+                        ratio: 2,
+                    },
                 },
                 h2: {
                     ...bold,
-                    size: {ratio: 1.5},
+                    size: {
+                        ratio: 1.5,
+                    },
                 },
                 h3: {
                     ...bold,
-                    size: {ratio: 1.17},
+                    size: {
+                        ratio: 1.17,
+                    },
                 },
                 h4: {
                     ...bold,
                 },
                 h5: {
                     ...bold,
-                    size: {ratio: 0.83},
+                    size: {
+                        ratio: 0.83,
+                    },
                 },
                 h6: {
                     ...bold,
-                    size: {ratio: 0.67},
+                    size: {
+                        ratio: 0.67,
+                    },
                 },
             },
         },

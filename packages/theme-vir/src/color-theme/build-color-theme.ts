@@ -12,7 +12,13 @@ import {
     type PartialWithUndefined,
     type RequiredAndNotNull,
 } from '@augment-vir/common';
-import {ContrastLevelName, contrastLevelLabel, findColorAtContrastLevel} from '@electrovir/color';
+import {
+    ContrastLevelName,
+    calculateContrast,
+    contrastLevelLabel,
+    contrastLevelNameMap,
+    findColorAtContrastLevel,
+} from '@electrovir/color';
 import {type CssVarDefinitions, type CssVarName, type SingleCssVarDefinition} from 'lit-css-vars';
 import {type ColorInit, type ColorInitValue} from './color-theme-init.js';
 import {defineColorThemeOverride} from './color-theme-override.js';
@@ -162,6 +168,56 @@ export const defaultLightThemePair: RequiredAndNotNull<NoRefColorInit> = {
 export const defaultContrastLevels: Readonly<ArrayOrSelectParam<ContrastLevelName>> =
     getEnumValues(ContrastLevelName);
 
+type ColorPreference = 'lightest' | 'darkest';
+
+function findColorWithPreference(
+    colors: Readonly<
+        | {foreground: string; background: ReadonlyArray<string>}
+        | {foreground: ReadonlyArray<string>; background: string}
+    >,
+    desiredContrastLevel: ContrastLevelName,
+    preference: ColorPreference,
+    /** Pre-computed contrast-against-white values per color string. Higher = darker. */
+    lightnessProxies: Readonly<Partial<Record<string, number>>>,
+): string | undefined {
+    const minContrast = contrastLevelNameMap[desiredContrastLevel].min;
+
+    const candidateColors: ReadonlyArray<string> = check.isArray(colors.foreground)
+        ? colors.foreground
+        : check.isArray(colors.background)
+          ? colors.background
+          : [];
+
+    const qualifying = candidateColors.filter((candidate) => {
+        const foreground = check.isArray(colors.foreground) ? candidate : colors.foreground;
+        const background = check.isArray(colors.foreground) ? colors.background : candidate;
+        return (
+            Math.abs(
+                calculateContrast({
+                    foreground,
+                    background: background as string,
+                }).contrast,
+            ) >= minContrast
+        );
+    });
+
+    if (qualifying.length === 0) {
+        return undefined;
+    }
+
+    return qualifying.reduce((best: string, color: string) => {
+        const bestProxy = lightnessProxies[best] ?? 0;
+        const colorProxy = lightnessProxies[color] ?? 0;
+        return preference === 'lightest'
+            ? colorProxy < bestProxy
+                ? color
+                : best
+            : colorProxy > bestProxy
+              ? color
+              : best;
+    });
+}
+
 /**
  * Options for {@link buildColorTheme}.
  *
@@ -254,32 +310,67 @@ export function buildColorTheme(
                 value: color,
             }));
 
-            const lightSelfFgString = assertWrap.isTruthy(
-                findColorAtContrastLevel(
-                    {
-                        foreground: colorStrings,
-                        background: defaultBackgroundString,
-                    },
-                    ContrastLevelName.SmallBodyText,
-                ),
-                `Failed to find light mode small body text color for ${firstColor.colorName}`,
+            /** Pre-computed contrast-against-white per color. Higher value = darker shade. */
+            const lightnessProxies = arrayToObject(colorStrings, (colorString) => {
+                return {
+                    key: colorString,
+                    value: Math.abs(
+                        calculateContrast({
+                            foreground: colorString,
+                            background: '#ffffff',
+                        }).contrast,
+                    ),
+                };
+            });
+
+            /** Lightest palette color (least contrast against white). */
+            const lightestColorString = colorStrings.reduce((lightest, color) =>
+                (lightnessProxies[color] ?? 0) < (lightnessProxies[lightest] ?? 0)
+                    ? color
+                    : lightest,
             );
-            const darkSelfFgString = assertWrap.isTruthy(
-                findColorAtContrastLevel(
+            /** Darkest palette color (most contrast against white). */
+            const darkestColorString = colorStrings.reduce((darkest, color) =>
+                (lightnessProxies[color] ?? 0) > (lightnessProxies[darkest] ?? 0) ? color : darkest,
+            );
+
+            /**
+             * On-self light mode: lightest fg achieving small-body contrast on the lightest palette
+             * bg. Fixed across all on-self contrast levels.
+             */
+            const lightSelfFgString = assertWrap.isTruthy(
+                findColorWithPreference(
                     {
                         foreground: colorStrings,
-                        background: defaultForegroundString,
+                        background: lightestColorString,
                     },
                     ContrastLevelName.SmallBodyText,
+                    'lightest',
+                    lightnessProxies,
                 ),
-                `Failed to find dark mode small body text color for ${firstColor.colorName}`,
+                `Failed to find light mode on-self foreground color for ${firstColor.colorName}`,
+            );
+            /**
+             * On-self dark mode: darkest fg achieving small-body contrast on the darkest palette
+             * bg. Fixed across all on-self contrast levels.
+             */
+            const darkSelfFgString = assertWrap.isTruthy(
+                findColorWithPreference(
+                    {
+                        foreground: colorStrings,
+                        background: darkestColorString,
+                    },
+                    ContrastLevelName.SmallBodyText,
+                    'darkest',
+                    lightnessProxies,
+                ),
+                `Failed to find dark mode on-self foreground color for ${firstColor.colorName}`,
             );
             // Pre-compute base name parts that don't change per cross
             const baseNameParts = [
                 prefix,
                 firstColor.colorName,
             ];
-
             allCrosses.forEach((cross) => {
                 const comparison =
                     cross.crossWith === 'color-in-foreground-light-mode'
