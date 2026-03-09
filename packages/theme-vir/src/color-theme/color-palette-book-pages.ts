@@ -5,7 +5,7 @@ import {defineBookPage, type BookPage} from 'element-book';
 import {css, html, unsafeCSS} from 'element-vir';
 import {type SingleCssVarDefinition} from 'lit-css-vars';
 import {type RequireExactlyOne} from 'type-fest';
-import {noNativeSpacing, viraColorPalette, viraTheme} from 'vira';
+import {noNativeSpacing, viraTheme} from 'vira';
 import {
     buildColorTheme,
     groupColors,
@@ -128,7 +128,8 @@ export function createColorPaletteBookPages({
                                 & .color-details {
                                     font-family: monospace;
                                     font-size: 12px;
-                                    color: ${viraColorPalette['vira-grey-50'].value};
+                                    color: ${viraTheme.colors['vira-grey-foreground-header']
+                                        .foreground.value};
                                 }
 
                                 & .color-value {
@@ -205,7 +206,8 @@ export function createColorPaletteBookPages({
                                 .darkness-level {
                                     text-align: center;
                                     font-size: 12px;
-                                    color: ${viraColorPalette['vira-grey-50'].value};
+                                    color: ${viraTheme.colors['vira-grey-foreground-header']
+                                        .foreground.value};
                                 }
 
                                 td {
