@@ -2,7 +2,7 @@ import {check} from '@augment-vir/assert';
 import {type PartialWithUndefined} from '@augment-vir/common';
 import {VirColorPair, type FontWeight} from '@electrovir/color';
 import {defineBookPage, type BookPage} from 'element-book';
-import {css, html, unsafeCSS} from 'element-vir';
+import {css, html, listen, unsafeCSS} from 'element-vir';
 import {type SingleCssVarDefinition} from 'lit-css-vars';
 import {type RequireExactlyOne} from 'type-fest';
 import {noNativeSpacing, viraTheme} from 'vira';
@@ -82,10 +82,10 @@ export function createColorPaletteBookPages({
     useVerticalTheme,
     options,
 }: {
-    parent: Readonly<BookPage>;
     title: string;
     colors: Readonly<ColorPaletteVars>;
 } & PartialWithUndefined<{
+    parent: Readonly<BookPage>;
     includeContrast: boolean;
     includeTheme: boolean;
     useVerticalTheme: boolean;
@@ -102,67 +102,104 @@ export function createColorPaletteBookPages({
         parent: topColorsPage,
         title: 'Palette',
         defineExamples({defineExample}) {
-            Object.entries(colorGroups).forEach(
-                ([
-                    groupName,
-                    colors,
-                ]) => {
-                    defineExample({
-                        title: groupName,
-                        styles: css`
-                            :host {
-                                display: flex;
-                                flex-direction: column;
-                            }
+            defineExample({
+                title: 'All Colors',
+                styles: css`
+                    :host {
+                        display: flex;
+                        flex-direction: row;
+                    }
 
-                            .swatch-wrapper {
-                                display: flex;
-                                gap: 4px;
-                                align-items: center;
+                    p {
+                        ${noNativeSpacing}
+                    }
 
-                                & .swatch {
-                                    width: 50px;
-                                    height: 50px;
-                                }
+                    .color-column {
+                        display: flex;
+                        flex-direction: column;
+                    }
 
-                                & .color-details {
-                                    font-family: monospace;
-                                    font-size: 12px;
-                                    color: ${viraTheme.colors['vira-grey-foreground-header']
-                                        .foreground.value};
-                                }
+                    .column-title {
+                        text-align: center;
+                        font-size: 12px;
+                        padding-bottom: 4px;
+                        border-bottom: 1px solid
+                            ${viraTheme.colors['vira-grey-foreground-decoration'].foreground.value};
+                        margin-bottom: 4px;
+                        color: ${viraTheme.colors['vira-grey-foreground-non-body'].foreground
+                            .value};
+                    }
 
-                                & .color-value {
-                                    margin-left: 1ch;
-                                }
-                            }
-                        `,
-                        render() {
-                            return colors.map((color) => {
-                                return html`
-                                    <div class="swatch-wrapper">
-                                        <div
-                                            class="swatch"
-                                            style=${css`
-                                                background-color: ${unsafeCSS(
-                                                    color.definition.default,
-                                                )};
-                                            `}
-                                        ></div>
-                                        <p class="color-details">
-                                            <span>${color.cssVarName}</span>
-                                            <br />
-                                            <span class="color-value">
-                                                ${color.definition.default}
-                                            </span>
-                                        </p>
-                                    </div>
-                                `;
-                            });
+                    .swatch-wrapper {
+                        display: flex;
+                        gap: 4px;
+                        align-items: center;
+
+                        & .swatch {
+                            width: 50px;
+                            height: 50px;
+                            cursor: pointer;
+                        }
+
+                        & .color-details {
+                            display: none;
+                            font-family: monospace;
+                            font-size: 12px;
+                            color: ${viraTheme.colors['vira-grey-foreground-non-body'].foreground
+                                .value};
+                        }
+
+                        &.expanded .color-details {
+                            display: block;
+                        }
+
+                        & .color-value {
+                            margin-left: 1ch;
+                        }
+                    }
+                `,
+                render() {
+                    return Object.entries(colorGroups).map(
+                        ([
+                            groupName,
+                            colors,
+                        ]) => {
+                            return html`
+                                <div class="color-column">
+                                    <p class="column-title">${groupName}</p>
+                                    ${colors.map((color) => {
+                                        return html`
+                                            <div class="swatch-wrapper">
+                                                <div
+                                                    class="swatch"
+                                                    style=${css`
+                                                        background-color: ${unsafeCSS(
+                                                            color.definition.default,
+                                                        )};
+                                                    `}
+                                                    ${listen('click', (event) => {
+                                                        const wrapper = (
+                                                            event.currentTarget as HTMLElement
+                                                        ).parentElement;
+                                                        wrapper?.classList.toggle('expanded');
+                                                    })}
+                                                ></div>
+                                                <p class="color-details">
+                                                    <span>${color.cssVarName}</span>
+                                                    <br />
+                                                    <span class="color-value">
+                                                        ${color.definition.default}
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        `;
+                                    })}
+                                </div>
+                            `;
                         },
-                    });
+                    );
                 },
-            );
+            });
         },
     });
 
@@ -284,25 +321,26 @@ export function createColorPaletteBookPages({
         );
     }
 
-    const generatedTheme = buildColorTheme(colors, options);
+    function createThemePages(): BookPage[] {
+        const generatedTheme = buildColorTheme(colors, options);
+        return createColorThemeBookPages({
+            parent: topColorsPage,
+            title: 'Theme (auto)',
+            theme: generatedTheme.defaultLight,
+            hideInverseColors: true,
+            useVerticalLayout: useVerticalTheme,
+            prefixGroupByCount: 2,
+            overrides: [generatedTheme.darkOverride],
+        });
+    }
 
     return [
         topColorsPage,
         colorPalettePage,
-        contrastsPage,
+        includeContrast ? contrastsPage : undefined,
         includeContrast ? blackWhiteContrastPage : undefined,
         includeContrast ? createSelfContrastPage(400) : undefined,
         includeContrast ? createSelfContrastPage(700) : undefined,
-        ...(includeTheme
-            ? createColorThemeBookPages({
-                  parent: topColorsPage,
-                  title: 'Theme (auto)',
-                  theme: generatedTheme.defaultLight,
-                  hideInverseColors: true,
-                  useVerticalLayout: useVerticalTheme,
-                  prefixGroupByCount: 2,
-                  overrides: [generatedTheme.darkOverride],
-              })
-            : []),
+        ...(includeTheme ? createThemePages() : []),
     ].filter(check.isTruthy);
 }
