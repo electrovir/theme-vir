@@ -4502,17 +4502,17 @@ export default {
                 "--vir-red-on-self-small-body-fg": "var(--vira-red-200, #FFE4E1)",
                 "--vir-red-on-self-small-body-bg": "var(--vira-red-1000, #43130D)",
                 "--vir-red-on-self-body-fg": "var(--vira-red-200, #FFE4E1)",
-                "--vir-red-on-self-body-bg": "var(--vira-red-950, #52140D)",
+                "--vir-red-on-self-body-bg": "var(--vira-red-750, #9E231D)",
                 "--vir-red-on-self-non-body-fg": "var(--vira-red-200, #FFE4E1)",
-                "--vir-red-on-self-non-body-bg": "var(--vira-red-700, #BB2520)",
+                "--vir-red-on-self-non-body-bg": "var(--vira-red-600, #E2322C)",
                 "--vir-red-on-self-header-fg": "var(--vira-red-200, #FFE4E1)",
-                "--vir-red-on-self-header-bg": "var(--vira-red-550, #F43A32)",
+                "--vir-red-on-self-header-bg": "var(--vira-red-500, #FF564A)",
                 "--vir-red-on-self-placeholder-fg": "var(--vira-red-200, #FFE4E1)",
                 "--vir-red-on-self-placeholder-bg": "var(--vira-red-450, #FF8274)",
                 "--vir-red-on-self-decoration-fg": "var(--vira-red-200, #FFE4E1)",
                 "--vir-red-on-self-decoration-bg": "var(--vira-red-400, #FFA79B)",
                 "--vir-red-on-self-invisible-fg": "var(--vira-red-200, #FFE4E1)",
-                "--vir-red-on-self-invisible-bg": "var(--vira-red-350, #FFC1B8)",
+                "--vir-red-on-self-invisible-bg": "var(--vira-red-100, #FFF6F5)",
                 "--vir-red-on-self-lowest-contrast-fg": "var(--vira-red-200, #FFE4E1)",
                 "--vir-red-on-self-lowest-contrast-bg": "var(--vira-red-100, #FFF6F5)"
             },
@@ -10514,7 +10514,7 @@ export default {
                             },
                             "value": {
                                 "_$cssResult$": true,
-                                "cssText": "var(--vir-red-on-self-body-bg, var(--vira-red-950, #52140D))",
+                                "cssText": "var(--vir-red-on-self-body-bg, var(--vira-red-750, #9E231D))",
                                 "_strings": [
                                     "var(",
                                     ", ",
@@ -10522,7 +10522,7 @@ export default {
                                 ]
                             },
                             "syntax": "*",
-                            "default": "var(--vira-red-950, #52140D)"
+                            "default": "var(--vira-red-750, #9E231D)"
                         },
                         "init": {
                             "foreground": {
@@ -10536,7 +10536,7 @@ export default {
                             },
                             "background": {
                                 "_$cssResult$": true,
-                                "cssText": "var(--vira-red-950, #52140D)",
+                                "cssText": "var(--vira-red-750, #9E231D)",
                                 "_strings": [
                                     "var(",
                                     ", ",
@@ -10571,7 +10571,7 @@ export default {
                             },
                             "value": {
                                 "_$cssResult$": true,
-                                "cssText": "var(--vir-red-on-self-non-body-bg, var(--vira-red-700, #BB2520))",
+                                "cssText": "var(--vir-red-on-self-non-body-bg, var(--vira-red-600, #E2322C))",
                                 "_strings": [
                                     "var(",
                                     ", ",
@@ -10579,7 +10579,7 @@ export default {
                                 ]
                             },
                             "syntax": "*",
-                            "default": "var(--vira-red-700, #BB2520)"
+                            "default": "var(--vira-red-600, #E2322C)"
                         },
                         "init": {
                             "foreground": {
@@ -10593,7 +10593,7 @@ export default {
                             },
                             "background": {
                                 "_$cssResult$": true,
-                                "cssText": "var(--vira-red-700, #BB2520)",
+                                "cssText": "var(--vira-red-600, #E2322C)",
                                 "_strings": [
                                     "var(",
                                     ", ",
@@ -10628,7 +10628,7 @@ export default {
                             },
                             "value": {
                                 "_$cssResult$": true,
-                                "cssText": "var(--vir-red-on-self-header-bg, var(--vira-red-550, #F43A32))",
+                                "cssText": "var(--vir-red-on-self-header-bg, var(--vira-red-500, #FF564A))",
                                 "_strings": [
                                     "var(",
                                     ", ",
@@ -10636,7 +10636,7 @@ export default {
                                 ]
                             },
                             "syntax": "*",
-                            "default": "var(--vira-red-550, #F43A32)"
+                            "default": "var(--vira-red-500, #FF564A)"
                         },
                         "init": {
                             "foreground": {
@@ -10650,7 +10650,7 @@ export default {
                             },
                             "background": {
                                 "_$cssResult$": true,
-                                "cssText": "var(--vira-red-550, #F43A32)",
+                                "cssText": "var(--vira-red-500, #FF564A)",
                                 "_strings": [
                                     "var(",
                                     ", ",
@@ -10799,7 +10799,7 @@ export default {
                             },
                             "value": {
                                 "_$cssResult$": true,
-                                "cssText": "var(--vir-red-on-self-invisible-bg, var(--vira-red-350, #FFC1B8))",
+                                "cssText": "var(--vir-red-on-self-invisible-bg, var(--vira-red-100, #FFF6F5))",
                                 "_strings": [
                                     "var(",
                                     ", ",
@@ -10807,7 +10807,7 @@ export default {
                                 ]
                             },
                             "syntax": "*",
-                            "default": "var(--vira-red-350, #FFC1B8)"
+                            "default": "var(--vira-red-100, #FFF6F5)"
                         },
                         "init": {
                             "foreground": {
@@ -10821,7 +10821,7 @@ export default {
                             },
                             "background": {
                                 "_$cssResult$": true,
-                                "cssText": "var(--vira-red-350, #FFC1B8)",
+                                "cssText": "var(--vira-red-100, #FFF6F5)",
                                 "_strings": [
                                     "var(",
                                     ", ",
@@ -12431,7 +12431,7 @@ export default {
                             },
                             "value": {
                                 "_$cssResult$": true,
-                                "cssText": "var(--vir-red-on-self-body-inverse-fg, var(--vir-red-on-self-body-bg, var(--vira-red-950, #52140D)))",
+                                "cssText": "var(--vir-red-on-self-body-inverse-fg, var(--vir-red-on-self-body-bg, var(--vira-red-750, #9E231D)))",
                                 "_strings": [
                                     "var(",
                                     ", ",
@@ -12439,7 +12439,7 @@ export default {
                                 ]
                             },
                             "syntax": "*",
-                            "default": "var(--vir-red-on-self-body-bg, var(--vira-red-950, #52140D))"
+                            "default": "var(--vir-red-on-self-body-bg, var(--vira-red-750, #9E231D))"
                         },
                         "background": {
                             "name": {
@@ -12470,7 +12470,7 @@ export default {
                             },
                             "background": {
                                 "_$cssResult$": true,
-                                "cssText": "var(--vira-red-950, #52140D)",
+                                "cssText": "var(--vira-red-750, #9E231D)",
                                 "_strings": [
                                     "var(",
                                     ", ",
@@ -12488,7 +12488,7 @@ export default {
                             },
                             "value": {
                                 "_$cssResult$": true,
-                                "cssText": "var(--vir-red-on-self-non-body-inverse-fg, var(--vir-red-on-self-non-body-bg, var(--vira-red-700, #BB2520)))",
+                                "cssText": "var(--vir-red-on-self-non-body-inverse-fg, var(--vir-red-on-self-non-body-bg, var(--vira-red-600, #E2322C)))",
                                 "_strings": [
                                     "var(",
                                     ", ",
@@ -12496,7 +12496,7 @@ export default {
                                 ]
                             },
                             "syntax": "*",
-                            "default": "var(--vir-red-on-self-non-body-bg, var(--vira-red-700, #BB2520))"
+                            "default": "var(--vir-red-on-self-non-body-bg, var(--vira-red-600, #E2322C))"
                         },
                         "background": {
                             "name": {
@@ -12527,7 +12527,7 @@ export default {
                             },
                             "background": {
                                 "_$cssResult$": true,
-                                "cssText": "var(--vira-red-700, #BB2520)",
+                                "cssText": "var(--vira-red-600, #E2322C)",
                                 "_strings": [
                                     "var(",
                                     ", ",
@@ -12545,7 +12545,7 @@ export default {
                             },
                             "value": {
                                 "_$cssResult$": true,
-                                "cssText": "var(--vir-red-on-self-header-inverse-fg, var(--vir-red-on-self-header-bg, var(--vira-red-550, #F43A32)))",
+                                "cssText": "var(--vir-red-on-self-header-inverse-fg, var(--vir-red-on-self-header-bg, var(--vira-red-500, #FF564A)))",
                                 "_strings": [
                                     "var(",
                                     ", ",
@@ -12553,7 +12553,7 @@ export default {
                                 ]
                             },
                             "syntax": "*",
-                            "default": "var(--vir-red-on-self-header-bg, var(--vira-red-550, #F43A32))"
+                            "default": "var(--vir-red-on-self-header-bg, var(--vira-red-500, #FF564A))"
                         },
                         "background": {
                             "name": {
@@ -12584,7 +12584,7 @@ export default {
                             },
                             "background": {
                                 "_$cssResult$": true,
-                                "cssText": "var(--vira-red-550, #F43A32)",
+                                "cssText": "var(--vira-red-500, #FF564A)",
                                 "_strings": [
                                     "var(",
                                     ", ",
@@ -12716,7 +12716,7 @@ export default {
                             },
                             "value": {
                                 "_$cssResult$": true,
-                                "cssText": "var(--vir-red-on-self-invisible-inverse-fg, var(--vir-red-on-self-invisible-bg, var(--vira-red-350, #FFC1B8)))",
+                                "cssText": "var(--vir-red-on-self-invisible-inverse-fg, var(--vir-red-on-self-invisible-bg, var(--vira-red-100, #FFF6F5)))",
                                 "_strings": [
                                     "var(",
                                     ", ",
@@ -12724,7 +12724,7 @@ export default {
                                 ]
                             },
                             "syntax": "*",
-                            "default": "var(--vir-red-on-self-invisible-bg, var(--vira-red-350, #FFC1B8))"
+                            "default": "var(--vir-red-on-self-invisible-bg, var(--vira-red-100, #FFF6F5))"
                         },
                         "background": {
                             "name": {
@@ -12755,7 +12755,7 @@ export default {
                             },
                             "background": {
                                 "_$cssResult$": true,
-                                "cssText": "var(--vira-red-350, #FFC1B8)",
+                                "cssText": "var(--vira-red-100, #FFF6F5)",
                                 "_strings": [
                                     "var(",
                                     ", ",
@@ -13255,7 +13255,7 @@ export default {
                             },
                             "background": {
                                 "_$cssResult$": true,
-                                "cssText": "var(--vira-red-950, #52140D)",
+                                "cssText": "var(--vira-red-750, #9E231D)",
                                 "_strings": [
                                     "var(",
                                     ", ",
@@ -13275,7 +13275,7 @@ export default {
                             },
                             "background": {
                                 "_$cssResult$": true,
-                                "cssText": "var(--vira-red-700, #BB2520)",
+                                "cssText": "var(--vira-red-600, #E2322C)",
                                 "_strings": [
                                     "var(",
                                     ", ",
@@ -13295,7 +13295,7 @@ export default {
                             },
                             "background": {
                                 "_$cssResult$": true,
-                                "cssText": "var(--vira-red-550, #F43A32)",
+                                "cssText": "var(--vira-red-500, #FF564A)",
                                 "_strings": [
                                     "var(",
                                     ", ",
@@ -13355,7 +13355,7 @@ export default {
                             },
                             "background": {
                                 "_$cssResult$": true,
-                                "cssText": "var(--vira-red-350, #FFC1B8)",
+                                "cssText": "var(--vira-red-100, #FFF6F5)",
                                 "_strings": [
                                     "var(",
                                     ", ",
