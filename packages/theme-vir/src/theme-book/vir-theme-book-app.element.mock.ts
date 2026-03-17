@@ -48,6 +48,7 @@ export const VirThemeBookApp = defineElement()({
             ...createColorPaletteBookPages({
                 title: 'Example Palette',
                 colors: mockColorPalette,
+                includeTheme: true,
             }),
             applyColorThemeBookPage,
         ];
