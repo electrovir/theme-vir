@@ -78,6 +78,12 @@ export function defineThemeElements<TagPrefix extends string>(
     return themeElements;
 }
 
+/**
+ * `NoInfer` matches how `element-vir` constrains host class keys. Without it, TypeScript cannot
+ * relate this template literal to the constraint while `TagPrefix` is still generic.
+ */
+type HeadingHostClassKey<TagPrefix extends string> = `${NoInfer<`${TagPrefix}-heading`>}-${string}`;
+
 function defineHeadingElement<TagPrefix extends string>(
     options: Pick<AllThemeOptions<TagPrefix>, 'elementTagPrefix' | 'font'>,
 ) {
@@ -87,15 +93,20 @@ function defineHeadingElement<TagPrefix extends string>(
     return defineElement<{headingLevel: HeadingLevel}>()({
         tagName: headingTag,
         hostClasses: typedObjectFromEntries(
+            /**
+             * `mapEnumToObject` cannot be used here: host class keys must be prefixed with the
+             * element's tag name, not the bare enum values.
+             */
+            // eslint-disable-next-line @virmator/prefer-map-enum-to-object
             getEnumValues(HeadingLevel).map(
                 (
                     headingLevel,
                 ): [
-                    `${TagPrefix}-heading-${string}`,
+                    HeadingHostClassKey<TagPrefix>,
                     (params: {inputs: {headingLevel: HeadingLevel}}) => boolean,
                 ] => {
                     return [
-                        `${headingTag}-${headingLevel}`,
+                        `${headingTag}-${headingLevel}` satisfies `${TagPrefix}-heading-${string}` as HeadingHostClassKey<TagPrefix>,
                         ({inputs}) => inputs.headingLevel === headingLevel,
                     ];
                 },

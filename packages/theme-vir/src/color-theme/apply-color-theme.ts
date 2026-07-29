@@ -40,7 +40,12 @@ export function applyColorThemeViaStyleElement(
 ) {
     const cssVarValues: Record<CssVarName, string> = typedObjectFromEntries(
         getObjectTypedValues(colorTheme.colors as Record<CssVarName, ColorThemeColor>).flatMap(
-            (themeColor): [CssVarName, string][] => {
+            (
+                themeColor,
+            ): [
+                CssVarName,
+                string,
+            ][] => {
                 return [
                     buildCssVarDeclaration({
                         layerKey: 'background',
@@ -99,7 +104,10 @@ function buildCssVarDeclaration({
     layerKey: keyof ColorInit;
     themeOverride: ColorThemeOverride | undefined;
     themeColor: ColorThemeColor;
-}): [key: CssVarName, value: string] {
+}): [
+    key: CssVarName,
+    value: string,
+] {
     const cssVarName: CssVarName = String(themeColor[layerKey].name) as CssVarName;
 
     const override: string | undefined = themeOverride?.overrides[cssVarName];

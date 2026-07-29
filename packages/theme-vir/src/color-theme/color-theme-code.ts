@@ -30,13 +30,18 @@ export function generateThemeCode(
 ): string {
     const paletteVarName = options?.paletteVarName;
 
-    const defaultInitCode = colorInitToCode(theme.init.default, 1, undefined, paletteVarName);
-    const colorsInitCode = colorThemeInitToCode(
-        theme.init.colors,
-        1,
-        theme.init.default,
+    const defaultInitCode = colorInitToCode({
+        colorInit: theme.init.default,
+        indentLevel: 1,
+        defaultInit: undefined,
         paletteVarName,
-    );
+    });
+    const colorsInitCode = colorThemeInitToCode({
+        colorsInit: theme.init.colors,
+        indentLevel: 1,
+        defaultInit: theme.init.default,
+        paletteVarName,
+    });
 
     const themeCode = `export const theme = defineColorTheme(\n${defaultInitCode},\n${colorsInitCode},\n);`;
 
@@ -137,6 +142,7 @@ function tab(level: number): string {
     return '    '.repeat(level);
 }
 
+// eslint-disable-next-line @virmator/prefer-params-object
 function colorInitValuesEqual(a: ColorInitValue, b: ColorInitValue): boolean {
     if (typeof a !== typeof b) {
         return false;
@@ -196,12 +202,17 @@ function colorInitValueToCode(
     }
 }
 
-function colorInitToCode(
-    colorInit: ColorInit | NoRefColorInit,
-    indentLevel: number,
-    defaultInit: RequiredAndNotNull<NoRefColorInit> | undefined,
-    paletteVarName: string | undefined,
-): string {
+function colorInitToCode({
+    colorInit,
+    indentLevel,
+    defaultInit,
+    paletteVarName,
+}: Readonly<{
+    colorInit: ColorInit | NoRefColorInit;
+    indentLevel: number;
+    defaultInit: RequiredAndNotNull<NoRefColorInit> | undefined;
+    paletteVarName: string | undefined;
+}>): string {
     const entries: string[] = [];
 
     if (
@@ -240,18 +251,28 @@ function colorInitToCode(
     return `${tab(indentLevel)}{\n${entries.join('\n')}\n${tab(indentLevel)}}`;
 }
 
-function colorThemeInitToCode(
-    colorsInit: ColorThemeInit,
-    indentLevel: number,
-    defaultInit: RequiredAndNotNull<NoRefColorInit>,
-    paletteVarName: string | undefined,
-): string {
+function colorThemeInitToCode({
+    colorsInit,
+    indentLevel,
+    defaultInit,
+    paletteVarName,
+}: Readonly<{
+    colorsInit: ColorThemeInit;
+    indentLevel: number;
+    defaultInit: RequiredAndNotNull<NoRefColorInit>;
+    paletteVarName: string | undefined;
+}>): string {
     const entries = getObjectTypedEntries(colorsInit).map(
         ([
             colorName,
             colorInit,
         ]) => {
-            return `${tab(indentLevel + 1)}'${colorName}': ${colorInitToCode(colorInit, indentLevel + 1, defaultInit, paletteVarName).trimStart()},`;
+            return `${tab(indentLevel + 1)}'${colorName}': ${colorInitToCode({
+                colorInit,
+                indentLevel: indentLevel + 1,
+                defaultInit,
+                paletteVarName,
+            }).trimStart()},`;
         },
     );
 

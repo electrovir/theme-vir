@@ -46,7 +46,10 @@ const VirApplyThemeDemo = defineElement()({
             const [
                 key,
                 value,
-            ] = entry as unknown as [string, ColorThemeColor];
+            ] = entry as unknown as [
+                string,
+                ColorThemeColor,
+            ];
             return html`
                 <div class="demo-square" style=${colorCss(value)}>
                     <span>${key}</span>

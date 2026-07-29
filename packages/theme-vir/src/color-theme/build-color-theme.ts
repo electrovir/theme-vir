@@ -236,16 +236,21 @@ function resolveExtremeContrastColor({
 
 type ColorPreference = 'lightest' | 'darkest';
 
-function findColorWithPreference(
+function findColorWithPreference({
+    colors,
+    desiredContrastLevel,
+    preference,
+    lightnessProxies,
+}: Readonly<{
     colors: Readonly<
         | {foreground: string; background: ReadonlyArray<string>}
         | {foreground: ReadonlyArray<string>; background: string}
-    >,
-    desiredContrastLevel: ContrastLevelName,
-    preference: ColorPreference,
+    >;
+    desiredContrastLevel: ContrastLevelName;
+    preference: ColorPreference;
     /** Pre-computed contrast-against-white values per color string. Higher = darker. */
-    lightnessProxies: Readonly<Partial<Record<string, number>>>,
-): string | undefined {
+    lightnessProxies: Readonly<Partial<Record<string, number>>>;
+}>): string | undefined {
     const minContrast = contrastLevelNameMap[desiredContrastLevel].min;
 
     const candidateColors: ReadonlyArray<string> = check.isArray(colors.foreground)
@@ -376,10 +381,12 @@ export function buildColorTheme(
             const firstColor = colors[0];
 
             // Create an object for O(1) color lookup instead of O(n) find()
-            const colorByDefault = arrayToObject(colors, (color) => ({
-                key: color.definition.default,
-                value: color,
-            }));
+            const colorByDefault = arrayToObject(colors, (color) => {
+                return {
+                    key: color.definition.default,
+                    value: color,
+                };
+            });
 
             /** Pre-computed contrast-against-white per color. Higher value = darker shade. */
             const lightnessProxies = arrayToObject(colorStrings, (colorString) => {
@@ -410,15 +417,15 @@ export function buildColorTheme(
              * bg. Fixed across all on-self contrast levels.
              */
             const lightSelfFgString = assertWrap.isTruthy(
-                findColorWithPreference(
-                    {
+                findColorWithPreference({
+                    colors: {
                         foreground: colorStrings,
                         background: lightestColorString,
                     },
-                    ContrastLevelName.SmallBodyText,
-                    'lightest',
+                    desiredContrastLevel: ContrastLevelName.SmallBodyText,
+                    preference: 'lightest',
                     lightnessProxies,
-                ),
+                }),
                 `Failed to find light mode on-self foreground color for ${firstColor.colorName}`,
             );
             /**
@@ -426,15 +433,15 @@ export function buildColorTheme(
              * bg. Fixed across all on-self contrast levels.
              */
             const darkSelfFgString = assertWrap.isTruthy(
-                findColorWithPreference(
-                    {
+                findColorWithPreference({
+                    colors: {
                         foreground: colorStrings,
                         background: darkestColorString,
                     },
-                    ContrastLevelName.SmallBodyText,
-                    'darkest',
+                    desiredContrastLevel: ContrastLevelName.SmallBodyText,
+                    preference: 'darkest',
                     lightnessProxies,
-                ),
+                }),
                 `Failed to find dark mode on-self foreground color for ${firstColor.colorName}`,
             );
             /**

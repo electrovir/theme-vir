@@ -96,6 +96,7 @@ export function noRefColorInitToString(init: Values<NoRefColorInit>): string {
  *
  * @category Internal
  */
+// eslint-disable-next-line @virmator/prefer-params-object
 export function createColorCssVarDefault(
     fromName: string,
     init: ColorInitValue,
