@@ -402,15 +402,17 @@ export function buildColorTheme(
             });
 
             /** Lightest palette color (least contrast against white). */
-            const lightestColorString = colorStrings.reduce((lightest, color) =>
-                (lightnessProxies[color] ?? 0) < (lightnessProxies[lightest] ?? 0)
+            const lightestColorString = colorStrings.reduce((lightest, color) => {
+                return (lightnessProxies[color] ?? 0) < (lightnessProxies[lightest] ?? 0)
                     ? color
-                    : lightest,
-            );
+                    : lightest;
+            });
             /** Darkest palette color (most contrast against white). */
-            const darkestColorString = colorStrings.reduce((darkest, color) =>
-                (lightnessProxies[color] ?? 0) > (lightnessProxies[darkest] ?? 0) ? color : darkest,
-            );
+            const darkestColorString = colorStrings.reduce((darkest, color) => {
+                return (lightnessProxies[color] ?? 0) > (lightnessProxies[darkest] ?? 0)
+                    ? color
+                    : darkest;
+            });
 
             /**
              * On-self light mode: lightest fg achieving small-body contrast on the lightest palette

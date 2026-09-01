@@ -310,15 +310,15 @@ export function createColorPaletteBookPages({
     const blackWhiteContrastPage = createContrastPage('Contrast Black White', blackWhiteCells);
 
     function createSelfContrastPage(fontWeight: FontWeight) {
-        return createContrastPage(`Contrast Self ${fontWeight}`, (colors) =>
-            colors.map((color) => {
+        return createContrastPage(`Contrast Self ${fontWeight}`, (colors) => {
+            return colors.map((color) => {
                 return {
                     fontWeight,
                     title: color.suffix || '',
                     foreground: color.definition,
                 };
-            }),
-        );
+            });
+        });
     }
 
     function createThemePages(): BookPage[] {

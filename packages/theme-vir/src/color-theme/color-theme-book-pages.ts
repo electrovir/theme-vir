@@ -188,13 +188,13 @@ export function createColorThemeBookPages({
 
                         return html`
                             <div class="theme-wrapper">
-                                ${group.map((entry) =>
-                                    buildThemeColorTemplate({
+                                ${group.map((entry) => {
+                                    return buildThemeColorTemplate({
                                         controls,
                                         theme: currentTheme,
                                         themeColorName: entry,
-                                    }),
-                                )}
+                                    });
+                                })}
                             </div>
                         `;
                     },

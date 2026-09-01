@@ -38,16 +38,16 @@ describe(defineColorThemeOverride.name, () => {
         );
     });
     it('rejects an override that does not match a theme color', () => {
-        assert.throws(() =>
-            defineColorThemeOverride(mockTheme, 'mock', {
+        assert.throws(() => {
+            return defineColorThemeOverride(mockTheme, 'mock', {
                 colorOverrides: {
                     // @ts-expect-error: invalid color name
                     'invalid-color': {
                         background: 'pink',
                     },
                 },
-            }),
-        );
+            });
+        });
     });
     it('applies overrides', async () => {
         const fixture = await testWeb.render(html`
