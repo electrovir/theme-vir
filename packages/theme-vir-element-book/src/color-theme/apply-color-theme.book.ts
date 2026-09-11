@@ -1,9 +1,8 @@
 import {colorCss} from '@electrovir/color';
 import {defineBookPage} from 'element-book';
 import {css, defineElement, html, listen} from 'element-vir';
+import {applyColorThemeViaStyleElement, type ColorThemeColor} from 'theme-vir';
 import {ViraButton, viraTheme, viraThemeDarkOverride} from 'vira';
-import {applyColorThemeViaStyleElement} from './apply-color-theme.js';
-import {type ColorThemeColor} from './color-theme.js';
 
 const VirApplyThemeDemo = defineElement()({
     tagName: 'vir-apply-theme-demo',

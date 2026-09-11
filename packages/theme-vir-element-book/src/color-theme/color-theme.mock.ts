@@ -1,6 +1,5 @@
 import {defineCssVars} from 'lit-css-vars';
-import {defineColorThemeOverride} from './color-theme-override.js';
-import {defineColorTheme} from './color-theme.js';
+import {defineColorTheme, defineColorThemeOverride} from 'theme-vir';
 
 export const mockColorPalette = defineCssVars({
     'mock-red-100': '#FFF6F5',

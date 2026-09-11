@@ -4,7 +4,34 @@ import {assertSnapshot, describe, it} from '@augment-vir/test';
 import {generateThemeCode} from './color-theme-code.js';
 import {defineColorThemeOverride} from './color-theme-override.js';
 import {defineColorTheme, themeDefaultKey} from './color-theme.js';
-import {mockColorTheme} from './color-theme.mock.js';
+
+const mockColorTheme = defineColorTheme(
+    {
+        foreground: 'black',
+        background: 'white',
+        prefix: 'mock',
+    },
+    {
+        'action-primary': {
+            foreground: 'dodgerblue',
+        },
+        'action-secondary': {
+            foreground: 'navy',
+        },
+        'action-danger': {
+            foreground: 'red',
+        },
+        'nav-bar': {
+            background: '#ccc',
+        },
+        'button-primary': {
+            foreground: 'white',
+            background: {
+                refForeground: 'action-primary',
+            },
+        },
+    },
+);
 
 describe(defineColorTheme.name, () => {
     it('maps all colors', () => {

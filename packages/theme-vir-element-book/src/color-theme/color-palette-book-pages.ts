@@ -4,17 +4,17 @@ import {VirColorPair, type FontWeight} from '@electrovir/color';
 import {defineBookPage, type BookPage} from 'element-book';
 import {css, html, listen, unsafeCSS} from 'element-vir';
 import {type SingleCssVarDefinition} from 'lit-css-vars';
-import {type RequireExactlyOne} from 'type-fest';
-import {noNativeSpacing, viraTheme} from 'vira';
 import {
     buildColorTheme,
     groupColors,
+    themeDefaultKey,
     type BuildLowLevelColorThemeOptions,
     type ColorPaletteVars,
     type PaletteColor,
-} from './build-color-theme.js';
+} from 'theme-vir';
+import {type RequireExactlyOne} from 'type-fest';
+import {noNativeSpacing, viraTheme} from 'vira';
 import {createColorThemeBookPages} from './color-theme-book-pages.js';
-import {themeDefaultKey} from './color-theme.js';
 
 type ContrastCell = {
     title: string;

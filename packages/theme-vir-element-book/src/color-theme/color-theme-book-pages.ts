@@ -9,10 +9,8 @@ import {
     type DefineExampleCallback,
 } from 'element-book';
 import {css, html, listen, nothing} from 'element-vir';
+import {generateThemeCode, type ColorTheme, type ColorThemeOverride} from 'theme-vir';
 import {type EmptyObject} from 'type-fest';
-import {generateThemeCode} from './color-theme-code.js';
-import {type ColorThemeOverride} from './color-theme-init.js';
-import {type ColorTheme} from './color-theme.js';
 
 const noneOverridesSelectionValue = 'None';
 
