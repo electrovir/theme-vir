@@ -1,6 +1,6 @@
 {
     "name": "@theme-vir/element-book",
-    "version": "29.0.0-beta.1",
+    "version": "29.0.0",
     "description": "Element Book integration for theme-vir.",
     "homepage": "https://electrovir.github.io/theme-vir",
     "bugs": {
@@ -33,9 +33,9 @@
     "dependencies": {
         "@augment-vir/assert": "^32.3.0",
         "@augment-vir/common": "^32.3.0",
-        "@electrovir/color": "^2.0.0-beta.0",
+        "@electrovir/color": "^2.0.0",
         "lit-css-vars": "^3.6.3",
-        "theme-vir": "^29.0.0-beta.1",
+        "theme-vir": "^29.0.0",
         "type-fest": "^5.8.0"
     },
     "devDependencies": {
@@ -45,7 +45,7 @@
         "@web/test-runner-commands": "^1.0.1",
         "@web/test-runner-playwright": "^1.0.0",
         "@web/test-runner-visual-regression": "^1.0.1",
-        "element-book": "^27.0.0-beta.2",
+        "element-book": "^27.0.0-beta.3",
         "element-vir": "^27.0.0",
         "esbuild": "^0.28.2",
         "istanbul-smart-text-reporter": "^1.1.5",
@@ -57,7 +57,7 @@
         "vite-tsconfig-paths": "^6.1.1"
     },
     "peerDependencies": {
-        "element-book": "^27.0.0-beta.2",
+        "element-book": "^27.0.0-beta.3",
         "element-vir": "^27.0.0",
         "vira": "^32.0.0-beta.0"
     },

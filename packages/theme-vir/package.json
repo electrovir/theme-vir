@@ -1,6 +1,6 @@
 {
     "name": "theme-vir",
-    "version": "29.0.0-beta.1",
+    "version": "29.0.0",
     "description": "Create an entire web theme.",
     "keywords": [
         "design",
@@ -44,7 +44,7 @@
     "dependencies": {
         "@augment-vir/assert": "^32.3.0",
         "@augment-vir/common": "^32.3.0",
-        "@electrovir/color": "^2.0.0-beta.0",
+        "@electrovir/color": "^2.0.0",
         "apca-w3": "^0.1.9",
         "lit-css-vars": "^3.6.3",
         "type-fest": "^5.8.0"
