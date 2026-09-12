@@ -1,6 +1,5 @@
 import {check} from '@augment-vir/assert';
 import {groupArrayBy, type PartialWithUndefined} from '@augment-vir/common';
-import {VirColorPair} from '@electrovir/color';
 import {
     BookPageControlType,
     defineBookPage,
@@ -11,6 +10,7 @@ import {
 import {css, html, listen, nothing} from 'element-vir';
 import {generateThemeCode, type ColorTheme, type ColorThemeOverride} from 'theme-vir';
 import {type EmptyObject} from 'type-fest';
+import {ViraColorPair} from 'vira';
 
 const noneOverridesSelectionValue = 'None';
 
@@ -100,26 +100,26 @@ export function createColorThemeBookPages({
         }
 
         const normalTemplate = html`
-            <${VirColorPair.assign({
+            <${ViraColorPair.assign({
                 color: themeColor,
                 showVarValues: true,
                 showVarNames: controls['Show Var Names'],
                 showContrast: controls['Show Contrast Tips'],
                 fontWeight: 400,
-            })}></${VirColorPair}>
+            })}></${ViraColorPair}>
         `;
 
         const inverseColor = hideInverseColors ? undefined : inverseThemeColor;
 
         const inverseTemplate = inverseColor
             ? html`
-                  <${VirColorPair.assign({
+                  <${ViraColorPair.assign({
                       color: inverseColor,
                       showVarValues: false,
                       showVarNames: controls['Show Var Names'],
                       showContrast: controls['Show Contrast Tips'],
                       fontWeight: 400,
-                  })}></${VirColorPair}>
+                  })}></${ViraColorPair}>
               `
             : nothing;
 

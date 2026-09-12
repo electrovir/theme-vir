@@ -1,6 +1,6 @@
 {
     "name": "@electrovir/theme-vir-mono-repo",
-    "version": "29.0.0-beta.0",
+    "version": "29.0.0-beta.1",
     "private": true,
     "repository": {
         "type": "git",
@@ -44,7 +44,7 @@
         "@typescript-eslint/eslint-plugin": "^8.69.0",
         "cspell": "^10.2.2",
         "dependency-cruiser": "^18.2.0",
-        "device-navigation": "5.0.0-beta.0",
+        "device-navigation": "5.0.0",
         "esbuild": "^0.28.2",
         "eslint": "^10.10.0",
         "eslint-config-prettier": "^10.1.8",

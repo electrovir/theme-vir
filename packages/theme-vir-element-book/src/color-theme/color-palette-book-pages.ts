@@ -1,6 +1,6 @@
 import {check} from '@augment-vir/assert';
 import {type PartialWithUndefined} from '@augment-vir/common';
-import {VirColorPair, type FontWeight} from '@electrovir/color';
+import {type FontWeight} from '@electrovir/color';
 import {defineBookPage, type BookPage} from 'element-book';
 import {css, html, listen, unsafeCSS} from 'element-vir';
 import {type SingleCssVarDefinition} from 'lit-css-vars';
@@ -13,7 +13,7 @@ import {
     type PaletteColor,
 } from 'theme-vir';
 import {type RequireExactlyOne} from 'type-fest';
-import {noNativeSpacing, viraTheme} from 'vira';
+import {noNativeSpacing, ViraColorPair, viraTheme} from 'vira';
 import {createColorThemeBookPages} from './color-theme-book-pages.js';
 
 type ContrastCell = {
@@ -258,7 +258,7 @@ export function createColorPaletteBookPages({
                                         return html`
                                             <td>
                                                 <p class="darkness-level">${color.suffix}</p>
-                                                <${VirColorPair.assign({
+                                                <${ViraColorPair.assign({
                                                     color: {
                                                         background:
                                                             cell.background || color.definition,
@@ -269,7 +269,7 @@ export function createColorPaletteBookPages({
                                                     showVarNames: false,
                                                     showContrast: true,
                                                     fontWeight: cell.fontWeight,
-                                                })}></${VirColorPair}>
+                                                })}></${ViraColorPair}>
                                             </td>
                                         `;
                                     });
