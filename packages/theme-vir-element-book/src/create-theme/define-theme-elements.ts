@@ -112,7 +112,7 @@ function defineHeadingElement<TagPrefix extends string>(
                 },
             ),
         ),
-        styles: ({hostClasses}) => {
+        styles({hostClasses}) {
             const hostClassValues = getObjectTypedValues(hostClasses) as HostClass[];
 
             return css`

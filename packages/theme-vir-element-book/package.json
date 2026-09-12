@@ -1,6 +1,6 @@
 {
     "name": "@theme-vir/element-book",
-    "version": "28.25.2",
+    "version": "29.0.0-beta.0",
     "description": "Element Book integration for theme-vir.",
     "homepage": "https://electrovir.github.io/theme-vir",
     "bugs": {
@@ -31,22 +31,22 @@
         "test:update": "virmator test web update"
     },
     "dependencies": {
-        "@augment-vir/assert": "^32.2.3",
-        "@augment-vir/common": "^32.2.3",
+        "@augment-vir/assert": "^32.3.0-beta.0",
+        "@augment-vir/common": "^32.3.0-beta.0",
         "@electrovir/color": "^1.7.11",
         "lit-css-vars": "^3.6.3",
-        "theme-vir": "^28.25.2",
+        "theme-vir": "^29.0.0-beta.0",
         "type-fest": "^5.8.0"
     },
     "devDependencies": {
-        "@augment-vir/test": "^32.2.3",
+        "@augment-vir/test": "^32.3.0-beta.0",
         "@web/dev-server-esbuild": "^2.0.0",
         "@web/test-runner": "^1.0.0",
         "@web/test-runner-commands": "^1.0.1",
         "@web/test-runner-playwright": "^1.0.0",
         "@web/test-runner-visual-regression": "^1.0.1",
-        "element-book": "^26.17.4",
-        "element-vir": "^26.17.3",
+        "element-book": "^27.0.0-beta.0",
+        "element-vir": "^27.0.0-beta.3",
         "esbuild": "^0.28.2",
         "istanbul-smart-text-reporter": "^1.1.5",
         "markdown-code-example-inserter": "^3.0.6",
@@ -57,8 +57,8 @@
         "vite-tsconfig-paths": "^6.1.1"
     },
     "peerDependencies": {
-        "element-book": ">=17",
-        "element-vir": "^26",
+        "element-book": "^27.0.0-beta.0",
+        "element-vir": "^27.0.0-beta.3",
         "vira": ">=28"
     },
     "engines": {
